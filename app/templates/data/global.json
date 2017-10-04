@@ -1,0 +1,22 @@
+{
+	"global": [
+		{
+			"name": "Завод «Буревестник»"
+		},
+		{
+			"addresses": [
+				{
+					"city": "Гатчина",
+					"address": "ул. Соборная, 31",
+					"tel_1": "+7 (812) 314-17-85",
+					"tel_1_link": "tel:+78123141785",
+					"tel_2": "+7 (813) 719-33-02",
+					"tel_2_link": "tel:+78137193302"
+				}
+			]
+		},
+		{
+			"fish": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut eos eum eveniet exercitationem incidunt, inventore, iusto laborum molestiae, mollitia necessitatibus nostrum perspiciatis quod tempora ullam veritatis voluptas. Accusantium aperiam, consectetur cupiditate deleniti ducimus earum facere itaque maxime natus neque nihil odit, officiis quaerat reiciendis repudiandae soluta ullam ut, voluptates. Ab adipisci deserunt exercitationem ipsa iure iusto maxime odio quaerat saepe similique sunt, tempora ullam, voluptate. Dolore molestias neque unde?"
+		}
+	]
+}

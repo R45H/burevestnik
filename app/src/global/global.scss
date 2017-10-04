@@ -1,6 +1,22 @@
 html {
 	height: 100%;
-	font-size: 10px;
+	font-size: 6px;
+
+	@include screen-sm() {
+		font-size: 7px;
+	}
+
+	@include screen-md() {
+		font-size: 8px;
+	}
+
+	@include screen-lg() {
+		font-size: 9px;
+	}
+
+	@include screen-xl() {
+		font-size: 10px;
+	}
 }
 
 body {
@@ -8,7 +24,7 @@ body {
 	font-size: 1.6rem;
 	font-family: $font-main;
 	color: $color-text;
-	line-height: 1.5;
+	line-height: 1.4;
 
 	&.noscroll {
 		overflow: hidden;
@@ -40,5 +56,6 @@ img {
 }
 
 ::selection {
-
+	background: $color-third;
+	color: white;
 }
