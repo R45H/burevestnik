@@ -2,6 +2,7 @@ $color-main: #ff9900;
 $color-second: #0e2ec6;
 $color-third: #00aa72;
 $color-text: #333;
+$color-text-light: #666;
 $color-gray: #ccc;
 
 $color-webcenter-1: #ff141f;
@@ -20,8 +21,8 @@ $point-md: 768px;
 $point-lg: 992px;
 $point-xl: 1200px;
 
-$font-main: 'Roboto', sans-serif;
-$font-fa: 'FontAwesome';
+$font-main: 'Roboto', sans-serif; // 300 (light), normal (regular), 500 (medium), 700 (bold)
+$font-fa: 'FontAwesome', sans-serif;
 
 $duration: .3s;
 

@@ -1,2 +1,13 @@
+include ../mixins/logo
+
 // FOOTER
 footer.footer
+	.container
+		.footer__wrap
+			+logo(class='footer__logo')
+
+			.footer__i
+				p.footer__webc= 'Разработано '
+					a.footer__webc-link(href='https://webcenter.pro/' target='_blank') Webcenter.pro
+
+				p.footer__copyright= '© 2007–2017 ОАО ' + global[0].name

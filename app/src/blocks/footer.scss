@@ -1,5 +1,53 @@
 $name: footer;
 
 .#{$name} {
+	flex: none;
+	padding: $space / 2 0;
+	background: $color-text;
+	color: white;
+	font-size: 1.4rem;
 
+	&__wrap {
+		text-align: center;
+
+		@include screen-sm() {
+			text-align: left;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&__logo {
+
+		@include screen-sm(max) {
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__i {
+		text-align: center;
+
+		@include screen-sm() {
+			text-align: right;
+		}
+	}
+
+	&__webc {
+		margin-bottom: 1rem;
+	}
+
+	&__webc-link {
+		color: $color-webcenter-1;
+		border-bottom: 1px solid $color-webcenter-1;
+
+		&:hover {
+			color: $color-webcenter-2;
+			border-bottom-color: $color-webcenter-2;
+		}
+	}
+
+	&__copyright {
+		color: $color-text-light;
+	}
 }
