@@ -10,3 +10,5 @@ npm-debug.log
 /production/
 /temp/
 /ftp/
+/app/html2pug/
+!/app/html2pug/index.html

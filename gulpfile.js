@@ -23,7 +23,8 @@ var
    data         = require('gulp-data'),                    // Парс JSON
    fs           = require('fs'),                           // Чтение и запись файлов
    prettify     = require('gulp-jsbeautifier'),            // Форматирование JS и HTML
-   replace      = require('gulp-replace')                  // Замена текста в файлах
+   replace      = require('gulp-replace'),                 // Замена текста в файлах
+   html2Pug    = require('gulp-html2pug')                  // Конвертация html в pug
 ;
 /* ================================ */
 
@@ -248,6 +249,17 @@ gulp.task('sprite', function() {
 
 	spriteData.img.pipe(gulp.dest(app + 'sprites/')); // путь, куда сохраняем картинку
 	spriteData.css.pipe(gulp.dest(app + 'sprites/')); // путь, куда сохраняем стили
+});
+/* ================================ */
+
+/* ==== КОНВЕРТАЦИЯ HTML В PUG ==== */
+gulp.task('html2pug', function() {
+	return gulp.src(app + 'html2pug/index.html')
+		.pipe(html2Pug({
+			tabs: true,
+			fragment: true
+		}))
+		.pipe(gulp.dest(app + 'html2pug'));
 });
 /* ================================ */
 
