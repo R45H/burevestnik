@@ -37,13 +37,23 @@ $name: footer;
 		margin-bottom: 1rem;
 	}
 
+	&__webc-text,
 	&__webc-link {
-		color: $color-webcenter-1;
-		border-bottom: 1px solid $color-webcenter-1;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__webc-text {
+		margin-right: 1rem;
+	}
+
+	&__webc-img {
+		display: block;
+		width: 5rem;
+		fill: white;
 
 		&:hover {
-			color: $color-webcenter-2;
-			border-bottom-color: $color-webcenter-2;
+			fill: $color-webcenter-2;
 		}
 	}
 
