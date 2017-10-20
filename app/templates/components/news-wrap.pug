@@ -1,0 +1,15 @@
+//TODO Колонки неправильно растягиваются по вертикали
+
+include ../mixins/news
+
+.news-wrap.container
+	.row
+		.col-lg-6.news-wrap__col
+			.news-wrap__item
+				+news(news[0], 'news_img_top')
+
+		.col-lg-6
+			.news-wrap__item.news-wrap__item_sm
+				+news(news[1])
+			.news-wrap__item.news-wrap__item_sm
+				+news(news[2])

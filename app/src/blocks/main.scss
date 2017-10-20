@@ -2,4 +2,8 @@ $name: main;
 
 .#{$name} {
 	flex: auto;
+
+	&__space-col {
+		padding-bottom: 30px;
+	}
 }

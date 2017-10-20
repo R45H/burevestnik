@@ -1,0 +1,30 @@
+$name: news-wrap;
+
+.#{$name} {
+
+	&__col {
+
+		@include screen-lg(max) {
+			padding-bottom: 15px;
+		}
+	}
+
+	&__item {
+		height: 100%;
+
+		&_sm {
+			height: 50%;
+
+			&:first-child {
+				padding-bottom: 15px;
+			}
+
+			&:last-child {
+
+				@include screen-lg() {
+					padding-top: 15px;
+				}
+			}
+		}
+	}
+}

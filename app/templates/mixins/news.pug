@@ -1,0 +1,11 @@
+mixin news(data, mod)
+	.news(class= mod)
+
+		a.news__img-wrap(href= data.link)
+			.news__img(style= 'background-image: url(' + data.img + ');' )
+
+		.news__text-wrap
+			a.news__title(href= data.link)= data.title
+			.news__text-i
+				span.news__date= data.date
+				a.link.news__link(href= data.link) Читать далее
