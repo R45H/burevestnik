@@ -6,4 +6,13 @@ $name: main;
 	&__space-col {
 		padding-bottom: 30px;
 	}
+
+	&__cat-wrap {
+		max-width: 320px;
+		margin: 0 auto 30px;
+
+		@include screen-lg() {
+			margin-bottom: $space / 2;
+		}
+	}
 }

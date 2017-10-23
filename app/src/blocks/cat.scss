@@ -1,0 +1,106 @@
+$name: cat;
+
+.#{$name} {
+	display: block;
+	background: no-repeat center / cover;
+	padding-bottom: 100%;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+
+	@include screen-md(max) {
+		color: white;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $color-fog;
+		transition: $duration / 2 ease;
+
+		@include screen-md() {
+			background-color: white;
+		}
+	}
+
+	&:hover {
+		color: white;
+
+		&::before {
+			background-color: $color-fog;
+		}
+
+		.#{$name} {
+			// =====
+
+			&__icon {
+				fill: white;
+			}
+
+			&__name {
+
+				&::after {
+					background: white;
+				}
+			}
+		}
+	}
+
+	&__wrap {
+		padding: 15px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__icon {
+		fill: white;
+		height: 30%;
+		width: 100%;
+		margin-bottom: 2em;
+		display: inline-block;
+		transition: $duration / 2 ease;
+
+		@include screen-md() {
+			fill: $color-second;
+		}
+	}
+
+	&__name {
+		font-size: 1.8rem;
+		font-weight: 500;
+		position: relative;
+		padding-bottom: 1em;
+		transition: $duration / 2 ease;
+
+		@include screen-sm() {
+			min-height: 3.9em;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 50%;
+			height: 2px;
+			background: white;
+			transition: $duration / 2 ease;
+			position: absolute;
+			bottom: 0;
+			left: 25%;
+
+			@include screen-md() {
+				background: $color-gray;
+			}
+		}
+	}
+}

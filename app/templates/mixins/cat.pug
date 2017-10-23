@@ -1,0 +1,25 @@
+include svg/svg-production
+
+mixin cat(data)
+	a.cat(
+		class= attributes.class
+		href= data.link
+		style='background-image: url(' + data.img + ');'
+	)
+		.cat__wrap
+
+			case data.icon
+				when 'tank'
+					+svg-tank(class='cat__icon')
+				when 'settings'
+					+svg-settings(class='cat__icon')
+				when 'oil-platform'
+					+svg-oil-platform(class='cat__icon')
+				when 'cruise'
+					+svg-cruise(class='cat__icon')
+				when 'gloves'
+					+svg-gloves(class='cat__icon')
+				when 'clamp'
+					+svg-clamp(class='cat__icon')
+
+			p.cat__name= data.name

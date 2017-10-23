@@ -1,0 +1,40 @@
+{
+	"cat": [
+		{
+			"name": "Судовая арматура",
+			"icon": "cruise",
+			"img": "img/content/banners/01.jpg",
+			"link": "#"
+		},
+		{
+			"name": "Теплообменные аппараты",
+			"icon": "settings",
+			"img": "img/content/production/01.jpg",
+			"link": "#"
+		},
+		{
+			"name": "Арматура для нефтегазовых промыслов",
+			"icon": "oil-platform",
+			"img": "img/content/production/02.jpg",
+			"link": "#"
+		},
+		{
+			"name": "Судовые скобяные изделия",
+			"icon": "clamp",
+			"img": "img/content/production/03.jpg",
+			"link": "#"
+		},
+		{
+			"name": "Средства индивидуальной защиты",
+			"icon": "gloves",
+			"img": "img/content/production/04.jpg",
+			"link": "#"
+		},
+		{
+			"name": "Изделия из пластмасс",
+			"icon": "tank",
+			"img": "img/content/production/05.jpg",
+			"link": "#"
+		}
+	]
+}

@@ -27,7 +27,7 @@ $name: section;
 		}
 
 		&_dark {
-			background: rgba(black, .35);
+			background: $color-fog;
 		}
 	}
 
@@ -51,5 +51,9 @@ $name: section;
 		&::before {
 			@extend .section__fill_dark;
 		}
+	}
+
+	&_space-bot_half {
+		padding-bottom: $space / 2;
 	}
 }

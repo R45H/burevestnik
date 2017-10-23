@@ -1,5 +1,5 @@
 include ../mixins/logo
-include ../mixins/svg/logo-webc
+include ../mixins/svg/svg-logo-webc
 
 // FOOTER
 footer.footer
@@ -11,6 +11,6 @@ footer.footer
 				p.footer__webc
 					span.footer__webc-text Разработано
 					a.footer__webc-link(href='https://webcenter.pro/' target='_blank')
-						+logo-webc(class= 'footer__webc-img')
+						+svg-logo-webc(class= 'footer__webc-img')
 
 				p.footer__copyright= '© 2007–2017 ОАО ' + global[0].name

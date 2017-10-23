@@ -86,3 +86,42 @@ h6 {
 	background: $color-third;
 	color: white;
 }
+
+.justify-content-between {
+	justify-content: space-between;
+}
+
+.hidden-xs {
+
+	@include screen-sm(max) {
+		display: none !important;
+	}
+}
+
+.hidden-sm {
+
+	@include screen-md(max) {
+		display: none !important;
+	}
+}
+
+.hidden-md {
+
+	@include screen-lg(max) {
+		display: none !important;
+	}
+}
+
+.hidden-lg {
+
+	@include screen-xl(max) {
+		display: none !important;
+	}
+}
+
+.hidden-xl {
+
+	@include screen-xl() {
+		display: none !important;
+	}
+}
