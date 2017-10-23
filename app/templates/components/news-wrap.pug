@@ -3,7 +3,7 @@
 include ../mixins/news
 
 .news-wrap.container
-	.row
+	.row.main__space-col
 		.col-lg-6.news-wrap__col
 			.news-wrap__item
 				+news(news[0], 'news_img_top')
@@ -13,3 +13,6 @@ include ../mixins/news
 				+news(news[1])
 			.news-wrap__item.news-wrap__item_sm
 				+news(news[2])
+
+	.news-wrap__btn-wrap
+		a.btn.btn_arrow(href='#') Все новости

@@ -27,4 +27,12 @@ $name: news-wrap;
 			}
 		}
 	}
+
+	&__btn-wrap {
+		text-align: center;
+
+		@include screen-sm() {
+			text-align: right;
+		}
+	}
 }

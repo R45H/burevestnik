@@ -1,0 +1,99 @@
+$name: btn;
+
+.#{$name} {
+	display: inline-block;
+	position: relative;
+	font-size: 1.8rem;
+	color: $color-main;
+	border: 2px solid $color-main;
+	background-color: transparent;
+	text-align: center;
+	cursor: pointer;
+	line-height: 1;
+	outline: none;
+	padding: .5em 1.5em;
+	font-weight: 500;
+	font-family: $font-main;
+	user-select: none;
+	transition: $duration / 2 ease;
+
+	&:hover {
+		background-color: $color-main;
+		color: white;
+	}
+
+	&:active {
+		background-color: darken($color-main, 15%);
+		color: darken(white, 15%);
+		border-color: darken($color-main, 15%);
+	}
+
+	&_fill {
+		background-color: $color-main;
+		color: white;
+
+		&:hover {
+			background-color: $color-third;
+			border-color: $color-third;
+		}
+
+		&:active {
+			background-color: darken($color-third, 15%);
+			border-color: darken($color-third, 15%);
+		}
+	}
+
+	&_arrow {
+		border: 1px solid $color-second;
+		color: $color-second;
+		font-size: 1.6rem;
+		padding-right: 3.5em;
+		overflow: hidden;
+		transition: none;
+
+		&::after {
+			content: '\f105';
+			font-family: $font-fa;
+			font-size: 2em;
+			position: absolute;
+			top: 50%;
+			right: .75em;
+			line-height: 1;
+			text-align: right;
+			transform: translateY(-50%);
+			transition: $duration ease right, $duration ease opacity;
+		}
+
+		&:hover {
+			background-color: transparent;
+			color: $color-main;
+			border-color: $color-main;
+
+			&::after {
+				right: .6em;
+			}
+		}
+
+		&:active {
+			background-color: transparent;
+			color: darken($color-main, 15%);
+			border-color: darken($color-main, 15%);
+
+			&::after {
+				right: .4em;
+				opacity: 0;
+			}
+		}
+	}
+
+	&_wide {
+		width: 100%;
+	}
+}
+
+input.#{$name} {
+
+	&_arrow {
+		padding-right: 1.5em;
+	}
+}
