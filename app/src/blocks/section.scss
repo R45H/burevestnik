@@ -2,4 +2,54 @@ $name: section;
 
 .#{$name} {
 	padding: $space 0;
+	background: no-repeat center / cover;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__fill {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		&_bright {
+			background: rgba(white, .86);
+		}
+
+		&_dark {
+			background: rgba(black, .35);
+		}
+	}
+
+	&_blur {
+
+		&::before {
+			background: inherit;
+			filter: blur(2px);
+		}
+	}
+
+	&_bright {
+
+		&::before {
+			@extend .section__fill_bright;
+		}
+	}
+
+	&_dark {
+
+		&::before {
+			@extend .section__fill_dark;
+		}
+	}
 }
