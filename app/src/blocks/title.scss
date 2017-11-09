@@ -4,14 +4,6 @@ $name: title;
 	font-size: 4.8rem;
 	text-align: center;
 	font-weight: 400;
-	margin-bottom: $space * 3/4;
+	margin-bottom: $space / 2;
 	line-height: 1.1;
-
-	&::after {
-		content: '';
-		display: block;
-		background: url($path + 'img/icons/waves.svg') no-repeat center;
-		height: 2rem;
-		margin-top: $space * 1/4;
-	}
 }
