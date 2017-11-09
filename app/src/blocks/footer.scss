@@ -3,7 +3,7 @@ $name: footer;
 .#{$name} {
 	flex: none;
 	padding: $space / 2 0;
-	background: $color-text;
+	background: linear-gradient(to bottom, $color-footer-1, $color-footer-2);
 	color: white;
 	font-size: 1.4rem;
 
@@ -53,11 +53,18 @@ $name: footer;
 		fill: white;
 
 		&:hover {
-			fill: $color-webcenter-2;
+
+			.cls-1 {
+				fill: $color-webcenter-2;
+			}
+
+			.cls-2 {
+				fill: $color-webcenter-1;
+			}
 		}
 	}
 
 	&__copyright {
-		color: $color-text-light;
+
 	}
 }
