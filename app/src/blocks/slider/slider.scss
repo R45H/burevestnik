@@ -1,0 +1,77 @@
+$name: slider;
+
+.#{$name} {
+	color: white;
+	position: relative;
+
+	.#{$name}__item {
+		display: flex;
+	}
+
+	&__item {
+		min-height: 100vh;
+	}
+
+	&__i {
+		width: 100%;
+		background: no-repeat center / cover;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		padding: $space 0 ($space * 1.5);
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			@extend .section__fill_dark;
+		}
+	}
+
+	&__title {
+		font-weight: normal;
+		font-size: 3rem;
+	}
+
+	&__dots {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: $space / 2;
+
+		@include screen-sm(max) {
+			left: 0;
+			width: 100%;
+			transform: none;
+			text-align: center;
+		}
+
+		li {
+			display: inline-block;
+			padding: .7rem;
+			transition: $duration / 2 ease;
+			opacity: .45;
+			cursor: pointer;
+
+			&:hover {
+				opacity: .7;
+			}
+
+			&.slick-active {
+				opacity: 1;
+				cursor: default;
+			}
+		}
+	}
+
+	&__dot {
+		width: 1.5rem;
+		height: 1.5rem;
+		background-color: white;
+	}
+}
