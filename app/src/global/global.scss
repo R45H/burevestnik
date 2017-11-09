@@ -69,7 +69,6 @@ img {
 	max-height: 100%;
 }
 
-p,
 ul,
 li,
 h1,
@@ -80,6 +79,10 @@ h5,
 h6 {
 	margin: 0;
 	padding: 0;
+}
+
+p {
+	margin: 1em 0;
 }
 
 ::selection {
@@ -115,13 +118,6 @@ h6 {
 .hidden-lg {
 
 	@include screen-xl(max) {
-		display: none !important;
-	}
-}
-
-.hidden-xl {
-
-	@include screen-xl() {
 		display: none !important;
 	}
 }

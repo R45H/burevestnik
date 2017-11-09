@@ -7,12 +7,52 @@ $name: main;
 		padding-bottom: 30px;
 	}
 
+	&__space-top {
+		margin-top: $space;
+	}
+
+	&__space-top_half {
+		margin-top: $space / 2;
+	}
+
+	&__space-bot {
+		margin-bottom: $space;
+	}
+
+	&__space-bot_half {
+		margin-bottom: $space / 2;
+	}
+
 	&__cat-wrap {
 		max-width: 320px;
 		margin: 0 auto 30px;
 
 		@include screen-lg() {
 			margin-bottom: $space / 2;
+			flex-grow: 1;
+		}
+	}
+
+	&__slider {
+		margin-top: -($space);
+	}
+
+	&__ext-wrap {
+		display: inline-block;
+	}
+
+	&__ext {
+		padding: .25em 0;
+	}
+
+	&__vert-line {
+		display: flex;
+		justify-content: center;
+
+		&::after {
+			content: '';
+			width: 1px;
+			background: $color-text-light;
 		}
 	}
 }

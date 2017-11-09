@@ -6,4 +6,12 @@ $name: title;
 	font-weight: 400;
 	margin-bottom: $space / 2;
 	line-height: 1.1;
+
+	&_sm {
+		font-size: 3.6rem;
+	}
+
+	&_left {
+		text-align: left;
+	}
 }

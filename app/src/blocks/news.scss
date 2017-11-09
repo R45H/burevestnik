@@ -114,5 +114,9 @@ a.#{$name} {
 		&:hover {
 			color: $color-main;
 		}
+
+		&:active {
+			color: darken($color-main, 15%);
+		}
 	}
 }
