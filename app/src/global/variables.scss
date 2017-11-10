@@ -5,8 +5,7 @@ $color-text: #333;
 $color-text-light: #666;
 $color-gray: #ccc;
 
-$color-footer-1: #28516d;
-$color-footer-2: #2677ad;
+$color-grad: #2677ad;
 
 $color-webcenter-1: #ff141f;
 $color-webcenter-2: #334b61;
@@ -33,6 +32,15 @@ $space: 10rem;
 
 $path: '../';
 
+%shadow {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(to bottom, rgba($color-text, .65), transparent);
+}
 
 // ----------------------------
 // МИКСИНЫ ДЛЯ ТЕКУЩЕГО ПРОЕКТА

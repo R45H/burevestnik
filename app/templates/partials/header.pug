@@ -1,2 +1,42 @@
+include ../mixins/logo
+include ../mixins/svg/svg-marker
+include ../mixins/svg/svg-tel
+include ../mixins/svg/svg-search
+
 // HEADER
-header.header
+header.header(class= page.link == global[0].link_home ? 'header_transparent' : '')
+	.container.header__wrap
+
+		.header__left
+			+logo(class='header__logo')
+
+		.header__right
+			.header__right-top
+				.header__item
+					a.header__link(href='contacts.html')
+						+svg-marker(class='header__icon header__icon_space_right')
+						= global[1].addresses[0].city + ', ' + global[1].addresses[0].address
+
+				.header__item
+					.header__tel
+						+svg-tel(class='header__icon header__icon_space_right')
+						a.header__link(href= global[1].addresses[0].tel_1_link)= global[1].addresses[0].tel_1
+						span= ', '
+						a.header__link(href= global[1].addresses[0].tel_2_link)= global[1].addresses[0].tel_2
+
+				.header__item
+					a.header__link.header__link_full(href='#')
+						+svg-search(class='header__icon header__icon_big')
+
+				.header__item.header__toggle-wrap
+					a.toggle.header__toggle(href='#')
+						.toggle__lines
+
+			.header__right-bot
+				ul.menu
+
+					each val in menu
+
+						if !val.other
+							li.menu__item
+								a.menu__link(href= val.link)= val.name

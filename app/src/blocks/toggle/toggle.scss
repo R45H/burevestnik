@@ -1,0 +1,115 @@
+$name: toggle;
+
+.#{$name} {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+
+	&:hover {
+
+		.#{$name}__lines {
+			background: $color-main;
+
+			&::before,
+			&::after {
+				background: $color-main;
+			}
+		}
+	}
+
+	&__lines {
+		height: 2px;
+		width: 100%;
+		background: white;
+
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: relative;
+			height: 2px;
+			width: 100%;
+			background: white;
+			transition: $duration / 2 ease transition;
+		}
+
+		&::before {
+			top: -8px;
+		}
+
+		&::after {
+			bottom: -6px;
+		}
+	}
+
+	&_closed {
+
+		.#{$name}__lines {
+
+			&::before {
+				animation: toggleTopLineRevert $duration ease-out;
+				animation-fill-mode: forwards;
+			}
+
+			&::after {
+				animation: toggleBottomLineRevert $duration ease-out;
+				animation-fill-mode: forwards;
+			}
+		}
+	}
+
+	&_opened {
+
+		.#{$name}__lines {
+			background: transparent;
+
+			&::before {
+				animation: toggleTopLine $duration ease-out;
+				animation-fill-mode: forwards;
+			}
+
+			&::after {
+				animation: toggleBottomLine $duration ease-out;
+				animation-fill-mode: forwards;
+			}
+		}
+
+		&:hover {
+
+			.#{$name}__lines {
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+@keyframes toggleTopLine {
+	from {top: -8px;}
+	40%  {top: 0;}
+	60%  {top: 0; transform: none}
+	to   {top: 0; transform: rotate(45deg);}
+}
+
+@keyframes toggleBottomLine {
+	from {bottom: -6px;}
+	40%  {bottom: 2px;}
+	60%  {bottom: 2px; transform: none}
+	to   {bottom: 2px; transform: rotate(-45deg);}
+}
+
+@keyframes toggleTopLineRevert {
+	from {top: 0; transform: rotate(45deg);}
+	40%  {top: 0; transform: none}
+	60%  {top: 0;}
+	to   {top: -8px;}
+}
+
+@keyframes toggleBottomLineRevert {
+	from {bottom: 2px; transform: rotate(-45deg);}
+	40%  {bottom: 2px; transform: none}
+	60%  {bottom: 2px;}
+	to   {bottom: -6px;}
+}
