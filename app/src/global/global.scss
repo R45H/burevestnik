@@ -58,8 +58,8 @@ a {
 		}
 
 		&:active {
-			color: darken($color-main, 15%);
-			border-bottom-color: darken($color-main, 15%);
+			color: $color-main-active;
+			border-bottom-color: $color-main-active;
 		}
 	}
 }

@@ -42,6 +42,17 @@ $name: menu;
 				}
 			}
 		}
+
+		&:active {
+
+			.#{$name} {
+
+				&__link {
+					color: $color-main-active;
+					border-bottom-color: transparent;
+				}
+			}
+		}
 	}
 
 	&__link {

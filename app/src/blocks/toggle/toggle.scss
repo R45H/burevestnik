@@ -20,6 +20,18 @@ $name: toggle;
 		}
 	}
 
+	&:active {
+
+		.#{$name}__lines {
+			background: $color-main-active;
+
+			&::before,
+			&::after {
+				background: $color-main-active;
+			}
+		}
+	}
+
 	&__lines {
 		height: 2px;
 		width: 100%;

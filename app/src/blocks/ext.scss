@@ -9,7 +9,7 @@ $name: ext;
 	}
 
 	&:active {
-		color: darken($color-main, 15%);
+		color: $color-main-active;
 	}
 
 	&__img {

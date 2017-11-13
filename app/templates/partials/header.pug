@@ -19,12 +19,12 @@ header.header(class= page.link == global[0].link_home ? 'header_transparent' : '
 
 				.header__item
 					.header__tel
-						+svg-tel(class='header__icon header__icon_space_right')
+						+svg-tel(class='header__icon header__icon_space_right header__icon_tel')
 						a.header__link(href= global[1].addresses[0].tel_1_link)= global[1].addresses[0].tel_1
-						span= ', '
+						span.header__tel-delimiter= ', '
 						a.header__link(href= global[1].addresses[0].tel_2_link)= global[1].addresses[0].tel_2
 
-				.header__item
+				.header__item.header__search-wrap
 					a.header__link.header__link_full(href='#')
 						+svg-search(class='header__icon header__icon_big')
 

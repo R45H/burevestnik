@@ -23,9 +23,9 @@ $name: btn;
 	}
 
 	&:active {
-		background-color: darken($color-main, 15%);
+		background-color: $color-main-active;
 		color: darken(white, 15%);
-		border-color: darken($color-main, 15%);
+		border-color: $color-main-active;
 	}
 
 	&_fill {
@@ -76,8 +76,8 @@ $name: btn;
 
 		&:active {
 			background-color: transparent;
-			color: darken($color-main, 15%);
-			border-color: darken($color-main, 15%);
+			color: $color-main-active;
+			border-color: $color-main-active;
 
 			&::after {
 				right: .4em;
