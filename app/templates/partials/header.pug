@@ -32,6 +32,19 @@ header.header(class= page.link == global[0].link_home ? 'header_transparent' : '
 					a.toggle.header__toggle(href='#')
 						.toggle__lines
 
+				ul.aside
+
+					each val in menu
+						li.aside__item
+							a.aside__link(href= val.link)= val.name
+
+							if val.sub
+								ul.aside__sub
+
+									each sub in val.sub
+										li.aside__sub-item
+											a.aside__sub-link(href= sub.link)= sub.name
+
 			.header__right-bot
 				ul.menu
 

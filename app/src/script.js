@@ -4,6 +4,7 @@ $(function() {
 	(function() { @@include('blocks/header/header.js') }());
 	(function() { @@include('blocks/slider/slider.js') }());
 	(function() { @@include('blocks/toggle/toggle.js') }());
+	(function() { @@include('blocks/aside/aside.js') }());
 
 	@@include('global/global.js')
 });

@@ -65,6 +65,7 @@ $name: header;
 
 		@include screen-lg() {
 			border-bottom: 1px solid $color-gray;
+			position: relative;
 		}
 	}
 
