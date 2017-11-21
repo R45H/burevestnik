@@ -1,10 +1,13 @@
 $(function() {
 	@@include('blocks/map/map.js')
 
+	(function() {
+		@@include('blocks/toggle/toggle.js')
+		@@include('blocks/aside/aside.js')
+	}());
+
 	(function() { @@include('blocks/header/header.js') }());
 	(function() { @@include('blocks/slider/slider.js') }());
-	(function() { @@include('blocks/toggle/toggle.js') }());
-	(function() { @@include('blocks/aside/aside.js') }());
 
 	@@include('global/global.js')
 });

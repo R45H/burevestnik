@@ -1,42 +1,44 @@
 var
-	classBlock = 'toggle',
-	$toggle = $('.' + classBlock),
-	classActive = classBlock + '_opened',
-	classInactive = classBlock + '_closed',
-	classAside = 'aside',
-	$aside = $('.' + classAside);
+	classToggle = 'toggle',
+	$toggle = $('.' + classToggle),
+	classTActive = classToggle + '_opened',
+	classTInactive = classToggle + '_closed';
 
 /* Анимация гамбургера при клике */
 $toggle.on('click', function() {
 	var $this = $(this);
 
-	if (!$this.hasClass(classActive) && !$this.hasClass(classInactive)) {
-		$this.addClass(classActive);
+	if (!$this.hasClass(classTActive) && !$this.hasClass(classTInactive)) {
+		$this.addClass(classTActive);
 	} else {
-		$this.toggleClass(classActive + ' ' + classInactive);
+		$this.toggleClass(classTActive + ' ' + classTInactive);
 	}
 });
 /* ===== */
 
 /* Работа бокового меню */
 $toggle.on('click', function() {
-	$aside.slideToggle(200);
+	if ($(this).hasClass(classTActive)) {
+		toggleAside('open');
+	} else {
+		toggleAside();
+	}
 });
 /* ===== */
 
 /* Клик по документу */
 $(document).on('click', function(event) {
-	if (!$toggle.hasClass(classActive)) return;
+	if (!$toggle.hasClass(classTActive)) return;
 
 	var $target = $(event.target);
 
-	if ($target.closest('.' + classBlock).length ||
+	if ($target.closest('.' + classToggle).length ||
 		$target.closest('.' + classAside).length) return;
 
 	$toggle
-		.removeClass(classActive)
-		.addClass(classInactive);
+		.removeClass(classTActive)
+		.addClass(classTInactive);
 
-	$aside.slideUp(75);
+	toggleAside('close', 75);
 });
 /* ===== */

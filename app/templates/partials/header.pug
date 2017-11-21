@@ -38,6 +38,9 @@ header.header(class= page.link == global[0].link_home ? 'header_transparent' : '
 						li.aside__item
 							a.aside__link(href= val.link)= val.name
 
+								if val.sub
+									i.aside__arrow.fa.fa-angle-down
+
 							if val.sub
 								ul.aside__sub
 

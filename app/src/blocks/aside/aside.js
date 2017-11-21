@@ -1,32 +1,74 @@
 var
-	classBlock = 'aside',
-	classToggle = 'js-opened',
-	$aside = $('.' + classBlock),
-	$asideSub = $aside.find('.' + classBlock + '__sub'),
-	$asideItemsWithSub = $asideSub.parent();
+	classAside = 'aside',
+	classAOpened = classAside + '__item_opened',
+	$aside = $('.' + classAside),
+	$asideSub = $aside.find('.' + classAside + '__sub'),
+	$asideArrow = $asideSub.parent().find('.' + classAside + '__arrow'),
+	resMobile = 575;
 
-$asideItemsWithSub.on('click', function() {
-	if (window.innerWidth > 575) return;
+$asideArrow.on('click', function() {
+	if (window.innerWidth > resMobile) return;
 
-	var $this = $(this);
+	var $item = $(this).parents('.' + classAside + '__item');
 
-	if ($this.hasClass(classToggle)) {
-		$this
-			.removeClass(classToggle)
-			.find('.' + classBlock + '__sub')
-			.slideUp(200);
+	if ($item.hasClass(classAOpened)) {
+		toggleSub($item);
 		return;
 	}
 
-	$asideSub.each(function() {
-		$(this)
-			.slideUp(200)
-			.parent()
-			.removeClass(classToggle);
+	$aside.find('.' + classAOpened).each(function() {
+		toggleSub($(this));
 	});
 
-	$this
-		.addClass(classToggle)
-		.find('.' + classBlock + '__sub')
-		.slideDown(200);
+	toggleSub($item, 'open');
 });
+
+$(window).on('resize', function() {
+	if (window.innerWidth <= resMobile) return;
+
+	var $openedItem = $aside.find('.' + classAOpened);
+
+	if ($openedItem.length) {
+		toggleSub($openedItem, '', 0);
+	}
+});
+
+function toggleAside(action, speed) {
+
+	if (speed === undefined) {
+		speed = 200;
+	}
+
+	if (action == 'open') {
+		$aside.slideDown(speed);
+	} else {
+		$aside.slideToggle(speed);
+
+		$aside.find('.' + classAOpened).each(function() {
+			toggleSub($(this));
+		});
+	}
+}
+
+function toggleSub($item, action, speed) {
+
+	if (speed === undefined) {
+		speed = 200;
+	}
+
+	if (action == 'open') {
+		$item
+			.addClass(classAOpened)
+			.find('.' + classAside + '__sub')
+			.slideDown(speed);
+	} else {
+		$item
+			.removeClass(classAOpened)
+			.find('.' + classAside + '__sub')
+			.slideUp(speed, function() {
+				$item
+					.find('.' + classAside + '__sub')
+					.css('display', '');
+			});
+	}
+}
