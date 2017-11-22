@@ -21,6 +21,14 @@ $name: main;
 		margin-top: $space / 2;
 	}
 
+	&_space-top_none {
+		padding-top: 0;
+
+		@include screen-lg() {
+			padding-top: 0;
+		}
+	}
+
 	&__space-bot {
 		margin-bottom: $space;
 	}
@@ -63,11 +71,14 @@ $name: main;
 		margin: ($space / 4) 0;
 	}
 
-	&_space-top_none {
-		padding-top: 0;
+	&__btn-wrap {
+		margin-bottom: 15px;
+		width: 100%;
 
-		@include screen-lg() {
-			padding-top: 0;
+		@include screen-sm() {
+			width: auto;
+			margin-bottom: $space / 4;
+			margin-right: $space / 4;
 		}
 	}
 }

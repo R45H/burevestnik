@@ -3,3 +3,8 @@ include ../mixins/bread
 .section
 	.container
 		+bread(class= 'main__bread')
+
+		h1.title.title_left.title_lg Акционерам
+
+		each val in shareholders
+			a.btn.main__btn-wrap(href='#')= val
