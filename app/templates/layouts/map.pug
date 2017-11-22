@@ -11,7 +11,7 @@ html(lang="ru")
 		include ../partials/header
 
 		.wrapper
-			main.main
+			main.main(class= page.link == global[0].link_home ? 'main_space-top_none' : '')
 				block content
 
 			include ../partials/footer

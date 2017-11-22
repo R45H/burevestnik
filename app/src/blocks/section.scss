@@ -6,6 +6,10 @@ $name: section;
 	position: relative;
 	overflow: hidden;
 
+	&:first-child {
+		padding-top: 0;
+	}
+
 	&__fill {
 		position: absolute;
 		top: 0;

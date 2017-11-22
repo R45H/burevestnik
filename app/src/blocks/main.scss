@@ -3,14 +3,10 @@ $name: main;
 .#{$name} {
 	flex: auto;
 	position: relative;
+	padding-top: $space / 1.5;
 
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: $space;
+	@include screen-lg() {
+		padding-top: $space;
 	}
 
 	&__space-col {
@@ -43,10 +39,6 @@ $name: main;
 		}
 	}
 
-	&__slider {
-		margin-top: -($space);
-	}
-
 	&__ext-wrap {
 		display: inline-block;
 		margin-bottom: 1em;
@@ -64,6 +56,18 @@ $name: main;
 			content: '';
 			width: 1px;
 			background: $color-text-light;
+		}
+	}
+
+	&__bread {
+		margin: ($space / 4) 0;
+	}
+
+	&_space-top_none {
+		padding-top: 0;
+
+		@include screen-lg() {
+			padding-top: 0;
 		}
 	}
 }

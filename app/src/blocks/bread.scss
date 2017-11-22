@@ -1,0 +1,40 @@
+$name: bread;
+
+.#{$name} {
+	list-style-type: none;
+
+	&__item {
+		display: inline-block;
+		position: relative;
+
+		&::after {
+			content: '\f101';
+			position: absolute;
+			right: 0;
+			width: 2rem;
+			font-family: $font-fa;
+			text-align: center;
+			color: $color-gray;
+		}
+
+		&:last-child {
+
+			&::after {
+				content: none;
+			}
+		}
+	}
+
+	&__link {
+		color: $color-gray;
+		margin-right: 2rem;
+
+		&:hover {
+			color: $color-main;
+		}
+	}
+
+	&__text {
+		color: $color-text-light;
+	}
+}
