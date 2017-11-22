@@ -1,6 +1,7 @@
 include ../mixins/slider
 include ../mixins/cat
 include ../mixins/ext
+include ../components/news-wrap
 
 .section.section_space-bot_none
 	+slider(slider)(class='main__slider')
@@ -29,7 +30,7 @@ include ../mixins/ext
 	.container
 		h2.title Новости предприятия
 
-	include ../components/news-wrap
+	+news-wrap(news)
 
 .section.section_blur.section_space-bot_none(style='background-image: url(img/content/banners/03.jpg);')
 	.section__fill.section__fill_lightblue

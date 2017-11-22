@@ -2,17 +2,30 @@
 
 include ../mixins/news
 
-.news-wrap.container
-	.row.main__space-col
-		.col-lg-6.news-wrap__col
-			.news-wrap__item
-				+news(news[0], 'news_img_top')
+mixin news-wrap(data)
+	.news-wrap.container
+		.row.main__space-col
+			.col-lg-6.news-wrap__col
+				.news-wrap__item
+					+news(data[0], 'news_img_top')
 
-		.col-lg-6
-			.news-wrap__item.news-wrap__item_sm
-				+news(news[1])
-			.news-wrap__item.news-wrap__item_sm
-				+news(news[2])
+			.col-lg-6.news-wrap__col
+				.news-wrap__item.news-wrap__item_sm
+					+news(data[1])
+				.news-wrap__item.news-wrap__item_sm
+					+news(data[2])
 
-	.news-wrap__btn-wrap
-		a.btn.btn_arrow(href='#') Все новости
+			- var i = 3;
+			- while (true) {
+				if (!data[i])
+					- break;
+
+				.col-lg-6.news-wrap__col
+					.news-wrap__item
+						+news(data[i])
+
+				- i++;
+			- }
+
+		.news-wrap__btn-wrap
+			a.btn.btn_arrow(href='#') Все новости

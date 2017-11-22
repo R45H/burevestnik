@@ -6,8 +6,10 @@ var
 	$asideArrow = $asideSub.parent().find('.' + classAside + '__arrow'),
 	resMobile = 575;
 
-$asideArrow.on('click', function() {
+$asideArrow.on('click', function(e) {
 	if (window.innerWidth > resMobile) return;
+
+	e.preventDefault();
 
 	var $item = $(this).parents('.' + classAside + '__item');
 

@@ -3,9 +3,10 @@ $name: news-wrap;
 .#{$name} {
 
 	&__col {
+		padding-bottom: 15px;
 
-		@include screen-lg(max) {
-			padding-bottom: 15px;
+		@include screen-lg() {
+			padding-bottom: 30px;
 		}
 	}
 
