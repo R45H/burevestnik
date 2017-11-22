@@ -14,4 +14,8 @@ $name: title;
 	&_left {
 		text-align: left;
 	}
+
+	&_space_half {
+		margin-bottom: $space / 4;
+	}
 }

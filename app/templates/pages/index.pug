@@ -5,7 +5,7 @@ include ../mixins/ext
 .section.section_space-bot_none
 	+slider(slider)(class='main__slider')
 
-.section.section_bright.section_space-bot_half(style='background-image: url(img/content/banners/04.jpg);')
+.section.section_bright.section_space-bot_half(style='background-image: url(img/content/banners/02.jpg);')
 	.container
 		h2.title Мы производим
 
@@ -27,28 +27,28 @@ include ../mixins/ext
 
 .section
 	.container
-		h2.title Последние новости
+		h2.title Новости предприятия
 
 	include ../components/news-wrap
 
-.section.section_blur.section_space-bot_none(style='background-image: url(img/content/banners/05.jpg);')
-	.section__fill.section__fill_bright
+.section.section_blur.section_space-bot_none(style='background-image: url(img/content/banners/03.jpg);')
+	.section__fill.section__fill_lightblue
 	.container
 		.row
 			.col-md-6.col-lg-7.main__space-bot
 				h3.title.title_sm.title_left Важно! Здесь располагаются документы, предоставленные юристами
 				p Людмила Юрьевна начала свою трудовую деятельность на Электромеханическом заводе «Буревестник» сразу после окончания Ленинградского института авиационного приборостроения в июле 1992 года инженером по организации управления производством отдела организации труда, заработной платы и экономики.
 				p Пройдя долгий и насыщенный трудовой путь на предприятии и благодаря своим деловым и личным качествам, опыту практической работы, грамотному подходу к выполнению служебных обязанностей с апреля 2014 года Людмила Юрьевна назначена на должность начальника экономического управления.
-				a.btn.btn_fill.main__space-top_half(href='#') Читать далее
+				a.btn.btn_fill(href='#') Читать далее
 
 			.col-sm-1.main__space-bot.main__vert-line.hidden-sm
 
 			.col-md-5.col-lg-4.main__space-bot
-				h3.title.title_sm.title_left Файлы
+				h3.title.title_sm.title_left.title_space_half Файлы
 
 				.main__ext-wrap
 					each val in ext
 						+ext(val)(class='main__ext')
 
 				div
-					a.btn.main__space-top_half(href='#') Другие файлы
+					a.btn(href='#') Другие файлы

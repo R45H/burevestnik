@@ -2,7 +2,7 @@ $name: cat;
 
 .#{$name} {
 	display: block;
-	background: no-repeat center / cover;
+	background: white no-repeat center / contain;
 	padding-bottom: 100%;
 	position: relative;
 	text-align: center;
@@ -31,7 +31,7 @@ $name: cat;
 		color: white;
 
 		&::before {
-			background-color: $color-fog;
+			background-color: $color-fog-blue;
 		}
 
 		.#{$name} {

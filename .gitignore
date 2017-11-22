@@ -4,6 +4,7 @@ npm-debug.log
 /app/img/backup/
 /layout/
 !/layout/.gitkeep
+!/layout/notes.txt
 /app/sprites/
 !/app/sprites/.gitkeep
 /dist/

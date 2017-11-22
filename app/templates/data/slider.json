@@ -1,10 +1,5 @@
 {
 	"slider": [
-		{"img": "/img/content/banners/06.jpg"},
-		{"img": "/img/content/banners/01.jpg"},
-		{"img": "/img/content/banners/02.jpg"},
-		{"img": "/img/content/banners/03.jpg"},
-		{"img": "/img/content/banners/04.jpg"},
-		{"img": "/img/content/banners/05.jpg"}
+		{"img": "/img/content/banners/01.jpg"}
 	]
 }
