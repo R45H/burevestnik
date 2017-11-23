@@ -1,0 +1,24 @@
+$name: text;
+
+.#{$name} {
+
+	ul {
+		list-style-type: none;
+
+		li {
+			position: relative;
+			padding-left: 2em;
+			margin-bottom: .75em;
+
+			&::before {
+				content: '';
+				width: 1em;
+				height: 1em;
+				position: absolute;
+				left: 0;
+				top: .25em;
+				background: url($path + 'img/list.svg') no-repeat center / contain;
+			}
+		}
+	}
+}

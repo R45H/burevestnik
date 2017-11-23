@@ -73,6 +73,21 @@ $name: news;
 		margin-right: 1rem;
 	}
 
+	&__link {
+		color: $color-second;
+		border-bottom-color: $color-second;
+
+		&:hover {
+			color: $color-main;
+			border-bottom-color: $color-main;
+		}
+
+		&:active {
+			color: $color-main-active;
+			border-bottom-color: $color-main-active;
+		}
+	}
+
 	&__date,
 	&__link {
 		margin-bottom: 1rem;

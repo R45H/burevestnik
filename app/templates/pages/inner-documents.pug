@@ -1,0 +1,14 @@
+include ../mixins/bread
+
+.section
+	.container
+		+bread(class= 'main__bread')
+
+		h1.title= page.title
+
+		.text
+			ul
+
+				each val in inner_documents
+					li
+						a(href= val.link)= val.text
