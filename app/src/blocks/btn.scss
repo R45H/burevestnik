@@ -90,6 +90,25 @@ $name: btn;
 	&_wide {
 		width: 100%;
 	}
+
+	&_inactive {
+		color: $color-gray;
+		border-color: $color-gray;
+		background-color: white;
+		cursor: default;
+
+		&:hover,
+		&:active {
+			color: $color-gray;
+			border-color: $color-gray;
+			background-color: white;
+		}
+
+		&.#{$name}_fill {
+			background: $color-gray;
+			color: white;
+		}
+	}
 }
 
 input.#{$name} {

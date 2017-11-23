@@ -74,5 +74,15 @@ $name: menu;
 		justify-content: center;
 		border-bottom: 1px solid transparent;
 		transition: $duration ease border;
+
+		&[href='#'] {
+			color: $color-gray;
+			cursor: default;
+
+			&:hover,
+			&:active {
+				color: $color-gray;
+			}
+		}
 	}
 }

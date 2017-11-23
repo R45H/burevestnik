@@ -93,8 +93,14 @@ $name: aside;
 			}
 		}
 
-		&_active {
-
+		&[href='#'] {
+			color: $color-gray;
+			cursor: default;
+			
+			&:hover,
+			&:active {
+				background: white;
+			}
 		}
 	}
 

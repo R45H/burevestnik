@@ -4,9 +4,14 @@ include ../mixins/bread
 	.container
 		+bread(class= 'main__bread')
 
-		h1.title.title_left.title_lg Акционерам
+		h1.title.title_left.title_lg= page.title
 
 		.main__btn-wrap
-			each val in shareholders
-				.main__btn
-					a.btn.btn_wide(href='#')= val
+
+			each val in menu
+
+				if (val.name == page.title)
+
+					each sub in val.sub
+						.main__btn
+							a.btn.btn_wide(class= sub.link == '#' ? 'btn_inactive' : '' href= sub.link)= sub.name

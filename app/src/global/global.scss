@@ -49,17 +49,17 @@ a {
 
 	&:not([class]),
 	&[class=''] {
-		color: $color-second;
-		border-bottom: 1px solid $color-second;
+		color: $color-text;
+		border-bottom: 1px solid lighten($color-text, 30%);
 
 		&:hover {
-			color: $color-main;
-			border-bottom-color: $color-main;
+			color: $color-second;
+			border-bottom-color: transparent;
 		}
 
 		&:active {
-			color: $color-main-active;
-			border-bottom-color: $color-main-active;
+			color: darken($color-second, 15%);
+			border-bottom-color: transparent;
 		}
 	}
 }
