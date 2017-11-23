@@ -2,16 +2,11 @@ $name: footer;
 
 .#{$name} {
 	flex: none;
-	padding: $space / 2 0;
+	padding: $space / 4 0;
 	color: white;
 	font-size: 1.4rem;
 	position: relative;
-	background: $color-grad;
-
-	&::before {
-		content: '';
-		@extend %shadow;
-	}
+	background: $color-second-light;
 
 	&__wrap {
 		text-align: center;

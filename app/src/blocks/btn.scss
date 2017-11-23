@@ -34,13 +34,13 @@ $name: btn;
 		color: white;
 
 		&:hover {
-			background-color: $color-third;
-			border-color: $color-third;
+			background-color: $color-second;
+			border-color: $color-second;
 		}
 
 		&:active {
-			background-color: darken($color-third, 15%);
-			border-color: darken($color-third, 15%);
+			background-color: darken($color-second, 15%);
+			border-color: darken($color-second, 15%);
 		}
 	}
 

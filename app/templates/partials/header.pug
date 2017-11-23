@@ -36,7 +36,7 @@ header.header(class= page.link == global[0].link_home ? 'header_transparent' : '
 
 					each val in menu
 						li.aside__item
-							a.aside__link(href= val.link)= val.name
+							a.aside__link(href= val.link class= page.link == val.link ? 'aside__link_active' : '')= val.name
 
 								if val.sub
 									i.aside__arrow.fa.fa-angle-down
@@ -54,5 +54,5 @@ header.header(class= page.link == global[0].link_home ? 'header_transparent' : '
 					each val in menu
 
 						if !val.other
-							li.menu__item
+							li.menu__item(class= page.link == val.link ? 'menu__item_active' : '')
 								a.menu__link(href= val.link)= val.name

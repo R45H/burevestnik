@@ -53,6 +53,17 @@ $name: menu;
 				}
 			}
 		}
+
+		&_active {
+
+			.#{$name} {
+				// =====
+
+				&__link {
+					color: $color-main;
+				}
+			}
+		}
 	}
 
 	&__link {

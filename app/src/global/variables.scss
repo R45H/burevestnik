@@ -1,17 +1,15 @@
 $color-main: #ff9900;
 $color-second: #0e2ec6;
-$color-third: #00aa72;
+$color-second-light: #0b6cb5;
 $color-text: #333;
 $color-text-light: #666;
 $color-gray: #ccc;
-
-$color-grad: #2677ad;
 
 $color-webcenter-1: #ff141f;
 $color-webcenter-2: #334b61;
 
 $color-fog: rgba(black, .35);
-$color-fog-blue: rgba(#479bc1, .5);
+$color-fog-blue: rgba($color-second-light, .5);
 $color-fog-lightblue: rgba(#e6eff5, .86);
 
 $color-main-active: darken($color-main, 15%);
