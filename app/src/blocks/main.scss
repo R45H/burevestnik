@@ -72,13 +72,26 @@ $name: main;
 	}
 
 	&__btn-wrap {
-		margin-bottom: 15px;
-		width: 100%;
 
 		@include screen-sm() {
-			width: auto;
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -($space / 8);
+		}
+	}
+
+	&__btn {
+		display: block;
+		margin-bottom: 15px;
+
+		@include screen-sm() {
 			margin-bottom: $space / 4;
-			margin-right: $space / 4;
+			padding: 0 ($space / 8);
+			flex-grow: 1;
+		}
+
+		@include screen-lg() {
+			max-width: 50%;
 		}
 	}
 }

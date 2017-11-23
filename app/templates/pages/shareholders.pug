@@ -6,5 +6,7 @@ include ../mixins/bread
 
 		h1.title.title_left.title_lg Акционерам
 
-		each val in shareholders
-			a.btn.main__btn-wrap(href='#')= val
+		.main__btn-wrap
+			each val in shareholders
+				.main__btn
+					a.btn.btn_wide(href='#')= val

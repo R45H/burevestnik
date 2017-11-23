@@ -16,6 +16,7 @@ $name: btn;
 	font-family: $font-main;
 	user-select: none;
 	transition: $duration / 2 ease;
+	word-break: break-word;
 
 	&:hover {
 		background-color: $color-main;
