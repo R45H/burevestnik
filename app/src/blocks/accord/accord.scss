@@ -1,0 +1,79 @@
+$name: accord;
+
+.#{$name} {
+	border: 1px solid $color-gray;
+
+	&__panel {
+		border-bottom: 1px solid $color-gray;
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		&_opened {
+
+			.#{$name} {
+				// =====
+
+				&__head {
+
+					&::after {
+						transform: rotate(-180deg);
+					}
+				}
+
+				&__body {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&__head,
+	&__body {
+		padding: 15px;
+
+		@include screen-sm() {
+			padding: ($space / 4) ($space / 2);
+		}
+	}
+
+	&__head {
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 1.8rem;
+
+		&::after {
+			content: '\f107';
+			display: block;
+			font-family: $font-fa;
+			font-size: 2em;
+			line-height: .5;
+			margin-left: .5em;
+			transition: $duration ease transform;
+		}
+
+		&:hover {
+			color: $color-main;
+		}
+	}
+
+	&__body {
+		display: none;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 1em;
+	}
+
+	&__text {
+		padding-left: 2em;
+	}
+
+	&__btn {
+		margin-top: 1rem;
+	}
+}

@@ -8,6 +8,7 @@ $(function() {
 
 	(function() { @@include('blocks/header/header.js') }());
 	(function() { @@include('blocks/slider/slider.js') }());
+	(function() { @@include('blocks/accord/accord.js') }());
 
 	@@include('global/global.js')
 });

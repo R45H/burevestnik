@@ -1,0 +1,26 @@
+$name: subcats;
+
+.#{$name} {
+	margin: ($space / 2) 0;
+
+	@include screen-sm() {
+		display: flex;
+		flex-wrap: wrap;
+		margin: ($space / 2) (-$space / 8) ($space / 4);
+	}
+
+	&__btn {
+		display: block;
+		margin-bottom: 15px;
+
+		@include screen-sm() {
+			margin-bottom: $space / 4;
+			padding: 0 ($space / 8);
+			flex-grow: 1;
+		}
+
+		@include screen-lg() {
+			max-width: 50%;
+		}
+	}
+}

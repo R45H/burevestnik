@@ -1,0 +1,15 @@
+include ../mixins/bread
+include ../mixins/accord
+
+.section
+	.container
+		+bread(class= 'main__bread')
+
+		h1.title.title_left.title_lg= page.title
+
+		include ../components/subcats
+
+		hr.main__space-top_fourth
+		p.subtitle В настоящее время ОАО #{global[0].name} требуются на постоянную работу:
+
+		+accord(accord)

@@ -1,0 +1,9 @@
+.subcats
+
+	each val in menu
+
+		if (val.name == page.title)
+
+			each sub in val.sub
+				.subcats__btn
+					a.btn.btn_wide(class= sub.link == '#' ? 'btn_inactive' : '' href= sub.link)= sub.name

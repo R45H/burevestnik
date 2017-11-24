@@ -21,6 +21,10 @@ $name: main;
 		margin-top: $space / 2;
 	}
 
+	&__space-top_fourth {
+		margin-top: $space / 4;
+	}
+
 	&_space-top_none {
 		padding-top: 0;
 
@@ -69,29 +73,5 @@ $name: main;
 
 	&__bread {
 		margin: ($space / 4) 0;
-	}
-
-	&__btn-wrap {
-
-		@include screen-sm() {
-			display: flex;
-			flex-wrap: wrap;
-			margin: 0 -($space / 8);
-		}
-	}
-
-	&__btn {
-		display: block;
-		margin-bottom: 15px;
-
-		@include screen-sm() {
-			margin-bottom: $space / 4;
-			padding: 0 ($space / 8);
-			flex-grow: 1;
-		}
-
-		@include screen-lg() {
-			max-width: 50%;
-		}
 	}
 }

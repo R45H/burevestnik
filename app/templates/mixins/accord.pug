@@ -1,0 +1,29 @@
+//-
+	accord
+		title - заголовок
+		duties - должностные обязанности
+		demands - требования
+
+mixin accord(data)
+	.accord.js-accord_toggle
+
+		each val, i in data
+
+			.accord__panel(class= i == 0 ? 'accord__panel_opened' : '')
+				.accord__head
+					h3.accord__title= (i + 1) + '. ' + val.title
+
+				.accord__body
+					.text
+
+						p: b Должностные обязанности
+						p.accord__text= val.duties
+
+						p: b Требования:
+
+						ul
+
+							each sub in val.demands
+								li= sub
+
+					a.btn.btn_fill.accord__btn(href='#') Отправить отклик

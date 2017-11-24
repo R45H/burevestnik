@@ -4,17 +4,7 @@ $name: aside;
 	font-weight: 500;
 	list-style-type: none;
 	color: $color-text;
-	position: absolute;
-	top: 100%;
-	right: 0;
 	border: 1px solid $color-gray;
-	width: 100%;
-	display: none;
-
-	@include screen-sm() {
-		width: auto;
-		right: -15px;
-	}
 
 	&__item {
 		position: relative;
@@ -100,6 +90,18 @@ $name: aside;
 			&:hover,
 			&:active {
 				background: white;
+			}
+
+			.#{$name} {
+				// =====
+
+				&__arrow {
+					color: $color-text;
+
+					&:hover {
+						color: white;
+					}
+				}
 			}
 		}
 	}
