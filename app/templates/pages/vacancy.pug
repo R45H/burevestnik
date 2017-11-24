@@ -13,3 +13,33 @@ include ../mixins/accord
 		p.subtitle В настоящее время ОАО #{global[0].name} требуются на постоянную работу:
 
 		+accord(accord)
+
+.section.section_blur(style='background-image: url(img/content/banners/01.jpg);')
+	.section__fill.section__fill_darker
+	.container
+		h2.title.title_white Отдел кадров
+
+		.text.text_white
+
+			//- TODO Добавить иконки
+			.text-center
+				.main__cols
+
+					.main__col
+						each val in global[1].addresses[0].division[1].contacts[0].tel
+							div
+								a(href= val.link)= val.name
+
+					.main__col
+						each val in global[1].addresses[0].division[1].contacts[0].email
+							div
+								a(href= 'mailto:' + val)= val
+					.main__col
+						each val in global[1].addresses[0].division[1].contacts[0].fax
+							div
+								a(href= val.link)= val.name
+
+			hr
+
+			p Вы можете направить свое резюме по электронной почте или по факсу для рассмотрения и занесения Вашей кандидатуры в базу специалистов, в том числе и в случае, если Вы не нашли интересующую Вас вакансию.
+			p Ваши знания, опыт и компетенция могут быть востребованы в любое время.

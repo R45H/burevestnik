@@ -22,4 +22,20 @@ $name: text;
 			}
 		}
 	}
+
+	&_white {
+		color: white;
+
+		a {
+			color: white;
+
+			&:hover {
+				color: $color-main;
+			}
+
+			&:active {
+				color: $color-main-active;
+			}
+		}
+	}
 }

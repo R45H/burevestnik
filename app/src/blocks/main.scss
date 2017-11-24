@@ -74,4 +74,23 @@ $name: main;
 	&__bread {
 		margin: ($space / 4) 0;
 	}
+
+	&__cols {
+		display: inline-block;
+		text-align: left;
+
+		@include screen-sm() {
+			text-align: left;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&__col {
+		margin-bottom: $space / 4;
+
+		@include screen-sm() {
+			margin: 0;
+		}
+	}
 }
