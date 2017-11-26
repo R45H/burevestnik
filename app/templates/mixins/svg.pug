@@ -1,0 +1,3 @@
+mixin svg(fileName, classes)
+	svg(class= classes ? classes : '')
+		use(xlink:href="img/sprite.svg#" + fileName)

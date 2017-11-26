@@ -24,7 +24,9 @@ var
    fs           = require('fs'),                           // Чтение и запись файлов
    prettify     = require('gulp-jsbeautifier'),            // Форматирование JS и HTML
    replace      = require('gulp-replace'),                 // Замена текста в файлах
-   html2Pug    = require('gulp-html2pug')                  // Конвертация html в pug
+   html2Pug     = require('gulp-html2pug'),                // Конвертация html в pug
+   svgSprite    = require('gulp-svg-sprite'),              // Создание SVG спрайтов
+   svgmin       = require('gulp-svgmin')                   // Сжатие SVG
 ;
 /* ================================ */
 
@@ -153,7 +155,12 @@ gulp.task('js-libs', function() {
 
 /* ========== ТАСК "IMG" ========== */
 gulp.task('img', function() {
-	return gulp.src(app + 'img/**/*') // Берём все изображения
+	return gulp.src([ // Берём все изображения
+		app + 'img/**/*.jpg',
+		app + 'img/**/*.png',
+		app + 'img/**/*.gif'
+	])
+		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(prod ? cache(imagemin({ // Сжимаем их с наилучшими настройками с учётом кэширования
 			interlaced: true,
 			progressive: true,
@@ -161,6 +168,44 @@ gulp.task('img', function() {
 			use: [pngquant()]
 		})) : gutil.noop())
 		.pipe(gulp.dest(dist + 'img')) // Выгружаем на продакшн
+		.pipe(reload({stream: true})); // Перезагружаем сервер
+});
+/* ================================ */
+
+/* ========== ТАСК "SVG" ========== */
+gulp.task('svg', function() {
+	return gulp.src([ // Берём все svg кроме спрайта
+		app + 'img/**/*.svg',
+		'!' + app + 'img/svg-sprite/**/*.svg'
+	])
+		.pipe(plumber(err)) // Отслеживаем ошибки
+		.pipe(prod ? svgmin() : gutil.noop()) // Сжимаем
+		.pipe(gulp.dest(dist + 'img')) // Выгружаем на продакшн
+		.pipe(reload({stream: true})); // Перезагружаем сервер
+});
+/* ================================ */
+
+/* ==== ГЕНЕРАЦИЯ SVG СПРАЙТА ===== */
+gulp.task('svg-sprite', function() {
+	return gulp.src(app + 'img/svg-sprite/**/*.svg') // Берём SVG файлы
+		.pipe(plumber(err)) // Отслеживаем ошибки
+		.pipe(prod ? svgmin() : gutil.noop()) // Сжимаем
+		.pipe(svgSprite({ // Делаем спрайт
+			mode: {
+				symbol: { // Используем тег symbol
+					dest: '.', // Отключаем папку symbol
+					sprite: 'sprite.svg' // Задаём имя файла
+				}
+			},
+			shape: {
+				id: {
+					generator: function(name, file) {
+						return 'svg-' + name.slice((name.lastIndexOf('\\') + 1) || 0, name.indexOf('.')); // Добавляем префикс svg- к ID
+					}
+				}
+			}
+		}))
+		.pipe(gulp.dest(dist + 'img/')) // Выплёвываем
 		.pipe(reload({stream: true})); // Перезагружаем сервер
 });
 /* ================================ */
@@ -191,6 +236,8 @@ gulp.task('build', function(callback) {
 			'js',
 			'js-libs',
 			'img',
+			'svg',
+			'svg-sprite',
 			'fonts'
 		],
 		callback
@@ -201,12 +248,27 @@ gulp.task('build', function(callback) {
 /* ========= ТАСК "WATCH" ========= */
 gulp.task('watch', function() {
 	gulp.watch(app + '**/*.pug', ['pug']); // Наблюдение за PUG файлами
-	gulp.watch([app + 'src/**/*.scss', '!' + app + 'src/libs.scss'], ['scss']); // Наблюдение за своими SCSS файлами
+	gulp.watch([ // Наблюдение за своими SCSS файлами
+		app + 'src/**/*.scss',
+		'!' + app + 'src/libs.scss'
+	], ['scss']);
 	gulp.watch(app + 'src/libs.scss', ['css-libs']); // Наблюдение за скачанными CSS файлами
-	gulp.watch([app + 'src/**/*.js', '!' + app + 'src/libs.js'], ['js']); // Наблюдение за своими JS файлами
+	gulp.watch([ // Наблюдение за своими JS файлами
+		app + 'src/**/*.js',
+		'!' + app + 'src/libs.js'
+	], ['js']);
 	gulp.watch(app + 'src/libs.js', ['js-libs']); // Наблюдение за скачанными JS файлами
-	gulp.watch(app + 'img/*', ['img']); // Наблюдение за картинками
-	gulp.watch(app + 'fonts/*', ['fonts']); // Наблюдение за шрифтами
+	gulp.watch([ // Наблюдение за картинками
+		app + 'img/**/*.jpg',
+		app + 'img/**/*.png',
+		app + 'img/**/*.gif'
+	], ['img']);
+	gulp.watch([ // Наблюдение за всеми SVG файлами, кроме папки для спрайта
+		app + 'img/**/*.svg',
+		'!' + app + 'img/svg-sprite/**/*.svg'
+	], ['svg']);
+	gulp.watch(app + 'img/svg-sprite/**/*.svg', ['svg-sprite']); // Наблюдение за папкой с SVG файлами для спрайта
+	gulp.watch(app + 'fonts/**/*', ['fonts']); // Наблюдение за шрифтами
 	gulp.watch(app + 'templates/data/**/*.json', function() { // Наблюдение за JSON файлами
 		runSequence(
 			'json',
@@ -241,25 +303,25 @@ gulp.task('clear', function() {
 
 /* ====== СОЗДАНИЕ СПРАЙТОВ ======= */
 gulp.task('sprite', function() {
-	var spriteData = gulp.src(app + 'sprites/*.*') // путь, откуда берем картинки для спрайта
+	var data = gulp.src('sprites/*.*') // путь, откуда берем картинки для спрайта
 		.pipe(sprite({
 			imgName: 'RESULT.png',
 			cssName: 'RESULT.css'
 		}));
 
-	spriteData.img.pipe(gulp.dest(app + 'sprites/')); // путь, куда сохраняем картинку
-	spriteData.css.pipe(gulp.dest(app + 'sprites/')); // путь, куда сохраняем стили
+	data.img.pipe(gulp.dest('sprites/')); // путь, куда сохраняем картинку
+	data.css.pipe(gulp.dest('sprites/')); // путь, куда сохраняем стили
 });
 /* ================================ */
 
 /* ==== КОНВЕРТАЦИЯ HTML В PUG ==== */
 gulp.task('html2pug', function() {
-	return gulp.src(app + 'html2pug/index.html')
+	return gulp.src('html2pug/index.html')
 		.pipe(html2Pug({
 			tabs: true,
 			fragment: true
 		}))
-		.pipe(gulp.dest(app + 'html2pug'));
+		.pipe(gulp.dest('html2pug'));
 });
 /* ================================ */
 

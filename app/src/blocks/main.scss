@@ -75,7 +75,7 @@ $name: main;
 		margin: ($space / 4) 0;
 	}
 
-	&__cols {
+	&__link-wrap {
 		display: inline-block;
 		text-align: left;
 
@@ -86,7 +86,7 @@ $name: main;
 		}
 	}
 
-	&__col {
+	&__link-col {
 		margin-bottom: $space / 4;
 
 		@include screen-sm() {

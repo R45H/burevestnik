@@ -5,11 +5,11 @@ npm-debug.log
 /layout/
 !/layout/.gitkeep
 !/layout/notes.txt
-/app/sprites/
-!/app/sprites/.gitkeep
+/sprites/
+!/sprites/.gitkeep
 /dist/
 /production/
 /temp/
 /ftp/
-/app/html2pug/
-!/app/html2pug/index.html
+/html2pug/
+!/html2pug/index.html

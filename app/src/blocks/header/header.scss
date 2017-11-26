@@ -142,6 +142,7 @@ $name: header;
 
 	&__icon {
 		height: 1.2em;
+		width: 1.2em;
 		fill: white;
 
 		&_space_right {
@@ -150,9 +151,11 @@ $name: header;
 
 		&_big {
 			height: 1.4em;
+			width: 1.4em;
 		}
 
 		&_tel {
+			width: 1.2em;
 
 			@include screen-md(max) {
 				display: none;

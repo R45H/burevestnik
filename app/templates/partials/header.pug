@@ -1,7 +1,5 @@
 include ../mixins/logo
-include ../mixins/svg/svg-marker
-include ../mixins/svg/svg-tel
-include ../mixins/svg/svg-search
+include ../mixins/svg
 
 // HEADER
 header.header(class= page.link == global[0].link_home ? 'header_transparent' : '')
@@ -14,19 +12,19 @@ header.header(class= page.link == global[0].link_home ? 'header_transparent' : '
 			.header__right-top
 				.header__item
 					a.header__link(href='contacts.html')
-						+svg-marker(class='header__icon header__icon_space_right')
+						+svg('svg-marker', 'header__icon header__icon_space_right')
 						= global[1].addresses[0].city + ', ' + global[1].addresses[0].address
 
 				.header__item
 					.header__tel
-						+svg-tel(class='header__icon header__icon_space_right header__icon_tel')
+						+svg('svg-tel', 'header__icon header__icon_space_right header__icon_tel')
 						a.header__link(href= global[1].addresses[0].division[0].contacts[0].tel[0].link)= global[1].addresses[0].division[0].contacts[0].tel[0].name
 						span.header__tel-delimiter= ', '
 						a.header__link(href= global[1].addresses[0].division[0].contacts[0].tel[1].link)= global[1].addresses[0].division[0].contacts[0].tel[1].name
 
 				.header__item.header__search-wrap
 					a.header__link.header__link_full(href='#')
-						+svg-search(class='header__icon header__icon_big')
+						+svg('svg-search', 'header__icon header__icon_big')
 
 				.header__item.header__toggle-wrap
 					a.toggle.header__toggle(href='#')

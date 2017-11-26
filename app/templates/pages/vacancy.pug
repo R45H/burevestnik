@@ -23,18 +23,18 @@ include ../mixins/accord
 
 			//- TODO Добавить иконки
 			.text-center
-				.main__cols
+				.main__link-wrap
 
-					.main__col
+					.main__link-col
 						each val in global[1].addresses[0].division[1].contacts[0].tel
 							div
 								a(href= val.link)= val.name
 
-					.main__col
+					.main__link-col
 						each val in global[1].addresses[0].division[1].contacts[0].email
 							div
 								a(href= 'mailto:' + val)= val
-					.main__col
+					.main__link-col
 						each val in global[1].addresses[0].division[1].contacts[0].fax
 							div
 								a(href= val.link)= val.name
