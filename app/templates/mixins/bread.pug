@@ -4,5 +4,20 @@ mixin bread(data)
 		li.bread__item
 			a.bread__link(href= global[0].link_home) Главная
 
-		li.bread__item
-			span.bread__text= page.title
+		each val in menu
+
+			if val.link == page.link
+				li.bread__item
+					span.bread__text= val.name
+
+			else
+
+				if val.sub
+
+					each sub in val.sub
+
+						if sub.link == page.link
+							li.bread__item
+								a.bread__link(href= val.link)= val.name
+							li.bread__item
+								span.bread__text= sub.name
