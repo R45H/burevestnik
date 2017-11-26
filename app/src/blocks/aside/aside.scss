@@ -5,6 +5,7 @@ $name: aside;
 	list-style-type: none;
 	color: $color-text;
 	border: 1px solid $color-gray;
+	background: white;
 
 	&__item {
 		position: relative;

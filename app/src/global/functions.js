@@ -22,16 +22,22 @@ function getScrollbarWidth() {
 function toggleBodyScroll(noscroll) {
 	var
 		$body = $('body'),
-		noScrollClass = 'noscroll';
+		$header = $('.header'),
+		noScrollClass = 'noscroll',
+		scrollWidth = getScrollbarWidth();
 
 	if (noscroll === false) {
 		$body
 			.css('padding-right', '')
 			.removeClass(noScrollClass);
+
+		$header.css('padding-right', '');
 	} else {
 		$body
-			.css('padding-right', getScrollbarWidth())
+			.css('padding-right', scrollWidth)
 			.addClass(noScrollClass);
+
+		$header.css('padding-right', scrollWidth);
 	}
 }
 /* ========== */

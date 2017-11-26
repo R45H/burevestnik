@@ -4,6 +4,7 @@ var
 	$aside = $('.' + classAside),
 	$asideSub = $aside.find('.' + classAside + '__sub'),
 	$asideArrow = $asideSub.parent().find('.' + classAside + '__arrow'),
+	$body = $('body'),
 	resMobile = 575;
 
 $asideArrow.on('click', function(e) {
@@ -26,31 +27,26 @@ $asideArrow.on('click', function(e) {
 });
 
 $(window).on('resize', function() {
-	if (window.innerWidth <= resMobile) return;
 
+	if (window.innerWidth <= resMobile) {
+
+		if ($toggle.hasClass(classTActive) && !$body.hasClass('noscroll')) {
+			toggleBodyScroll(true);
+		}
+		return;
+	}
+
+	if ($toggle.hasClass(classTActive) && $body.hasClass('noscroll')) {
+		toggleBodyScroll(false);
+	}
+
+	// Закрываем на десктопе открытые подменю
 	var $openedItem = $aside.find('.' + classAOpened);
-
 	if ($openedItem.length) {
 		toggleSub($openedItem, '', 0);
 	}
+	// =====
 });
-
-function toggleAside(action, speed) {
-
-	if (speed === undefined) {
-		speed = 200;
-	}
-
-	if (action == 'open') {
-		$aside.slideDown(speed);
-	} else {
-		$aside.slideToggle(speed);
-
-		$aside.find('.' + classAOpened).each(function() {
-			toggleSub($(this));
-		});
-	}
-}
 
 function toggleSub($item, action, speed) {
 

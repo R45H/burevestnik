@@ -10,7 +10,7 @@ $name: header;
 	transform: translate3d(0, 0, 0);
 	background: $color-second-light;
 	color: white;
-	transition: $duration ease;
+	transition: $duration ease height;
 
 	@include screen-lg() {
 		height: $space;
@@ -197,6 +197,11 @@ $name: header;
 		@include screen-sm() {
 			right: -15px;
 			width: auto;
+		}
+
+		@include screen-sm(max) {
+			max-height: calc(100vh - 6.66667rem);
+			overflow: auto;
 		}
 	}
 

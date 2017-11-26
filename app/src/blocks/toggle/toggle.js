@@ -42,3 +42,28 @@ $(document).on('click', function(event) {
 	toggleAside('close', 75);
 });
 /* ===== */
+
+function toggleAside(action, speed) {
+
+	if (speed === undefined) {
+		speed = 200;
+	}
+
+	if (action == 'open') {
+		$aside.slideDown(speed);
+
+		if (window.innerWidth <= resMobile) {
+			toggleBodyScroll(true);
+		}
+	} else {
+		$aside.slideToggle(speed);
+
+		$aside.find('.' + classAOpened).each(function() {
+			toggleSub($(this));
+		});
+
+		if (window.innerWidth <= resMobile) {
+			toggleBodyScroll(false);
+		}
+	}
+}
