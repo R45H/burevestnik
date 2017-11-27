@@ -3,7 +3,6 @@ node_modules/
 npm-debug.log
 /app/img/backup/
 /layout/
-!/layout/.gitkeep
 !/layout/notes.txt
 /sprites/
 !/sprites/.gitkeep
