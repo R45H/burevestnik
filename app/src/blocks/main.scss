@@ -93,4 +93,32 @@ $name: main;
 			margin: 0;
 		}
 	}
+
+	&__link-i {
+		display: inline-flex;
+		align-items: center;
+
+		&:hover {
+
+			.#{$name}__link-icon {
+				fill: $color-main;
+			}
+
+			a {
+				color: $color-main;
+				border-bottom-color: transparent;
+			}
+		}
+
+		&_space {
+			margin-left: 2.6rem;
+		}
+	}
+
+	&__link-icon {
+		width: 1.6rem;
+		height: 1.6rem;
+		fill: white;
+		margin-right: 1rem;
+	}
 }

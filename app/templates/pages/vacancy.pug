@@ -1,5 +1,6 @@
 include ../mixins/bread
 include ../mixins/accord
+include ../mixins/svg
 
 .section
 	.container
@@ -21,23 +22,24 @@ include ../mixins/accord
 
 		.text.text_white
 
-			//- TODO Добавить иконки
 			.text-center
 				.main__link-wrap
 
-					.main__link-col
-						each val in global[1].addresses[0].division[1].contacts[0].tel
-							div
-								a(href= val.link)= val.name
+					each outerVal in ['tel', 'email', 'fax']
 
-					.main__link-col
-						each val in global[1].addresses[0].division[1].contacts[0].email
-							div
-								a(href= 'mailto:' + val)= val
-					.main__link-col
-						each val in global[1].addresses[0].division[1].contacts[0].fax
-							div
-								a(href= val.link)= val.name
+						.main__link-col
+
+							each val, i in global[1].addresses[0].division[1].contacts[0][outerVal]
+								div
+									div.main__link-i(class= i != 0 ? 'main__link-i_space' : '')
+
+										if i == 0
+											+svg(outerVal, 'main__link-icon')
+
+										if outerVal == 'email'
+											a(href= 'mailto:' + val)= val
+										else
+											a(href= val.link)= val.name
 
 			hr
 

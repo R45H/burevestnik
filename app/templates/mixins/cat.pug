@@ -7,5 +7,5 @@ mixin cat(data)
 		style='background-image: url(' + data.img + ');'
 	)
 		.cat__wrap
-			+svg('svg-' + data.icon, 'cat__icon')
+			+svg(data.icon, 'cat__icon')
 			p.cat__name= data.name
