@@ -54,10 +54,7 @@ $name: main;
 	&__ext-wrap {
 		display: inline-block;
 		margin-bottom: 1em;
-	}
-
-	&__ext {
-		padding: .25em 0;
+		margin-top: -($ext-space);
 	}
 
 	&__vert-line {
@@ -120,5 +117,10 @@ $name: main;
 		height: 1.6rem;
 		fill: white;
 		margin-right: 1rem;
+	}
+
+	&__text-wrap {
+		margin-bottom: $ext-space;
+		overflow: hidden;
 	}
 }

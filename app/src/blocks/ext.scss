@@ -3,6 +3,8 @@ $name: ext;
 .#{$name} {
 	display: flex;
 	align-items: flex-end;
+	position: relative;
+	padding: $ext-space 0;
 
 	&:hover {
 		color: $color-main;
@@ -14,12 +16,14 @@ $name: ext;
 
 	&__img {
 		height: 2em;
-		width: 1.8em;
-		margin-right: .5em;
+		width: $ext-img-space;
+		position: absolute;
+		left: 0;
+		top: 0;
 	}
 
 	&__wrap {
-
+		padding-left: $ext-img-space + .5em;
 	}
 
 	&__text {

@@ -13,7 +13,7 @@
 			"link": "#"
 		},
 		{
-			"name": "Арматура для нефтегазовых промыслов",
+			"name": "Промышленная арматура",
 			"icon": "oil-platform",
 			"img": "img/content/production/03.jpg",
 			"link": "#"
@@ -32,7 +32,7 @@
 		},
 		{
 			"name": "Изделия из пластмасс",
-			"icon": "tank",
+			"icon": "basket",
 			"img": "img/content/production/06.jpg",
 			"link": "#"
 		}
