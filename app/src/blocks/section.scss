@@ -124,4 +124,12 @@ $name: section;
 	&_space-bot_none {
 		padding-bottom: 0;
 	}
+
+	&_space-top_half {
+		padding-top: $space / 2;
+	}
+
+	&_space-top_none {
+		padding-top: 0;
+	}
 }

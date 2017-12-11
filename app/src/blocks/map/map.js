@@ -5,13 +5,13 @@ function initMap() {
 	if (!$map.length || $map.is(':hidden')) return;
 
 	/* Точки */
-	var dot1 = {lat: 59.940776, lng: 30.369471}; // Адрес 1
+	var dot1 = {lat: 59.563510, lng: 30.135450}; // г. Гатчина, ул. Соборная, 31
 	/* ===== */
 
 	/* Карты */
 	if (document.getElementById('map')) { // Карта 1
 		var map1 = new google.maps.Map(document.getElementById('map'), {
-			zoom: 13,
+			zoom: 15,
 			center: dot1,
 			scrollwheel: false,
 			mapTypeControl: true,
@@ -24,7 +24,7 @@ function initMap() {
 		});
 
 		/* Образец карточки */
-		var contentString1 = '<div class="map__info">Адрес 1</div>';
+		var contentString1 = '<div class="map__info">188305, Россия, Ленинградская обл,<br>г. Гатчина, ул. Соборная, 31</div>';
 		/* ================ */
 
 		/* Рамка */
@@ -34,9 +34,12 @@ function initMap() {
 		/* ===== */
 
 		/* Маркеры */
+		var image = 'img/map-marker.png';
+
 		var marker1 = new google.maps.Marker({
 			position: dot1,
-			map: map1
+			map: map1,
+			icon: image
 		});
 
 		marker1.addListener('click', function() {

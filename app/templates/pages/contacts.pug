@@ -2,7 +2,7 @@ include ../mixins/bread
 include ../mixins/accord
 include ../mixins/svg
 
-.section.section_space-bot_none
+.section
 	.container
 		+bread(class= 'main__bread')
 
@@ -18,7 +18,7 @@ include ../mixins/svg
 
 		p.subtitle.subtitle_space_none.text-center= fullAddress
 
-.section
+.section.section_space-top_none
 	.container
 		.grid
 
@@ -61,3 +61,9 @@ include ../mixins/svg
 										span!= ',&nbsp;'
 
 									a.link.link-icon__link(href= contact.link)= contact.name
+
+.section.section_space-top_none.section_space-bot_none
+	.container
+		h2.title Карта проезда
+
+	#map.map
