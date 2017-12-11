@@ -4,4 +4,12 @@ $name: subtitle;
 	font-size: 1.8rem;
 	font-weight: 700;
 	margin-bottom: $space / 2;
+
+	&_space_half {
+		margin-bottom: $space / 4;
+	}
+
+	&_space_none {
+		margin-bottom: 0;
+	}
 }

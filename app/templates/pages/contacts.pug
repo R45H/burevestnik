@@ -1,0 +1,63 @@
+include ../mixins/bread
+include ../mixins/accord
+include ../mixins/svg
+
+.section.section_space-bot_none
+	.container
+		+bread(class= 'main__bread')
+
+		h1.title.title_left.title_lg= page.title
+
+		hr
+
+		h2.title Адрес
+
+		- var fullAddress = '';
+		each val in ['index', 'country', 'region', 'city', 'address']
+			- fullAddress += global[1].addresses[0][val] + ', ';
+
+		p.subtitle.subtitle_space_none.text-center= fullAddress
+
+.section
+	.container
+		.grid
+
+			each val, i in global[1].addresses[0].division
+				.grid__col.grid__col_sm_6
+					p.subtitle.subtitle_space_half= i + 1 + '. ' + val.name
+
+					if (val.contacts[0].tel)
+						.link-icon.main__l-icon
+							+svg('tel', 'link-icon__icon')
+
+							.link-icon__i
+								each contact, i in val.contacts[0].tel
+
+									if i
+										span!= ',&nbsp;'
+
+									a.link.link-icon__link(href= contact.link)= contact.name
+
+					if (val.contacts[0].email)
+						.link-icon.main__l-icon
+							+svg('email', 'link-icon__icon')
+
+							.link-icon__i
+								each contact, i in val.contacts[0].email
+
+									if i
+										span!= ',&nbsp;'
+
+									a.link.link-icon__link(href= contact)= contact
+
+					if (val.contacts[0].fax)
+						.link-icon.main__l-icon
+							+svg('fax', 'link-icon__icon')
+
+							.link-icon__i
+								each contact, i in val.contacts[0].fax
+
+									if i
+										span!= ',&nbsp;'
+
+									a.link.link-icon__link(href= contact.link)= contact.name

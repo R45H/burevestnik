@@ -179,7 +179,13 @@ gulp.task('svg', function() {
 		'!' + app + 'img/svg-sprite/**/*.svg'
 	])
 		.pipe(plumber(err)) // Отслеживаем ошибки
-		.pipe(prod ? svgmin() : gutil.noop()) // Сжимаем
+		.pipe(prod ? svgmin({
+			plugins: [
+				{
+					mergePaths: false
+				}
+			]
+		}) : gutil.noop()) // Сжимаем
 		.pipe(gulp.dest(dist + 'img')) // Выгружаем на продакшн
 		.pipe(reload({stream: true})); // Перезагружаем сервер
 });

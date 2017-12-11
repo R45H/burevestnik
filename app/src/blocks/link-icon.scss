@@ -1,0 +1,24 @@
+$name: link-icon;
+
+.#{$name} {
+	position: relative;
+
+	&__icon {
+		width: 1.6rem;
+		height: 1.6rem;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		fill: $color-second;
+	}
+
+	&__i {
+		margin-left: 1.6rem * 1.5;
+		white-space: normal;
+	}
+
+	&__link {
+		display: inline-block;
+	}
+}

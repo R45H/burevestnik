@@ -1,0 +1,42 @@
+$name: grid;
+
+.#{$name} {
+	display: flex;
+	flex-wrap: wrap;
+	
+	&__col {
+		width: 100%;
+		padding: 15px;
+		border: 1px solid $color-gray;
+		border-bottom-color: transparent;
+
+		@include screen-sm() {
+			padding: 3rem 6rem;
+		}
+
+		&:last-child {
+			border-bottom-color: $color-gray;
+		}
+
+		&_sm_6 {
+
+			@include screen-sm() {
+				width: 50%;
+			}
+
+			&:nth-child(odd) {
+
+				@include screen-sm() {
+					border-right-color: transparent;
+				}
+			}
+
+			&:nth-last-child(2) {
+
+				@include screen-sm() {
+					border-bottom-color: $color-gray;
+				}
+			}
+		}
+	}
+}
