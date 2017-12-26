@@ -1,0 +1,150 @@
+$name: input;
+
+.#{$name} {
+	display: block;
+	width: 100%;
+	position: relative;
+	font-size: 1.8rem;
+	color: $color-light;
+
+	&__title {
+		line-height: 1.4em;
+		font-style: italic;
+		position: absolute;
+		top: .4em;
+		left: .6em;
+		cursor: text;
+		font-weight: 300;
+		transition: $duration / 2 ease;
+		user-select: none;
+		pointer-events: none;
+		padding-left: 2.8em;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 1.4em;
+			height: 1.4em;
+			background: no-repeat center / contain;
+			position: absolute;
+			top: 50%;
+			left: .6em;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__item {
+		display: block;
+		width: 100%;
+		height: 100%;
+		line-height: 1.4em;
+		-webkit-appearance: none;
+		border-radius: 0;
+		border: 1px solid $color-light;
+		padding: .4em .6em;
+		background: transparent;
+		font-family: $font-main;
+		font-weight: 300;
+		color: $color-text;
+
+		@include input-autofill($color-light, $color-light, transparent);
+
+		&textarea {
+			height: 4.5em;
+		}
+	}
+
+	&_space_bot {
+		margin-bottom: 30px;
+	}
+
+	&_invalid {
+		color: $color-error;
+
+		.#{$name} {
+			// =====
+
+			&__item {
+				border-color: $color-error;
+				color: $color-error;
+			}
+		}
+	}
+
+	&_focus &__title {
+		top: -1.6em;
+		font-size: 1.4rem;
+	}
+
+	&_name &__title::before {
+		background-image: url($path + 'img/icons/user-fill.svg');
+	}
+
+	&_email &__title::before {
+		background-image: url($path + 'img/icons/email-fill.svg');
+	}
+
+	&_tel &__title::before {
+		background-image: url($path + 'img/icons/tel-fill.svg');
+	}
+
+	&_message &__title::before {
+		background-image: url($path + 'img/icons/mess-fill.svg');
+	}
+
+	&_white {
+		color: $color-gray;
+
+		&.#{$name} {
+
+			&_name {
+
+				.#{$name} {
+
+					&__title::before {
+						background-image: url($path + 'img/icons/white-user-fill.svg');
+					}
+				}
+			}
+
+			&_email {
+
+				.#{$name} {
+
+					&__title::before {
+						background-image: url($path + 'img/icons/white-email-fill.svg');
+					}
+				}
+			}
+
+			&_tel {
+
+				.#{$name} {
+
+					&__title::before {
+						background-image: url($path + 'img/icons/white-tel-fill.svg');
+					}
+				}
+			}
+
+			&_message {
+
+				.#{$name} {
+
+					&__title::before {
+						background-image: url($path + 'img/icons/white-mess-fill.svg');
+					}
+				}
+			}
+		}
+
+		.#{$name} {
+			// =====
+
+			&__item {
+				border-color: white;
+				color: white;
+			}
+		}
+	}
+}

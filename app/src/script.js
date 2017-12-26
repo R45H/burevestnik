@@ -1,5 +1,4 @@
 $(function() {
-	@@include('blocks/map/map.js')
 
 	(function() {
 		@@include('blocks/toggle/toggle.js')
@@ -9,6 +8,7 @@ $(function() {
 	(function() { @@include('blocks/header/header.js') }());
 	(function() { @@include('blocks/slider/slider.js') }());
 	(function() { @@include('blocks/accord/accord.js') }());
+	(function() { @@include('blocks/input/input.js') }());
 
 	@@include('global/global.js')
 });

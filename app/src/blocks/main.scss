@@ -95,18 +95,6 @@ $name: main;
 		display: inline-flex;
 		align-items: center;
 
-		&:hover {
-
-			.#{$name}__link-icon {
-				fill: $color-main;
-			}
-
-			a {
-				color: $color-main;
-				border-bottom-color: transparent;
-			}
-		}
-
 		&_space {
 			margin-left: 2.6rem;
 		}
@@ -126,5 +114,9 @@ $name: main;
 
 	&__l-icon {
 		margin: 1em 0;
+	}
+
+	&__flex {
+		display: flex;
 	}
 }
