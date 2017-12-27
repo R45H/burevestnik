@@ -1,9 +1,10 @@
 include ../mixins/bread
 
-.section
+.section.section_space-bot_none
 	.container
 		+bread(class= 'main__bread')
-
 		h1.title.title_left.title_lg= page.title
 
+.section
+	.container
 		include ../components/subcats

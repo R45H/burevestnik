@@ -3,23 +3,24 @@ include ../mixins/accord
 include ../mixins/svg
 include ../mixins/input
 
-.section
+.section.section_space-bot_none
 	.container
 		+bread(class= 'main__bread')
-
 		h1.title.title_left.title_lg= page.title
 
-		hr
+.section
+	.container
+		hr.main__space-bot
 
-		h2.title Адрес
+		h2.title.main__space-bot Адрес
 
 		- var fullAddress = '';
 		each val in ['index', 'country', 'region', 'city', 'address']
 			- fullAddress += global[1].addresses[0][val] + ', ';
 
-		p.subtitle.subtitle_space_none.text-center= fullAddress
+		p.subtitle.text-center= fullAddress
 
-.section.section_space-top_none
+.section
 	.container
 		.grid
 
@@ -63,16 +64,16 @@ include ../mixins/input
 
 									a.link.link-icon__link(href= contact.link)= contact.name
 
-.section.section_space-top_none.section_space-bot_none
+.section.section_space-bot_none
 	.container
-		h2.title Карта проезда
+		h2.title.main__space-bot Карта проезда
 
 	#map.map
 
-.section.section_blur(style='background-image: url(img/content/banners/01.jpg);')
+.section.section_space_big.section_blur(style='background-image: url(img/content/banners/01.jpg);')
 	.section__fill.section__fill_darker
 	.container
-		h3.subtitle.subtitle_white Для связи с нами Вы можете воспользоваться формой, расположенной ниже:
+		h3.subtitle.subtitle_white.main__space-bot Для связи с нами Вы можете воспользоваться формой, расположенной ниже:
 
 		.row
 			.col-sm-4.col-lg-3.main__space-col

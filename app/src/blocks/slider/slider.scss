@@ -20,7 +20,7 @@ $name: slider;
 		justify-content: center;
 		align-items: center;
 		position: relative;
-		padding: ($space * 1.5) 0;
+		padding: ($space * .75) 0;
 	}
 
 	&__title {
@@ -32,7 +32,7 @@ $name: slider;
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
-		bottom: $space / 2;
+		bottom: $space;
 
 		@include screen-sm(max) {
 			left: 0;

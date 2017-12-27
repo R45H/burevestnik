@@ -5,7 +5,7 @@ $name: header;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: $space / 1.5;
+	height: $space / .75;
 	z-index: 50;
 	transform: translate3d(0, 0, 0);
 	background: $color-second-light;
@@ -13,7 +13,7 @@ $name: header;
 	transition: $duration ease height;
 
 	@include screen-lg() {
-		height: $space;
+		height: $space * 2;
 	}
 
 	&:not(.#{$name}_transparent) {
@@ -47,7 +47,7 @@ $name: header;
 		transition: $duration ease;
 
 		@include screen-sm() {
-			margin-right: $space / 2;
+			margin-right: $space;
 		}
 
 		@include screen-lg() {
@@ -220,7 +220,7 @@ $name: header;
 	&_collapse {
 
 		@include screen-lg() {
-			height: $space / 1.5;
+			height: $space / .75;
 		}
 
 		.#{$name} {

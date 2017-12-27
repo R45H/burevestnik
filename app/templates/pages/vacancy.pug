@@ -2,23 +2,25 @@ include ../mixins/bread
 include ../mixins/accord
 include ../mixins/svg
 
-.section
+.section.section_space-bot_none
 	.container
 		+bread(class= 'main__bread')
-
 		h1.title.title_left.title_lg= page.title
+
+.section
+	.container
 
 		include ../components/subcats
 
-		hr.main__space-top_fourth
-		p.subtitle В настоящее время ОАО #{global[0].name} требуются на постоянную работу:
+		hr.main__space-bot
+		p.subtitle.main__space-bot В настоящее время ОАО #{global[0].name} требуются на постоянную работу:
 
 		+accord(accord)
 
-.section.section_blur(style='background-image: url(img/content/banners/01.jpg);')
+.section.section_space_big.section_blur(style='background-image: url(img/content/banners/01.jpg);')
 	.section__fill.section__fill_darker
 	.container
-		h2.title.title_white Отдел кадров
+		h2.title.title_white.main__space-bot Отдел кадров
 
 		.text.text_white
 
@@ -41,7 +43,7 @@ include ../mixins/svg
 										else
 											a(href= val.link)= val.name
 
-			hr
+			hr.main__space
 
 			p Вы можете направить свое резюме по электронной почте или по факсу для рассмотрения и занесения Вашей кандидатуры в базу специалистов, в том числе и в случае, если Вы не нашли интересующую Вас вакансию.
 			p Ваши знания, опыт и компетенция могут быть востребованы в любое время.

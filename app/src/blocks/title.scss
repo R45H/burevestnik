@@ -4,8 +4,7 @@ $name: title;
 	font-size: 4.8rem;
 	text-align: center;
 	font-weight: 400;
-	margin-bottom: $space / 2;
-	line-height: 1.1;
+	line-height: 1.2;
 
 	&_sm {
 		font-size: 3.6rem;
@@ -18,10 +17,6 @@ $name: title;
 
 	&_left {
 		text-align: left;
-	}
-
-	&_space_half {
-		margin-bottom: $space / 4;
 	}
 
 	&_white {

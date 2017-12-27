@@ -2,7 +2,7 @@ $name: footer;
 
 .#{$name} {
 	flex: none;
-	padding: $space / 4 0;
+	padding: ($space / 2) 0;
 	color: white;
 	font-size: 1.4rem;
 	position: relative;

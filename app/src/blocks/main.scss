@@ -3,41 +3,45 @@ $name: main;
 .#{$name} {
 	flex: auto;
 	position: relative;
-	padding-top: $space / 1.5;
+	padding-top: $space / .75;
 
 	@include screen-lg() {
-		padding-top: $space;
+		padding-top: $space * 2;
 	}
 
 	&__space-col {
 		padding-bottom: 30px;
 	}
 
+	&__space {
+		margin: $space 0;
+	}
+
 	&__space-top {
 		margin-top: $space;
-	}
-
-	&__space-top_half {
-		margin-top: $space / 2;
-	}
-
-	&__space-top_fourth {
-		margin-top: $space / 4;
-	}
-
-	&_space-top_none {
-		padding-top: 0;
-
-		@include screen-lg() {
-			padding-top: 0;
-		}
 	}
 
 	&__space-bot {
 		margin-bottom: $space;
 	}
 
-	&__space-bot_half {
+	&__space-big {
+		margin: $space * 2;
+	}
+
+	&__space-top-big {
+		margin-top: $space * 2;
+	}
+
+	&__space-bot-big {
+		margin-bottom: $space * 2;
+	}
+
+	&__space-top-half {
+		margin-top: $space / 2;
+	}
+
+	&__space-bot-half {
 		margin-bottom: $space / 2;
 	}
 
@@ -46,7 +50,7 @@ $name: main;
 		margin: 0 auto 30px;
 
 		@include screen-lg() {
-			margin-bottom: $space / 2;
+			margin-bottom: $space;
 			flex-grow: 1;
 		}
 	}
@@ -69,7 +73,7 @@ $name: main;
 	}
 
 	&__bread {
-		margin: ($space / 4) 0;
+		margin: ($space / 2) 0;
 	}
 
 	&__link-wrap {
@@ -84,7 +88,7 @@ $name: main;
 	}
 
 	&__link-col {
-		margin-bottom: $space / 4;
+		margin-bottom: $space / 2;
 
 		@include screen-sm() {
 			margin: 0;
@@ -118,5 +122,13 @@ $name: main;
 
 	&__flex {
 		display: flex;
+	}
+
+	&_space-top_none {
+		padding-top: 0;
+
+		@include screen-lg() {
+			padding-top: 0;
+		}
 	}
 }

@@ -117,19 +117,27 @@ $name: section;
 		}
 	}
 
-	&_space-bot_half {
-		padding-bottom: $space / 2;
+	&_space_big {
+		padding: ($space * 2) 0;
 	}
 
-	&_space-bot_none {
-		padding-bottom: 0;
+	&_space-top_big {
+		padding-top: $space * 2;
 	}
 
-	&_space-top_half {
-		padding-top: $space / 2;
+	&_space-bot_big {
+		padding-bottom: $space * 2;
+	}
+
+	&_space_none {
+		padding: 0;
 	}
 
 	&_space-top_none {
 		padding-top: 0;
+	}
+
+	&_space-bot_none {
+		padding-bottom: 0;
 	}
 }

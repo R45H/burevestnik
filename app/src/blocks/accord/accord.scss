@@ -34,7 +34,7 @@ $name: accord;
 		padding: 15px;
 
 		@include screen-sm() {
-			padding: ($space / 4) ($space / 2);
+			padding: ($space / 2) $space;
 		}
 	}
 

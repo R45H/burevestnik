@@ -26,6 +26,13 @@ $name: news-wrap;
 					padding-top: 15px;
 				}
 			}
+
+			&:only-child {
+
+				@include screen-lg() {
+					padding-top: 0;
+				}
+			}
 		}
 	}
 

@@ -3,10 +3,10 @@ include ../mixins/cat
 include ../mixins/ext
 include ../components/news-wrap
 
-.section.section_space-bot_none
+.section.section_space_none
 	+slider(slider)
 
-.section.section_bright.section_space-bot_half(style='background-image: url(img/content/banners/02.jpg);')
+.section.section_space-top_big.section_bright(style='background-image: url(img/content/banners/02.jpg);')
 	.container
 		h1.title Производства завода
 			br
@@ -28,26 +28,26 @@ include ../components/news-wrap
 				else
 					- cnt++
 
-.section
+.section.section_space_big
 	.container
 		h2.title Новости предприятия
 
 	+news-wrap(news)
 
-.section.section_blur.section_space-bot_none(style='background-image: url(img/content/banners/03.jpg);')
+.section.section_space_big.section_space-bot_none.section_blur(style='background-image: url(img/content/banners/03.jpg);')
 	.section__fill.section__fill_lightblue
 	.container
 		.row
-			.col-md-6.col-lg-7.main__space-bot
+			.col-md-6.col-lg-7.main__space-bot-big
 				h3.title.title_sm.title_left Документы
 				.main__text-wrap
 					p Людмила Юрьевна начала свою трудовую деятельность на Электромеханическом заводе «Буревестник» сразу после окончания Ленинградского института авиационного приборостроения в июле 1992 года инженером по организации управления производством отдела организации труда, заработной платы и экономики.
 					p Пройдя долгий и насыщенный трудовой путь на предприятии и благодаря своим деловым и личным качествам, опыту практической работы, грамотному подходу к выполнению служебных обязанностей с апреля 2014 года Людмила Юрьевна назначена на должность начальника экономического управления.
 				a.btn.btn_fill(href='#') Читать далее
 
-			.col-sm-1.main__space-bot.main__vert-line.hidden-sm
+			.col-sm-1.main__space-bot-big.main__vert-line.hidden-sm
 
-			.col-md-5.col-lg-4.main__space-bot
+			.col-md-5.col-lg-4.main__space-bot-big
 				h3.title.title_sm.title_left Файлы
 
 				.main__ext-wrap
