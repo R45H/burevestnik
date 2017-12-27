@@ -34,7 +34,7 @@ function initMap() {
 		/* ===== */
 
 		/* Маркеры */
-		var image = 'img/map-marker.png';
+		var image = 'img/map-marker.svg';
 
 		var marker1 = new google.maps.Marker({
 			position: dot1,
