@@ -1,6 +1,7 @@
 include ../mixins/bread
 include ../mixins/accord
 include ../mixins/svg
+include ../mixins/input
 
 .section
 	.container
@@ -67,3 +68,29 @@ include ../mixins/svg
 		h2.title Карта проезда
 
 	#map.map
+
+.section.section_blur(style='background-image: url(img/content/banners/01.jpg);')
+	.section__fill.section__fill_darker
+	.container
+		h3.subtitle.subtitle_white Для связи с нами Вы можете воспользоваться формой, расположенной ниже:
+
+		.row
+			.col-sm-4.col-lg-3.main__space-col
+				+input({
+					title: 'Имя',
+					cls: ['name', 'space_bot', 'white']
+				})
+				+input({
+					title: 'E-mail',
+					cls: ['email', 'white']
+				})
+
+			.col-sm-8.col-lg-6.main__space-col.main__flex
+				+input({
+					title: 'Сообщение',
+					cls: ['message', 'white'],
+					textarea: true
+				})
+
+			.col-sm-8.push-sm-4.col-lg-3.push-lg-0.main__space-col
+				input.btn.btn_fill.btn_wide(type='submit' value='Отправить отклик')

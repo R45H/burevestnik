@@ -16,6 +16,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/accord/accord.js'
 	}());
+	(function() {
+		//=require 'blocks/input/input.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

@@ -18,7 +18,7 @@ $name: text;
 				position: absolute;
 				left: 0;
 				top: .25em;
-				background: url($path + 'img/list.svg') no-repeat center / contain;
+				background: url($path + 'img/icons/list.svg') no-repeat center / contain;
 			}
 		}
 	}
@@ -32,6 +32,7 @@ $name: text;
 
 			&:hover {
 				color: $color-main;
+				border-color: rgba(lighten($color-main, 20%), .5);
 			}
 
 			&:active {

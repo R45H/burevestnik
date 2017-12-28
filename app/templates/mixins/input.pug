@@ -1,0 +1,15 @@
+mixin input(options)
+	- var tag = options.textarea ? 'textarea' : 'input';
+	- var classes = '';
+
+	if (options.cls)
+		each val, i in options.cls
+			- classes += 'input_' + val;
+			- if (options.cls.length > i + 1) {
+				- classes += ' ';
+			- }
+
+
+	label.input(class= classes || '')
+		#{tag}.input__item(type='text')
+		span.input__title= options.title

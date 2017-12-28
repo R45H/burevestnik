@@ -56,12 +56,11 @@ a {
 
 		&:hover {
 			color: $color-second;
-			border-bottom-color: transparent;
+			border-bottom-color: lighten($color-second, 40%);
 		}
 
 		&:active {
-			color: darken($color-second, 15%);
-			border-bottom-color: transparent;
+			color: lighten($color-second, 25%);
 		}
 	}
 }
