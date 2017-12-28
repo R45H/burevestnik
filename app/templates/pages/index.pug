@@ -1,32 +1,12 @@
 include ../mixins/slider
-include ../mixins/cat
 include ../mixins/ext
 include ../components/news-wrap
+include ../components/manufacture
 
 .section.section_space_none
 	+slider(slider)
 
-.section.section_space-top_big.section_bright(style='background-image: url(img/content/banners/02.jpg);')
-	.container
-		h1.title.main__space-bot Производства завода
-			br
-			| ОАО #{global[0].name}
-
-		.row.justify-content-between
-
-			- var cnt = 0
-			each val in cat
-
-				if cnt
-					.hidden-md.col-lg-1
-
-				.col-sm-6.col-md-4.col-lg-3.main__cat-wrap
-					+cat(val)
-
-				if cnt == 2
-					- cnt = 0
-				else
-					- cnt++
++manufacture
 
 .section.section_space_big
 	.container

@@ -200,6 +200,7 @@ $name: header;
 		@include screen-sm() {
 			right: -15px;
 			width: auto;
+			min-width: 25rem;
 		}
 
 		@include screen-sm(max) {

@@ -1,4 +1,8 @@
-﻿http://gdkdc6.axshare.com/#g=1&p=главная
+﻿Прототип:
+http://gdkdc6.axshare.com/#g=1&p=главная
+
+Макеты:
 https://yadi.sk/d/uOBRPVtw3Pvhtc
 
-Не перенесена страница контактов
+Последнее обновление FTP:
+1889049 R45H <gmr45h@gmail.com> on 28.12.2017 at 9:09
