@@ -5,7 +5,7 @@ mixin news(data, mod)
 			.news__img(style= 'background-image: url(' + data.img + ');' )
 
 		.news__text-wrap
-			a.subtitle.news__title(href= data.link)= data.title
+			a.subtitle.link.link_white.news__title(href= data.link)= data.title
 			.news__text-i
 				span.news__date= data.date
 				a.link.news__link(href= data.link) Читать далее

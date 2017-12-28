@@ -1,0 +1,59 @@
+$name: check;
+
+.#{$name} {
+
+	&__input {
+		display: none;
+
+		&:checked {
+
+			+ label {
+
+				&::before {
+					color: $color-second-light;
+				}
+
+				&:hover {
+
+					&::before {
+						transition: none;
+						color: $color-main;
+					}
+				}
+			}
+		}
+	}
+
+	&__label {
+		display: block;
+		padding: .5em 0 .5em 2em;
+		position: relative;
+		font-size: 1.6rem;
+		cursor: pointer;
+
+		&::before {
+			content: '\2714';
+			display: block;
+			width: 1.6rem;
+			height: 1.6rem;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -.8rem;
+			border: 1px solid $color-gray;
+			background: white;
+			color: transparent;
+			line-height: 0.3em;
+			font-size: 1.3em;
+			transition: $duration / 2 ease-in color;
+		}
+
+		&:hover {
+			color: $color-main;
+
+			&::before {
+				border-color: $color-main;
+			}
+		}
+	}
+}

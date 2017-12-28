@@ -2,4 +2,18 @@ $name: link;
 
 .#{$name} {
 	@extend a:not([class]);
+
+	&_white {
+		color: white;
+		border-color: darken(white, 50%);
+
+		&:hover {
+			color: $color-main;
+			border-color: rgba(lighten($color-main, 20%), .5);
+		}
+
+		&:active {
+			color: $color-main-active;
+		}
+	}
 }

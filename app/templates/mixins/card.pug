@@ -1,0 +1,15 @@
+mixin card(data)
+	.card(class= attributes.class)
+
+		a.card__img-wrap(href= data.link)
+			.card__img(style='background-image: url(' + data.img + ')')
+
+		.card__text-wrap
+			.card__title-wrap
+				a.link.link_white.card__title(href= data.link)= data.title
+
+			each val in data.desc
+				p.card__desc
+					span.card__desc-name= val.name
+					= '\t\n'
+					span.card__desc-val= val.val

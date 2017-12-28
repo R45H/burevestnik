@@ -10,7 +10,7 @@ $name: main;
 	}
 
 	&__space-col {
-		padding-bottom: 30px;
+		margin-bottom: 30px;
 	}
 
 	&__space {
@@ -35,6 +35,10 @@ $name: main;
 
 	&__space-bot-big {
 		margin-bottom: $space * 2;
+	}
+
+	&__space-half {
+		margin-top: $space / 2;
 	}
 
 	&__space-top-half {

@@ -56,7 +56,9 @@ $name: news;
 	}
 
 	&__title {
+		border-bottom: none;
 		margin-bottom: 1.5em;
+		color: $color-text;
 	}
 
 	&__text-i {
@@ -73,16 +75,15 @@ $name: news;
 
 	&__link {
 		color: $color-second;
-		border-bottom-color: $color-second;
+		border-bottom-color: lighten($color-second, 40%);
 
 		&:hover {
 			color: $color-main;
-			border-bottom-color: $color-main;
+			border-color: lighten($color-main, 25%);
 		}
 
 		&:active {
 			color: $color-main-active;
-			border-bottom-color: $color-main-active;
 		}
 	}
 
@@ -116,20 +117,6 @@ $name: news;
 					padding-top: 2rem;
 				}
 			}
-		}
-	}
-}
-
-a.#{$name} {
-
-	&__title {
-
-		&:hover {
-			color: $color-main;
-		}
-
-		&:active {
-			color: $color-main-active;
 		}
 	}
 }

@@ -1,0 +1,65 @@
+$name: card;
+
+.#{$name} {
+	border: 1px solid $color-gray;
+
+	&__img-wrap {
+		display: block;
+		padding: 2.5rem;
+		overflow: hidden;
+
+		&:hover {
+
+			.#{$name}__img {
+				transform: scale(1.05);
+			}
+		}
+	}
+
+	&__img {
+		background: no-repeat center / contain;
+		padding-bottom: 66%;
+		transition: $duration ease;
+	}
+
+	&__text-wrap {
+		padding: 2.5rem;
+		background: $color-second-light;
+		color: white;
+	}
+
+	&__title-wrap {
+		text-align: center;
+		margin-bottom: 2rem;
+		font-weight: 500;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	&__title {
+		border-color: transparent;
+
+		&:hover {
+			border-color: transparent;
+		}
+	}
+
+	&__desc {
+		margin: 0 0 .8rem;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	&__desc-name {
+		font-weight: 500;
+		display: inline-block;
+	}
+
+	&__desc-val {
+		display: inline-block;
+	}
+}

@@ -1,0 +1,32 @@
+include ../mixins/bread
+include ../mixins/card
+
+.section.section_space-bot_none
+	.container
+		+bread(class= 'main__bread')
+		h1.title= page.title
+
+.section
+	.container
+		.row
+			.col-sm-3
+				.filter.main__space-col
+					p.subtitle Выберите тип изделия:
+					.check
+						input#filter1.check__input(type='checkbox')
+						label.check__label(for='filter1') Блаблабла
+					.check
+						input#filter2.check__input(type='checkbox')
+						label.check__label(for='filter2') Блаблабла
+					.check
+						input#filter3.check__input(type='checkbox')
+						label.check__label(for='filter3') Блаблабла
+
+				a.btn.btn_wide(href='#') Найти изделия
+
+			.col-sm-9
+				.row
+
+					each val in card
+						.col-sm-4.main__space-col
+							+card(val)
