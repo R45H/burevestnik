@@ -1,16 +1,25 @@
 $(function() {
 
+	//=require 'global/global.js'
+
 	(function() {
-		@@include('blocks/toggle/toggle.js')
-		@@include('blocks/aside/aside.js')
+		//=require 'blocks/toggle/toggle.js'
+		//=require 'blocks/aside/aside.js'
 	}());
 
-	(function() { @@include('blocks/header/header.js') }());
-	(function() { @@include('blocks/slider/slider.js') }());
-	(function() { @@include('blocks/accord/accord.js') }());
-	(function() { @@include('blocks/input/input.js') }());
-
-	@@include('global/global.js')
+	(function() {
+		//=require 'blocks/header/header.js'
+	}());
+	(function() {
+		//=require 'blocks/slider/slider.js'
+	}());
+	(function() {
+		//=require 'blocks/accord/accord.js'
+	}());
+	(function() {
+		//=require 'blocks/input/input.js'
+	}());
+	/* Blocks will be inserted here */
 });
 
-@@include('global/functions.js')
+//=require 'global/functions.js'
