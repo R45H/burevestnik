@@ -3,4 +3,13 @@ $name: filter;
 .#{$name} {
 	border: 1px solid $color-gray;
 	padding: 2.5rem;
+
+	&__title {
+		font-weight: 700;
+		margin-bottom: 1em;
+	}
+
+	&__check {
+		font-size: 1.4rem;
+	}
 }

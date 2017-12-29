@@ -1,5 +1,6 @@
 include ../mixins/bread
 include ../mixins/card
+include ../components/filter
 
 .section.section_space-bot_none
 	.container
@@ -9,24 +10,13 @@ include ../mixins/card
 .section
 	.container
 		.row
-			.col-sm-3
-				.filter.main__space-col
-					p.subtitle Выберите тип изделия:
-					.check
-						input#filter1.check__input(type='checkbox')
-						label.check__label(for='filter1') Блаблабла
-					.check
-						input#filter2.check__input(type='checkbox')
-						label.check__label(for='filter2') Блаблабла
-					.check
-						input#filter3.check__input(type='checkbox')
-						label.check__label(for='filter3') Блаблабла
-
+			.col-sm-5.col-md-4.col-lg-3.main__space-col
+				+filter(filter[0])(class='main__space-col')
 				a.btn.btn_wide(href='#') Найти изделия
 
-			.col-sm-9
+			.col-sm-7.col-md-8.col-lg-9
 				.row
 
 					each val in card
-						.col-sm-4.main__space-col
+						.col-md-6.col-lg-4.main__space-col
 							+card(val)

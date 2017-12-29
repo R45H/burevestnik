@@ -14,6 +14,13 @@ $name: card;
 				transform: scale(1.05);
 			}
 		}
+
+		&:active {
+
+			.#{$name}__img {
+				transform: scale(.95);
+			}
+		}
 	}
 
 	&__img {

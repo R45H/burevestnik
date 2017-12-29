@@ -1,6 +1,7 @@
 $name: check;
 
 .#{$name} {
+	font-size: 1.4rem;
 
 	&__input {
 		display: none;
@@ -10,14 +11,13 @@ $name: check;
 			+ label {
 
 				&::before {
-					color: $color-second-light;
+					background-image: url($path + 'img/icons/tick.svg');
 				}
 
 				&:hover {
 
 					&::before {
-						transition: none;
-						color: $color-main;
+						background-image: url($path + 'img/icons/tick-hover.svg');
 					}
 				}
 			}
@@ -26,26 +26,21 @@ $name: check;
 
 	&__label {
 		display: block;
-		padding: .5em 0 .5em 2em;
+		padding-left: 1.8em;
 		position: relative;
-		font-size: 1.6rem;
 		cursor: pointer;
 
 		&::before {
-			content: '\2714';
+			content: '';
 			display: block;
-			width: 1.6rem;
-			height: 1.6rem;
+			width: 1em;
+			height: 1em;
 			position: absolute;
 			left: 0;
-			top: 50%;
-			margin-top: -.8rem;
+			top: .2em;
 			border: 1px solid $color-gray;
-			background: white;
+			background: white no-repeat center / contain;
 			color: transparent;
-			line-height: 0.3em;
-			font-size: 1.3em;
-			transition: $duration / 2 ease-in color;
 		}
 
 		&:hover {
@@ -53,6 +48,18 @@ $name: check;
 
 			&::before {
 				border-color: $color-main;
+			}
+		}
+	}
+
+	&_space {
+
+		.#{$name}__label {
+			padding-top: .5em;
+			padding-bottom: .5em;
+
+			&::before {
+				top: .7em;
 			}
 		}
 	}
