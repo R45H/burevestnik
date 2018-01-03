@@ -9,9 +9,9 @@ module.exports = function(options) {
 
 		var
 			name = $.util.env.name || $.util.env.n || options.name, // Имя блока
-			comment = $.util.env.comment || $.util.env.cmt // Комментарий для SCSS инклюда
+			comment = $.util.env.comment || $.util.env.cmt, // Комментарий для SCSS инклюда
 
-		dirBlocks = options.dirBlocks, // Полный путь до папки с блоками
+			dirBlocks = options.dirBlocks, // Полный путь до папки с блоками
 			dirTemp = options.dirTemp, // Полный путь до папки с вёрсткой
 
 			dirThis = dirBlocks + name + '/', // Полный путь до папки с текущим блоком
@@ -22,7 +22,8 @@ module.exports = function(options) {
 			keyPugMixin = $.util.env.mixins || $.util.env.mixin || $.util.env.mix || $.util.env.m, // Ключ генерации PUG миксина
 			keyPugComp = $.util.env.components || $.util.env.component || $.util.env.comp || $.util.env.c, // Ключ генерации PUG компонента
 			keyPugPart = $.util.env.partials || $.util.env.partial || $.util.env.part || $.util.env.p, // Ключ генерации PUG части страницы
-			keyDataJson = $.util.env.json || $.util.env.o; // Ключ генерации JSON
+			keyDataJson = $.util.env.json || $.util.env.o // Ключ генерации JSON
+		;
 
 		// Генерация SCSS при запуске без ключей
 		if (!keyScss && !keyJs && !keyPugMixin && !keyPugComp && !keyPugPart && !keyDataJson) {
@@ -158,7 +159,7 @@ module.exports = function(options) {
 					'}',
 				pathToMain = options.src + 'style.scss', // Путь до диспетчера подключений
 				placeIntoMain = '/* Blocks will be inserted here */', // Метка для вставки строки
-				inc = '@import url(\'' + relPath + name + '.scss\');', // Строка для вставки
+				inc = '@import \'' + relPath + name + '\';', // Строка для вставки
 				cmt = comment ? ' // ' + comment : ''; // Комментарий для SCSS инклюда
 
 			fs.writeFileSync(path + name + '.scss', str);
@@ -283,8 +284,8 @@ module.exports = function(options) {
 
 			gulp.src(options.src + 'style.scss')
 				.pipe($.replace(
-					'@import url(\'' + options.relBlocks + name + '.scss\');',
-					'@import url(\'' + dirThisRel + name + '.scss\');'
+					'@import \'' + options.relBlocks + name + '\';',
+					'@import \'' + dirThisRel + name + '\';'
 				))
 				.pipe(gulp.dest(function(file) {
 					return file.base;
@@ -297,4 +298,4 @@ module.exports = function(options) {
 
 		done();
 	}
-}
+};

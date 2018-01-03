@@ -1,47 +1,47 @@
 // Служебные файлы
-@import url('global/variables.scss'); // SASS переменные
-@import url('global/fonts.scss'); // Шрифты
-@import url('global/global.scss'); // Глобальные стили
+@import 'global/variables'; // SASS переменные
+@import 'global/fonts'; // Шрифты
+@import 'global/global'; // Глобальные стили
 // =====
 
 // Блоки
-@import url('blocks/map/map.scss'); // Карта
-@import url('blocks/logo.scss'); // Логотип
-@import url('blocks/title.scss'); // Заголовок
-@import url('blocks/subtitle.scss'); // Маленький заголовок
-@import url('blocks/link.scss'); // Ссылка
-@import url('blocks/news.scss'); // Блок новостей
-@import url('blocks/news-wrap.scss'); // Контейнер с новостями
-@import url('blocks/btn.scss'); // Кнопка
-@import url('blocks/cat.scss'); // Категории
-@import url('blocks/slider/slider.scss'); // Слайдер
-@import url('blocks/ext.scss'); // Строчка с расширением
-@import url('blocks/menu.scss'); // Главное меню
-@import url('blocks/toggle/toggle.scss'); // Гамбургер
-@import url('blocks/aside/aside.scss'); // Боковое меню
-@import url('blocks/bread.scss'); // Хлебные крошки
-@import url('blocks/text.scss'); // Блок контента
-@import url('blocks/subcats.scss'); // Блок со ссылками подкатегорий
-@import url('blocks/accord/accord.scss'); // Аккордеон
-@import url('blocks/grid.scss'); // Сетка
-@import url('blocks/link-icon.scss'); // Ссылка с иконкой
-@import url('blocks/input/input.scss'); // Поля ввода
-@import url('blocks/card.scss'); // Карточка товара и подкатегорий
-@import url('blocks/filter.scss'); // Фильтр
-@import url('blocks/check.scss');
+@import 'blocks/map/map'; // Карта
+@import 'blocks/logo'; // Логотип
+@import 'blocks/title'; // Заголовок
+@import 'blocks/subtitle'; // Маленький заголовок
+@import 'blocks/link'; // Ссылка
+@import 'blocks/news'; // Блок новостей
+@import 'blocks/news-wrap'; // Контейнер с новостями
+@import 'blocks/btn'; // Кнопка
+@import 'blocks/cat'; // Категории
+@import 'blocks/slider/slider'; // Слайдер
+@import 'blocks/ext'; // Строчка с расширением
+@import 'blocks/menu'; // Главное меню
+@import 'blocks/toggle/toggle'; // Гамбургер
+@import 'blocks/aside/aside'; // Боковое меню
+@import 'blocks/bread'; // Хлебные крошки
+@import 'blocks/text'; // Блок контента
+@import 'blocks/subcats'; // Блок со ссылками подкатегорий
+@import 'blocks/accord/accord'; // Аккордеон
+@import 'blocks/grid'; // Сетка
+@import 'blocks/link-icon'; // Ссылка с иконкой
+@import 'blocks/input/input'; // Поля ввода
+@import 'blocks/card'; // Карточка товара и подкатегорий
+@import 'blocks/filter'; // Фильтр
+@import 'blocks/check';
 /* Blocks will be inserted here */
 // =====
 
 // Внешние контейнеры
-@import url('blocks/header/header.scss'); // Шапка
-@import url('blocks/footer.scss'); // Подвал
-@import url('blocks/section.scss'); // Секция контента
-@import url('blocks/main.scss'); // Контейнер контента
-@import url('blocks/wrapper.scss'); // Внешний контейнер
+@import 'blocks/header/header'; // Шапка
+@import 'blocks/footer'; // Подвал
+@import 'blocks/section'; // Секция контента
+@import 'blocks/main'; // Контейнер контента
+@import 'blocks/wrapper'; // Внешний контейнер
 // =====
 
 // Стили для печати
 @media print {
-	@import url('global/print.scss');
+	@import 'global/print';
 }
 // =====
