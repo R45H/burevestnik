@@ -50,7 +50,7 @@ include ../mixins/input
 									if i
 										span!= ',&nbsp;'
 
-									a.link.link-icon__link(href= 'mailto:' contact)= contact
+									a.link.link-icon__link(href= 'mailto:' + contact)= contact
 
 					if (val.contacts[0].fax)
 						.link-icon.main__l-icon

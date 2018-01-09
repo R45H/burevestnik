@@ -9,7 +9,12 @@ mixin input(options)
 				- classes += ' ';
 			- }
 
-
 	label.input(class= classes || '')
-		#{tag}.input__item(type='text')
+
+		if tag === 'input'
+			input.input__item(type='text')
+
+		if tag === 'textarea'
+			textarea.input__item
+
 		span.input__title= options.title

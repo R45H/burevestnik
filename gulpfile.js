@@ -267,6 +267,13 @@ lazyRequireTask('sprite', tasks + 'sprite', {
 	fName: 'result' // Имя готового файла
 });
 
+/** HTML:VALID
+ * Проверка HTML на валидность
+ */
+lazyRequireTask('html:valid', tasks + 'html-valid', {
+	src: dist + '*.html' // Путь к исходникам
+});
+
 /** HTML:TO:PUG
  * Конвертирует html в pug
  */
