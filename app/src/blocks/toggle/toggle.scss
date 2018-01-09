@@ -99,29 +99,85 @@ $name: toggle;
 }
 
 @keyframes toggleTopLine {
-	from {top: -8px;}
-	40%  {top: 0;}
-	60%  {top: 0; transform: none}
-	to   {top: 0; transform: rotate(45deg);}
+
+	from {
+		top: -8px;
+	}
+
+	40% {
+		top: 0;
+	}
+
+	60% {
+		top: 0;
+		transform: none;
+	}
+
+	to {
+		top: 0;
+		transform: rotate(45deg);
+	}
 }
 
 @keyframes toggleBottomLine {
-	from {bottom: -6px;}
-	40%  {bottom: 2px;}
-	60%  {bottom: 2px; transform: none}
-	to   {bottom: 2px; transform: rotate(-45deg);}
+
+	from {
+		bottom: -6px;
+	}
+
+	40% {
+		bottom: 2px;
+	}
+
+	60% {
+		bottom: 2px;
+		transform: none;
+	}
+
+	to {
+		bottom: 2px;
+		transform: rotate(-45deg);
+	}
 }
 
 @keyframes toggleTopLineRevert {
-	from {top: 0; transform: rotate(45deg);}
-	40%  {top: 0; transform: none}
-	60%  {top: 0;}
-	to   {top: -8px;}
+
+	from {
+		top: 0;
+		transform: rotate(45deg);
+	}
+
+	40% {
+		top: 0;
+		transform: none;
+	}
+
+	60% {
+		top: 0;
+	}
+
+	to {
+		top: -8px;
+	}
 }
 
 @keyframes toggleBottomLineRevert {
-	from {bottom: 2px; transform: rotate(-45deg);}
-	40%  {bottom: 2px; transform: none}
-	60%  {bottom: 2px;}
-	to   {bottom: -6px;}
+
+	from {
+		bottom: 2px;
+		transform: rotate(-45deg);
+	}
+
+	40% {
+		bottom: 2px;
+		transform: none;
+	}
+
+	60% {
+		bottom: 2px;
+	}
+
+	to {
+		bottom: -6px;
+	}
 }

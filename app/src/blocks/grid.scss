@@ -3,7 +3,7 @@ $name: grid;
 .#{$name} {
 	display: flex;
 	flex-wrap: wrap;
-	
+
 	&__col {
 		width: 100%;
 		padding: 15px;
