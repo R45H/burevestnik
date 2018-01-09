@@ -1,9 +1,9 @@
 // Плагины
 var
-	gulp     = require('gulp'),
-	$        = require('gulp-load-plugins')(),
-   del      = require('del'), // Для удаления файлов и папок
-   path     = require('path'); // Для работы с путями
+	gulp = require('gulp'),
+	$    = require('gulp-load-plugins')(),
+   del  = require('del'), // Для удаления файлов и папок
+   path = require('path'); // Для работы с путями
 
 // Флаг сборки на продакшн
 var prod = $.util.env.p || $.util.env.production;
