@@ -1,0 +1,20 @@
+include ../mixins/bread
+include ../mixins/detail-1
+include ../components/filter
+
+.section.section_space-bot_none
+    .container
+        +bread(class= 'main__bread')
+        h1.title= page.title
+
+.section
+    .container
+        .row
+            .col-sm-12
+
+            .col-sm-12
+                .row
+
+                    each title in detail_1
+                        .col-md-6.col-lg-4.main__space-col
+                            +detail-1(title)
