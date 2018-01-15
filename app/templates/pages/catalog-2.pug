@@ -1,5 +1,5 @@
 include ../mixins/bread
-include ../mixins/detail-1
+include ../mixins/card
 include ../components/filter
 
 .section.section_space-bot_none
@@ -9,12 +9,15 @@ include ../components/filter
 
 .section
     .container
+        hr.main__space-bot
+        h2.title.main__space-bot Типы изделий
+
         .row
             .col-sm-12
 
             .col-sm-12
                 .row
 
-                    each title in detail_1
-                        .col-md-6.col-lg-4.main__space-col
-                            +detail-1(title)
+                    each val in card_catalog_2
+                        .col-sm-6.col-md-4.col-lg-3.main__space-col
+                            +card(val)
