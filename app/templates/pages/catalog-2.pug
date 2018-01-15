@@ -1,23 +1,44 @@
 include ../mixins/bread
 include ../mixins/card
-include ../components/filter
+include ../mixins/select
 
 .section.section_space-bot_none
     .container
         +bread(class= 'main__bread')
         h1.title= page.title
 
-.section
+.section.section_space-bot_none
     .container
-        hr.main__space-bot
+        .row
+            .col-3.main__space-col
+                +select(select)
+
+            .col-3.main__space-col
+                +select(select_2)
+
+            .col-3.main__space-col
+
+            .col-3.main__space-col
+                +select(select_3)
+
+            .col-3.main__space-col
+                +select(select_4)
+
+            .col-3.main__space-col
+                +select(select_5)
+
+            .col-3.main__space-col
+
+            .col-3.main__space-col
+                a.btn.btn_wide(href='#') Найти изделия
+
+.section.section_space-top_none
+    .container
+        hr.main__space-top-half.main__space-bot
         h2.title.main__space-bot Типы изделий
 
         .row
-            .col-sm-12
 
-            .col-sm-12
-                .row
-
-                    each val in card_catalog_2
-                        .col-sm-6.col-md-4.col-lg-3.main__space-col
-                            +card(val)
+            each val in card_catalog_2
+                .col-sm-6.col-md-4.col-lg-3.main__space-col
+                    +card(val)

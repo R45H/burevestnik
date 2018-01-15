@@ -19,6 +19,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/input/input.js'
 	}());
+	(function() {
+		//=require 'blocks/select/select.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

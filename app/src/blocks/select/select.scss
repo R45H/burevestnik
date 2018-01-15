@@ -1,0 +1,102 @@
+$name: select;
+
+.#{$name} {
+	outline: none;
+	padding: .5em 2.5em .5em 2em;
+	background-color: white;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: $color-text-light;
+	border: none;
+
+	&__current {
+		outline: none;
+		padding: 0 3em 0 2em;
+		margin: 0;
+		border: 1px solid $color-gray;
+		color: $color-text-light;
+		appearance: none;
+		border-radius: 0;
+		min-width: 100%;
+		max-width: 100%;
+		background-color: white;
+		font-size: 1.4rem;
+		font-style: italic;
+		height: 4rem;
+		line-height: 3.8rem;
+
+		&::after {
+			content: '\f107';
+			font-family: $font-fa;
+			position: absolute;
+			right: .2em;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			font-size: 2.5rem;
+			font-style: normal;
+			line-height: 0;
+			transition: $duration / 2 ease;
+			color: $color-text-light;
+		}
+
+		&:hover,
+		&:active {
+
+			.select__text {
+				color: $color-main;
+			}
+		}
+
+		&_active {
+
+			&::after {
+				transform: translateX(-50%) translateY(-50%) rotate(180deg);
+				color: $color-main;
+			}
+
+			.select__text {
+				color: $color-main;
+			}
+		}
+
+		&.ui-button {
+			width: auto;
+		}
+	}
+
+	&__text {
+		margin: 0;
+		color: $color-text-light;
+	}
+
+	&__list {
+		background-color: white;
+		z-index: 1;
+		border: 0;
+
+		.ui-menu {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			border: 1px solid $color-gray;
+			border-top: none;
+			color: $color-text-light;
+			font-size: 1.4rem;
+			font-style: italic;
+			max-height: 20em;
+			position: relative;
+			outline: none;
+		}
+
+		.ui-menu-item-wrapper {
+			cursor: pointer;
+			padding: 1.1rem 3em 1.1rem 2em;
+			line-height: 1.8rem;
+
+			&.ui-state-active {
+				background: $color-main;
+				color: white;
+			}
+		}
+	}
+}
