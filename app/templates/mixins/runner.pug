@@ -11,5 +11,4 @@ mixin runner(data)
 			.runner__title= val.title
 			.runner__item
 
-		.runner__cost
-			.runner__cost-val.runner__cost-val_empty(data-unit= val.unit readonly)!= val.min
+		.runner__cost.runner__cost_empty(data-unit= val.unit readonly)!= val.min

@@ -1,13 +1,13 @@
 var
 	cRunner = 'runner',
-	cCostEmpty = cRunner + '__cost-val_empty',
+	cCostEmpty = cRunner + '__cost_empty',
 	$runner = $('.' + cRunner);
 
 $runner.each(function() {
 	var
 		$this = $(this),
 		$item = $this.find('.' + cRunner + '__item'),
-		$cost = $this.find('.' + cRunner + '__cost-val'),
+		$cost = $this.find('.' + cRunner + '__cost'),
 		min = parseInt($this.attr('data-min')),
 		max = parseInt($this.attr('data-max')),
 		step = parseInt($this.attr('data-step')),

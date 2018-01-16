@@ -3,6 +3,7 @@ $name: runner;
 .#{$name} {
 	display: flex;
 	justify-content: space-between;
+	min-height: 100%;
 
 	&__wrap {
 		display: block;
@@ -18,10 +19,9 @@ $name: runner;
 		color: $color-text-light;
 	}
 
-	&__cost-val {
+	&__cost {
 		@extend .input__item;
 		width: 4.5rem;
-		height: 4rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
