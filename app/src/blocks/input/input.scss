@@ -42,12 +42,13 @@ $name: input;
 		line-height: 1.4em;
 		appearance: none;
 		border-radius: 0;
-		border: 1px solid $color-light;
+		border: 1px solid $color-gray;
 		padding: .4em .6em;
 		background: transparent;
 		font-family: $font-main;
 		font-weight: 300;
 		color: $color-text;
+		outline: none;
 
 		@include input-autofill($color-light, $color-light, transparent);
 

@@ -1,0 +1,15 @@
+mixin runner(data)
+
+	- var val = data[0];
+
+	.runner(
+		data-min= val.min
+		data-max= val.max
+		data-step= val.step
+	)
+		.runner__wrap
+			.runner__title= val.title
+			.runner__item
+
+		.runner__cost
+			.runner__cost-val.runner__cost-val_empty(data-unit= val.unit readonly)!= val.min
