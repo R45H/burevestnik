@@ -1,7 +1,7 @@
 {
 	"card": [
 		{
-			"link": "#",
+			"link": "detail.html",
 			"img": "img/content/catalog/1/01.png",
 			"title": "Лоток в раковину",
 			"desc": [
@@ -10,7 +10,7 @@
 			]
 		},
 		{
-			"link": "#",
+			"link": "detail.html",
 			"img": "img/content/catalog/1/02.png",
 			"title": "Ведро для уборки",
 			"desc": [
@@ -19,7 +19,7 @@
 			]
 		},
 		{
-			"link": "#",
+			"link": "detail.html",
 			"img": "img/content/catalog/1/03.png",
 			"title": "Контейнер",
 			"desc": [
@@ -28,7 +28,7 @@
 			]
 		},
 		{
-			"link": "#",
+			"link": "detail.html",
 			"img": "img/content/catalog/1/04.png",
 			"title": "Таз, 13л",
 			"desc": [
@@ -37,7 +37,7 @@
 			]
 		},
 		{
-			"link": "#",
+			"link": "detail.html",
 			"img": "img/content/catalog/1/05.png",
 			"title": "Ведро, 4л",
 			"desc": [
@@ -46,7 +46,7 @@
 			]
 		},
 		{
-			"link": "#",
+			"link": "detail.html",
 			"img": "img/content/catalog/1/05.png",
 			"title": "Ведро, 8л",
 			"desc": [
@@ -55,7 +55,7 @@
 			]
 		},
 		{
-			"link": "#",
+			"link": "detail.html",
 			"img": "img/content/catalog/1/06.png",
 			"title": "Кувшин",
 			"desc": [
@@ -64,7 +64,7 @@
 			]
 		},
 		{
-			"link": "#",
+			"link": "detail.html",
 			"img": "img/content/catalog/1/07.png",
 			"title": "Таз, 30л",
 			"desc": [
@@ -73,7 +73,7 @@
 			]
 		},
 		{
-			"link": "#",
+			"link": "detail.html",
 			"img": "img/content/catalog/1/08.png",
 			"title": "Миска",
 			"desc": [

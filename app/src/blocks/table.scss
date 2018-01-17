@@ -1,0 +1,26 @@
+$name: table;
+
+.#{$name} {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 1.4rem;
+
+	&__cell {
+		border: 1px solid $color-gray;
+		vertical-align: top;
+		padding: 1em;
+		text-align: center;
+
+		&_head {
+			background: $color-second-light;
+			color: white;
+			font-weight: bold;
+			vertical-align: middle;
+		}
+
+		&_big-text {
+			text-align: left;
+			min-width: 300px;
+		}
+	}
+}

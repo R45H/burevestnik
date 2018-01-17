@@ -4,11 +4,15 @@ mixin bread(data)
 		li.bread__item
 			a.bread__link(href= global[0].link_home) Главная
 
+		- var hasMenuItem = false;
+
 		each val in menu
 
 			if val.link == page.link
 				li.bread__item
 					span.bread__text= val.name
+
+				- hasMenuItem = true;
 
 			else
 
@@ -21,3 +25,9 @@ mixin bread(data)
 								a.bread__link(href= val.link)= val.name
 							li.bread__item
 								span.bread__text= sub.name
+
+							- hasMenuItem = true;
+
+		if !hasMenuItem
+			li.bread__item
+				span.bread__text= page.title

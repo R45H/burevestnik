@@ -1,0 +1,37 @@
+include ../mixins/bread
+
+.section.section_space-bot_none
+	.container
+		+bread(class= 'main__bread')
+		h1.title= page.title
+
+.section
+	.container
+		.row
+			.col-sm-8.push-sm-2.main__space-bot
+				img.main__detail-img(src='img/content/catalog/2/01.png')
+
+		.row
+			.col-12
+				h2.subtitle.subtitle_big.main__space-bot-half Описание:
+				.text
+					p Запорный клапан (также вентиль) — запорная и регулирующая арматура, конструктивно выполненная в виде клапана, то есть её запирающий элемент перемещается параллельно оси потока рабочей среды.
+					p Как и другие виды запорной арматуры, запорные клапаны применяются для полного перекрытия своего проходного сечения, а, следовательно, потока рабочей среды; то есть запирающий элемент, которым в запорном клапане чаще всего является золотник, в процессе эксплуатации находится в крайних положениях «открыто» или «закрыто».
+					p Для регулирования расхода среды путём изменения проходного сечения успешно применяются регулирующие клапаны, также существуют и запорно-регулирующие клапаны, совмещающие эти функции.
+
+.section.section_space-top_none
+	.container
+
+		.main__table-wrap
+			table.table
+
+				each row, i in table
+
+					tr.table__row
+
+						each cell, j in row.row
+
+							td.table__cell(
+								class= i == 0 ? 'table__cell_head' : ''
+								class= j == 4 && i != 0 ? 'table__cell_big-text' : ''
+							)!= cell
