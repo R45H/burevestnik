@@ -1,0 +1,30 @@
+$name: social;
+
+.#{$name} {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	&__svg {
+		width: 100px;
+		height: 100px;
+		margin: 2.3rem auto;
+		fill: #fff;
+	}
+
+	&__text {
+		height: 100px;
+		margin: auto;
+	}
+}
+
+.main__social-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main__social-col {
+	width: 25%;
+}
