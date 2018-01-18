@@ -1,0 +1,22 @@
+$name: img;
+
+.#{$name} {
+	display: block;
+	margin: $space / 2 auto;
+
+	&_space_big {
+		margin: $space auto;
+	}
+
+	&_left {
+		float: left;
+		margin-right: $space / 2;
+		margin-top: 0;
+	}
+
+	&_right {
+		float: right;
+		margin-left: $space / 2;
+		margin-top: 0;
+	}
+}

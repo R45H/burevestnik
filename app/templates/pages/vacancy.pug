@@ -7,12 +7,13 @@ include ../mixins/svg
 		+bread(class= 'main__bread')
 		h1.title.title_left.title_lg= page.title
 
+.section.section_space-bot_none
+	.container
+		include ../components/subcats
+		hr
+
 .section
 	.container
-
-		include ../components/subcats
-
-		hr.main__space-bot
 		p.subtitle.main__space-bot В настоящее время ОАО #{global[0].name} требуются на постоянную работу:
 
 		+accord(accord)

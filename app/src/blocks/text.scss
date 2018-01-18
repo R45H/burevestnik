@@ -23,6 +23,10 @@ $name: text;
 		}
 	}
 
+	img {
+		border: 2px solid lighten($color-gray, 10%);
+	}
+
 	&_white {
 		color: white;
 
