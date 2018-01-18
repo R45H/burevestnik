@@ -16,7 +16,7 @@ include ../mixins/input
 
 		- var fullAddress = '';
 		each val in ['index', 'country', 'region', 'city', 'address']
-			- fullAddress += global[1].addresses[0][val] + ', ';
+			- fullAddress += global[1].addresses[0][val] + (val == 'address' ? '' : ', ');
 
 		p.subtitle.text-center= fullAddress
 

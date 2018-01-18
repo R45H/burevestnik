@@ -3,15 +3,23 @@ $name: map;
 .#{$name} {
 	height: 80vh;
 	width: 100%;
+	text-align: center;
 
 	@include screen-sm() {
 		height: 50vh;
 		min-height: 300px;
 	}
 
-	&__info {
+	&__text-wrap {
 		color: $color-text;
 		font-size: 1.6rem;
 		font-family: $font-main;
+	}
+
+	.gm-style {
+
+		img {
+			max-height: none;
+		}
 	}
 }

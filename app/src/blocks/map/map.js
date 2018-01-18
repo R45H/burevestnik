@@ -24,7 +24,15 @@ function initMap() {
 		});
 
 		/* Образец карточки */
-		var contentString1 = '<div class="map__info">188305, Россия, Ленинградская обл,<br>г. Гатчина, ул. Соборная, 31</div>';
+		var contentString1 = '' +
+			'<div class="map__info">' +
+				'<div class="map__img-wrap">' +
+					'<img src="../img/logo-sm.svg" alt="" class="map__img" width="75" height="75">' +
+				'</div>' +
+				'<div class="map__text-wrap">' +
+					'188305, Россия, Ленинградская обл,<br>г. Гатчина, ул. Соборная, 31' +
+				'</div>' +
+			'</div>';
 		/* ================ */
 
 		/* Рамка */
