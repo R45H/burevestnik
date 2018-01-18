@@ -8,6 +8,8 @@ $runner.each(function() {
 		$this = $(this),
 		$item = $this.find('.' + cRunner + '__item'),
 		$cost = $this.find('.' + cRunner + '__cost'),
+		$shadowMin = $this.find('[name="runner-min"]'),
+		$shadowMax = $this.find('[name="runner-max"]'),
 		min = parseInt($this.attr('data-min')),
 		max = parseInt($this.attr('data-max')),
 		step = parseInt($this.attr('data-step')),
@@ -16,28 +18,35 @@ $runner.each(function() {
 	setUnit(unit);
 
 	$item.slider({
-		range: 'max',
+		range: true,
 		min: min,
 		max: max,
 		step: step,
-		value: min,
+		values: [min, max],
 		classes: {
 			"ui-slider-range": cRunner + '__rail',
 			"ui-slider-handle": cRunner + '__handle'
 		},
 		slide: function(event, ui) {
 
-			if (ui.value == min) {
+			if (ui.values[0] == min && ui.values[1] == max) {
 				setUnit(unit);
 				$cost.addClass(cCostEmpty);
 			} else {
-				setUnit(ui.value);
+				setUnit(ui.values[0], ui.values[1]);
 				$cost.removeClass(cCostEmpty);
 			}
 		}
 	});
 
-	function setUnit(value) {
-		$cost.html(value);
+	function setUnit(param1, param2) {
+		var
+			val1 = param2 ? param1 : min,
+			val2 = param2 ? param2 : max,
+			html = param2 ? param1 + ' - ' + param2 : param1;
+
+		$cost.html(html);
+		$shadowMin.val(val1);
+		$shadowMax.val(val2);
 	}
 });

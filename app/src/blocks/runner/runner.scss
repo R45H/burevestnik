@@ -21,11 +21,12 @@ $name: runner;
 
 	&__cost {
 		@extend .input__item;
-		width: 4.5rem;
+		width: 7rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 0;
+		text-align: center;
+		padding: 0 .5em;
 		cursor: default;
 		font-size: 1.4rem;
 
@@ -38,7 +39,7 @@ $name: runner;
 
 	&__item {
 		display: block;
-		background: $color-second-light;
+		background: $color-gray;
 		height: .6rem;
 		margin: 0 1rem;
 		box-sizing: content-box;
@@ -47,7 +48,6 @@ $name: runner;
 		cursor: pointer;
 
 		&:hover {
-			background-color: $color-main;
 
 			.runner {
 				// =====
@@ -56,11 +56,14 @@ $name: runner;
 					border-color: $color-main;
 					transform: scale(1.2);
 				}
+
+				&__rail {
+					background-color: $color-main;
+				}
 			}
 		}
 
 		&:active {
-			background-color: $color-main;
 
 			.runner {
 				// =====
@@ -70,6 +73,10 @@ $name: runner;
 					background: $color-main;
 					transform: scale(1.2);
 				}
+
+				&__rail {
+					background-color: $color-main;
+				}
 			}
 		}
 	}
@@ -77,7 +84,7 @@ $name: runner;
 	.runner__rail {
 		height: .6rem;
 		margin-top: .7rem;
-		background: $color-gray;
+		background: $color-second-light;
 	}
 
 	.runner__handle {

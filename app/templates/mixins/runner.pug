@@ -12,3 +12,6 @@ mixin runner(data)
 			.runner__item
 
 		.runner__cost.runner__cost_empty(data-unit= val.unit readonly)!= val.min
+
+		input(type='hidden' value= val.min name='runner-min')
+		input(type='hidden' value= val.max name='runner-max')
