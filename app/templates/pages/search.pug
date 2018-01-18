@@ -1,0 +1,19 @@
+include ../mixins/bread
+include ../mixins/input
+
+.section.section_space-bot_none
+	.container
+		+bread(class= 'main__bread')
+		h1.title.title_left.title_lg= page.title
+
+.section.section_space-bot_half
+	.container
+		.row
+			.col-sm-9.main__space-bot-half
+				+input({
+					title: 'Введите запрос',
+					cls: ['search']
+				})
+
+			.col-sm-3.main__space-bot-half
+				a.btn.btn_wide(href='#') Искать на сайте

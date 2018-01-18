@@ -23,8 +23,8 @@ $name: input;
 		&::before {
 			content: '';
 			display: inline-block;
-			width: 1.5em;
-			height: 1.5em;
+			width: 1.3em;
+			height: 1.3em;
 			background: no-repeat center / contain;
 			position: absolute;
 			top: 50%;
@@ -78,7 +78,7 @@ $name: input;
 	}
 
 	&_name &__title {
-		padding-left: 2.8em;
+		padding-left: 2.9em;
 
 		&::before {
 			background-image: url($path + 'img/icons/user-fill.svg');
@@ -86,7 +86,7 @@ $name: input;
 	}
 
 	&_email &__title {
-		padding-left: 2.8em;
+		padding-left: 2.9em;
 
 		&::before {
 			background-image: url($path + 'img/icons/email-fill.svg');
@@ -94,7 +94,7 @@ $name: input;
 	}
 
 	&_tel &__title {
-		padding-left: 2.8em;
+		padding-left: 2.9em;
 
 		&::before {
 			background-image: url($path + 'img/icons/tel-fill.svg');
@@ -102,10 +102,18 @@ $name: input;
 	}
 
 	&_message &__title {
-		padding-left: 2.8em;
+		padding-left: 2.9em;
 
 		&::before {
 			background-image: url($path + 'img/icons/mess-fill.svg');
+		}
+	}
+
+	&_search &__title {
+		padding-left: 2.9em;
+
+		&::before {
+			background-image: url($path + 'img/icons/search-fill.svg');
 		}
 	}
 
@@ -150,6 +158,16 @@ $name: input;
 
 					&__title::before {
 						background-image: url($path + 'img/icons/white-mess-fill.svg');
+					}
+				}
+			}
+
+			&_search {
+
+				.#{$name} {
+
+					&__title::before {
+						background-image: url($path + 'img/icons/white-search-fill.svg');
 					}
 				}
 			}
