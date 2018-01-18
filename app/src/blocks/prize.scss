@@ -1,0 +1,26 @@
+$name: prize;
+
+.#{$name} {
+	min-height: 31em;
+	text-overflow: clip;
+	flex-direction: column;
+	overflow: hidden;
+	display: flex;
+	padding: 1.5rem;
+}
+
+.prize__personal-img {
+	margin: 1.5em auto 2em;
+	height: 179px;
+	width: 130px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.prize__info {
+	color: #0e2ec6;
+	margin: auto;
+	height: 100%;
+	line-height: 1.2em;
+}

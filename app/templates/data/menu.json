@@ -1,13 +1,13 @@
 {
 	"menu": [
 		{
-			"link": "#",
+			"link": "factory.html",
 			"name": "Завод",
 			"sub": [
 				{"link": "#", "name": "История"},
-				{"link": "#", "name": "Администрация"},
-				{"link": "#", "name": "Социальная политика"},
-				{"link": "#", "name": "Награды"},
+				{"link": "admin.html", "name": "Администрация"},
+				{"link": "social.html", "name": "Социальная политика"},
+				{"link": "prize.html", "name": "Награды"},
 				{"link": "#", "name": "Достижения"}
 			]
 		},
@@ -59,7 +59,7 @@
 			]
 		},
 		{
-			"link": "#",
+			"link": "pharos.html",
 			"name": "СК Маяк"
 		},
 		{

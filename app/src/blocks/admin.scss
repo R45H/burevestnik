@@ -1,0 +1,31 @@
+$name: admin;
+
+.#{$name} {
+	min-height: 100%;
+	padding: 1em 1.3em;
+	&__img {
+		background: no-repeat center / cover;
+		margin: 1.5em auto 2em;
+		height: 150px;
+		width: 150px;
+	}
+
+	&__name {
+		color: $color-second;
+		margin: .5em auto;
+	}
+
+	&__position {
+		color: $color-second;
+		font-style: italic;
+		font-size: 1.4rem;
+	}
+
+	&__info {
+		word-break: break-all;
+		padding: 1em 1.3em;
+		text-align: left;
+		margin: auto;
+		font-size: 1.4rem;
+	}
+}
