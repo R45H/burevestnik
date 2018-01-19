@@ -1,18 +1,30 @@
 $name: admin;
 
 .#{$name} {
-	min-height: 100%;
-	padding: 1em 1.3em;
+	border: 1px solid $color-gray;
+	height: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+
+	&__personal {
+		padding: 1rem;
+	}
+
 	&__img {
 		background: no-repeat center / cover;
-		margin: 1.5em auto 2em;
-		height: 150px;
-		width: 150px;
+		margin: 3rem auto;
+		height: 15rem;
+		width: 15rem;
+
+		&_contain {
+			background-size: contain;
+		}
 	}
 
 	&__name {
 		color: $color-second;
-		margin: .5em auto;
+		margin: .5em 0;
 	}
 
 	&__position {
@@ -21,11 +33,16 @@ $name: admin;
 		font-size: 1.4rem;
 	}
 
-	&__info {
-		word-break: break-all;
-		padding: 1em 1.3em;
-		text-align: left;
-		margin: auto;
+	&__info-wrap {
+		word-break: break-word;
+		padding: 1rem;
+		text-align: center;
+		margin-top: auto;
 		font-size: 1.4rem;
+	}
+
+	&__info-i {
+		display: inline-block;
+		text-align: left;
 	}
 }
