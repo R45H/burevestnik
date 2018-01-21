@@ -36,6 +36,10 @@ $name: section;
 		&_lightblue {
 			background: $color-fog-lightblue;
 		}
+
+		&_lightblue_2 {
+			background: $color-fog-lightblue-2;
+		}
 	}
 
 	&_blur {
@@ -114,6 +118,19 @@ $name: section;
 			width: 100%;
 			height: 100%;
 			@extend .section__fill_lightblue;
+		}
+	}
+
+	&_lightblue_2 {
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			@extend .section__fill_lightblue_2;
 		}
 	}
 

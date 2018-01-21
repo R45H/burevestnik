@@ -138,6 +138,27 @@ $name: main;
 		margin: 0 auto;
 	}
 
+	&__social-row {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	&__social-col {
+
+		@include screen-sm() {
+			width: 50%;
+		}
+
+		@include screen-md() {
+			width: 25%;
+		}
+
+		@include screen-lg() {
+			width: 20%;
+		}
+	}
+
 	&_space-top_none {
 		padding-top: 0;
 

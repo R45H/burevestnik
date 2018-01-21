@@ -1,0 +1,6 @@
+include svg
+
+mixin social(data)
+	.social
+		+svg(data.icon, 'social__icon')
+		.social__text= data.text
