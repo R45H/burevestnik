@@ -1,67 +1,15 @@
 include ../mixins/bread
-include ../mixins/accord
-
+include ../mixins/prize
 
 .section.section_space-bot_none
 	.container
 		+bread(class= 'main__bread')
 		h1.title= page.title
 
-
 .section
 	.container
 		.row
-			.col-xs-6.col-sm-6.col-md-4.col-lg-3.main__space-col
-				.prize.card.text-center
-					.prize__personal
-						.prize__personal-img(style="background-image: url(img/content/prize/10.jpg)")
-					.prize__info
-						p Разнообразный и богатый опыт укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития. Идейные соображения высшего порядка, а также начало
-			.col-xs-6.col-sm-6.col-md-4.col-lg-3.main__space-col
-				.prize.card.text-center
-					.prize__personal
-						.prize__personal-img(style="background-image: url(img/content/prize/11.jpg)")
-					.prize__info
-						p Разнообразный и богатый опыт укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития. Идейные соображения высшего порядка, а также начало
-			.col-xs-6.col-sm-6.col-md-4.col-lg-3.main__space-col
-				.prize.card.text-center
-					.prize__personal
-						.prize__personal-img(style="background-image: url(img/content/prize/12.jpg)")
-					.prize__info
-						p Разнообразный и богатый опыт укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития. Идейные соображения высшего порядка, а также начало
-			.col-xs-6.col-sm-6.col-md-4.col-lg-3.main__space-col
-				.prize.card.text-center
-					.prize__personal
-						.prize__personal-img(style="background-image: url(img/content/prize/13.jpg)")
-					.prize__info
-						p Разнообразный и богатый опыт укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития. Идейные соображения высшего порядка, а также начало
-			.col-xs-6.col-sm-6.col-md-4.col-lg-3.main__space-col
-				.prize.card.text-center
-					.prize__personal
-						.prize__personal-img(style="background-image: url(img/content/prize/14.jpg)")
-					.prize__info
-						p Разнообразный и богатый опыт укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития. Идейные соображения высшего порядка, а также начало
-			.col-xs-6.col-sm-6.col-md-4.col-lg-3.main__space-col
-				.prize.card.text-center
-					.prize__personal
-						.prize__personal-img(style="background-image: url(img/content/prize/15.jpg)")
-					.prize__info
-						p Разнообразный и богатый опыт укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития. Идейные соображения высшего порядка, а также начало
-			.col-xs-6.col-sm-6.col-md-4.col-lg-3.main__space-col
-				.prize.card.text-center
-					.prize__personal
-						.prize__personal-img(style="background-image: url(img/content/prize/17.jpg)")
-					.prize__info
-						p Разнообразный и богатый опыт укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития. Идейные соображения высшего порядка, а также начало
-			.col-xs-6.col-sm-6.col-md-4.col-lg-3.main__space-col
-				.prize.card.text-center
-					.prize__personal
-						.prize__personal-img(style="background-image: url(img/content/prize/20.jpg)")
-					.prize__info
-						p Разнообразный и богатый опыт укрепление и развитие структуры играет важную роль в формировании Разнообразный и богатый опыт укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития
-			.col-xs-6.col-sm-6.col-md-4.col-lg-3.main__space-col
-				.prize.card.text-center
-					.prize__personal
-						.prize__personal-img(style="background-image: url(img/content/prize/21.jpg)")
-					.prize__info
-						p Разнообразный и богатый опыт укрепление и развитие структуры играет важную
+
+			each val in prize
+				.col-sm-6.col-md-4.col-lg-3.main__space-col
+					+prize(val)
