@@ -33,10 +33,12 @@
 @import 'blocks/runner/runner'; // Кастомный бегунок
 @import 'blocks/table'; // Таблица
 @import 'blocks/admin'; // Карточка работника
-@import 'blocks/pharos';
-@import 'blocks/prize';
-@import 'blocks/social';
+@import 'blocks/pharos'; // Плитки с картинкой и текстом для страницы маяка
+@import 'blocks/prize'; // Карточка "награды"
+@import 'blocks/social'; // Блок с иконкой и заголовком для страницы "социальная политика"
 @import 'blocks/img'; // Картинка
+@import 'blocks/coach'; // Блок с описанием тренера
+@import 'blocks/partners'; // Блок с логотипами партнёров
 /* Blocks will be inserted here */
 // =====
 
