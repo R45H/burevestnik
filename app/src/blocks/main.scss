@@ -88,15 +88,19 @@ $name: main;
 			text-align: left;
 			display: flex;
 			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		&_center {
+
+			@include screen-sm() {
+				align-items: center;
+			}
 		}
 	}
 
 	&__link-col {
 		margin-bottom: $space / 2;
-
-		@include screen-sm() {
-			margin: 0;
-		}
 	}
 
 	&__link-i {
@@ -157,6 +161,14 @@ $name: main;
 		@include screen-lg() {
 			width: 20%;
 		}
+	}
+
+	&__soc-icon-wrap {
+		margin: 0 -.5rem;
+	}
+
+	&__soc-icon {
+		margin: .5rem;
 	}
 
 	&_space-top_none {

@@ -6,7 +6,7 @@ mixin admin(data)
 				class= data.img ? '' : 'admin__img_contain'
 				style="background-image: url(" + (data.img ? data.img : 'img/content/no-image-admin.svg') + ")"
 			)
-			p.subtitle.admin__name= data.name
+			p.subtitle.subtitle_blue.admin__name= data.name
 			.admin__position= data.position
 
 		.admin__info-wrap

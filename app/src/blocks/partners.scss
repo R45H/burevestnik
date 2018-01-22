@@ -9,9 +9,8 @@ $name: partners;
 		align-items: center;
 
 		@include screen-sm() {
-			flex-direction: row;
 			justify-content: space-between;
-			flex-wrap: wrap;
+			flex-flow: row wrap;
 		}
 	}
 

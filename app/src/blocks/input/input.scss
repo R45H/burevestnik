@@ -48,7 +48,7 @@ $name: input;
 		color: $color-text;
 		outline: none;
 
-		@include input-autofill($color-light, $color-light, transparent);
+		@include input-autofill($color-light, $color-light, white);
 
 		&textarea {
 			height: 4.5em;

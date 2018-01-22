@@ -9,14 +9,16 @@ $block.each(function() {
 		$title = $this.find('.' + classBlock + '__title'),
 		$item = $this.find('.' + classBlock + '__item');
 
+	if ($item.val()) {
+		$this.addClass(classActive);
+	}
+
 	$item.on('focusin', function() {
 		$this.addClass(classActive);
 	});
 
 	$item.on('focusout', function() {
-		var val = $item.val();
-
-		if (!val) {
+		if (!$item.val()) {
 			$this.removeClass(classActive);
 		}
 	});

@@ -1,13 +1,8 @@
-// TODO: Уточнить у Оли, надо ли замазывать фоновые картинки, или оставить как на макете
-// TODO: Предложить Оле другие социальные иконки
-// TODO: Уточнить, надо ли указывать адрес маяка на странице контактов
-// TODO: Надо ли добавлять маркер маяка на карту
-// TODO: На sm последняя секция отображается хреново
-
 include ../mixins/bread
 include ../mixins/svg
 include ../mixins/pharos
 include ../mixins/coach
+include ../mixins/soc-icon
 
 .section.section_space-bot_none
 	.container
@@ -27,8 +22,7 @@ include ../mixins/coach
 				.col-md-6.main__space-col
 					+pharos(val)
 
-.section.section_space_big.section_blur(style='background-image: url(img/content/pharos/bg-coach.jpg);')
-	.section__fill.section__fill_lightblue_2
+.section.section_space_big.section_lightblue_2(style='background-image: url(img/content/pharos/bg-coach.jpg);')
 	.container
 		h2.title.main__space-bot Наши тренеры-профессионалы
 		.row
@@ -47,15 +41,14 @@ include ../mixins/coach
 				each val in partners
 					img.partners__item(src= val)
 
-.section.section_space_big(style="background-image: url(img/content/pharos/bg-pharos.jpg);")
-	.section__fill.section__fill_darker
+.section.section_space_big.section_darker(style="background-image: url(img/content/pharos/bg-pharos.jpg);")
 	.container
 		h2.title.title_white.main__space-bot Контакты
 
 		.text.text_white
 
 			.text-center
-				.main__link-wrap
+				.main__link-wrap.main__link-wrap_center
 
 					- var data = global[1].addresses[0].division[8];
 
@@ -69,10 +62,16 @@ include ../mixins/coach
 						div
 							.main__link-i
 								+svg('marker', 'main__link-icon')
-								div= data.city + ', ' + data.address
+								a(href='contacts.html')= data.city + ', ' + data.address
 
 					.main__link-col
 						div
 							.main__link-i
 								+svg('clock', 'main__link-icon')
 								div= data.time
+
+					.main__link-col
+						.main__soc-icon-wrap
+
+							each val in soc_icon
+								+soc-icon(val)(class='soc-icon_white main__soc-icon')

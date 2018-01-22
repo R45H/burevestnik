@@ -64,6 +64,13 @@ include ../mixins/input
 
 									a.link.link-icon__link(href= contact.link)= contact.name
 
+					if (val.address)
+						.link-icon.main__l-icon
+							+svg('marker', 'link-icon__icon')
+
+							.link-icon__i
+								.link-icon__link= val.city + ', ' + val.address
+
 .section.section_space-bot_none
 	.container
 		h2.title.main__space-bot Карта проезда

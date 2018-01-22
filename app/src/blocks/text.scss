@@ -31,16 +31,20 @@ $name: text;
 		color: white;
 
 		a {
-			color: white;
-			border-color: darken(white, 50%);
 
-			&:hover {
-				color: $color-main;
-				border-color: rgba(lighten($color-main, 20%), .5);
-			}
+			&:not([class]),
+			&[class=''] {
+				color: white;
+				border-color: darken(white, 50%);
 
-			&:active {
-				color: $color-main-active;
+				&:hover {
+					color: $color-main;
+					border-color: rgba(lighten($color-main, 20%), .5);
+				}
+
+				&:active {
+					color: $color-main-active;
+				}
 			}
 		}
 	}
