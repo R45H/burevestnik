@@ -33,6 +33,10 @@ $name: section;
 			background: $color-fog-blue;
 		}
 
+		&_darkblue {
+			background: $color-fog-darkblue;
+		}
+
 		&_lightblue {
 			background: $color-fog-lightblue;
 		}
@@ -105,6 +109,19 @@ $name: section;
 			width: 100%;
 			height: 100%;
 			@extend .section__fill_blue;
+		}
+	}
+
+	&_darkblue {
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			@extend .section__fill_darkblue;
 		}
 	}
 

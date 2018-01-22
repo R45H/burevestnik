@@ -146,9 +146,14 @@ $name: main;
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
+
+		@include screen-sm() {
+			justify-content: space-between;
+		}
 	}
 
 	&__social-col {
+		flex-grow: 1;
 
 		@include screen-sm() {
 			width: 50%;
