@@ -8,14 +8,21 @@ $name: grid;
 		width: 100%;
 		padding: 15px;
 		border: 1px solid $color-gray;
-		border-bottom-color: transparent;
+		border-top-color: transparent;
 
 		@include screen-sm() {
 			padding: 3rem 6rem;
 		}
 
-		&:last-child {
-			border-bottom-color: $color-gray;
+		&:first-child {
+			border-top-color: $color-gray;
+		}
+
+		&:nth-child(2) {
+
+			@include screen-sm() {
+				border-top-color: $color-gray;
+			}
 		}
 
 		&_sm_6 {
@@ -24,17 +31,10 @@ $name: grid;
 				width: 50%;
 			}
 
-			&:nth-child(odd) {
+			&:nth-child(even) {
 
 				@include screen-sm() {
-					border-right-color: transparent;
-				}
-			}
-
-			&:nth-last-child(2) {
-
-				@include screen-sm() {
-					border-bottom-color: $color-gray;
+					border-left-color: transparent;
 				}
 			}
 		}

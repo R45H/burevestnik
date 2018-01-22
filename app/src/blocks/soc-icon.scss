@@ -1,0 +1,94 @@
+$name: soc-icon;
+
+.#{$name} {
+	background-color: $color-text;
+	color: white;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	font-size: 2.3rem;
+	height: 1.7em;
+	width: 1.7em;
+	transition: $duration / 2 ease;
+
+	&:hover {
+		background-color: $color-main;
+	}
+
+	&:active,
+	&.active {
+		background-color: $color-main-active;
+	}
+
+	&_vk {
+
+		&:hover {
+			background-color: $color-vk;
+		}
+
+		&:active,
+		&.active {
+			background-color: darken($color-vk, 10%);
+		}
+	}
+
+	&_youtube {
+
+		&:hover {
+			background-color: $color-yt;
+		}
+
+		&:active,
+		&.active {
+			background-color: darken($color-yt, 10%);
+		}
+	}
+
+	&_white {
+		background: white;
+		color: $color-text;
+
+		&:hover {
+			background: white;
+			color: $color-main;
+		}
+
+		&:active,
+		&.active {
+			background: white;
+			color: $color-main-active;
+		}
+
+		&.#{$name} {
+
+			&_vk {
+
+				&:hover {
+					background-color: white;
+					color: $color-vk;
+				}
+
+				&:active,
+				&.active {
+					background: white;
+					color: darken($color-vk, 10%);
+				}
+			}
+
+			&_youtube {
+
+				&:hover {
+					background-color: white;
+					color: $color-yt;
+				}
+
+				&:active,
+				&.active {
+					background: white;
+					color: darken($color-yt, 10%);
+				}
+			}
+		}
+	}
+}

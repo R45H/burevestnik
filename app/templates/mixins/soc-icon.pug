@@ -1,0 +1,7 @@
+mixin soc-icon(data)
+	a.soc-icon(
+		class= "soc-icon_" + data.name + (attributes.class ? " " + attributes.class : '')
+		href= data.link
+		target= '_blank'
+	)
+		i.fa(class='fa-' + data.name)
