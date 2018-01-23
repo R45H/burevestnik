@@ -1,0 +1,25 @@
+$name: fancybox;
+
+.#{$name} {
+	position: relative;
+	cursor: pointer;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $color-fog-darkblue url($path + 'img/icons/lens.svg') no-repeat center / 25%;
+		opacity: 0;
+		transition: $duration / 2 ease;
+	}
+
+	&:hover {
+
+		&::after {
+			opacity: 1;
+		}
+	}
+}

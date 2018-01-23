@@ -25,6 +25,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/runner/runner.js'
 	}());
+	(function() {
+		//=require 'blocks/fancybox/fancybox.js'
+	}());
 	/* Blocks will be inserted here */
 });
 
