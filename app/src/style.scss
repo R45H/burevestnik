@@ -41,10 +41,13 @@
 @import 'blocks/partners'; // Блок с логотипами партнёров
 @import 'blocks/soc-icon'; // Социальные иконки
 @import 'blocks/fancybox/fancybox'; // Просмотр изображений
+@import 'blocks/fog'; // Затемнение
+@import 'blocks/file-input/file-input'; // Инпут типа "файл"
 /* Blocks will be inserted here */
 // =====
 
 // Внешние контейнеры
+@import 'blocks/modal/modal'; // Модальное окно
 @import 'blocks/header/header'; // Шапка
 @import 'blocks/footer'; // Подвал
 @import 'blocks/section'; // Секция контента

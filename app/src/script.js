@@ -28,6 +28,12 @@ $(function() {
 	(function() {
 		//=require 'blocks/fancybox/fancybox.js'
 	}());
+	(function() {
+		//=require 'blocks/modal/modal.js'
+	}());
+	(function() {
+		//=require 'blocks/file-input/file-input.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

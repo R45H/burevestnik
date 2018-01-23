@@ -1,0 +1,140 @@
+$name: modal;
+
+.#{$name} {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	align-items: flex-start;
+	justify-content: center;
+	overflow-x: hidden;
+	padding: 0;
+	overflow-y: hidden;
+	display: none;
+
+	@include screen-sm() {
+		padding: 5% 0 30px;
+		overflow-y: auto;
+	}
+
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		background-color: white;
+		text-align: center;
+		position: relative;
+		transform: scale(.9);
+		opacity: 0;
+		transition: $duration ease transform, $duration linear opacity;
+
+		@include screen-sm() {
+			width: 700px;
+			max-width: 100%;
+			height: auto;
+		}
+
+		&_visible {
+			transition: $duration * 2 ease transform, $duration linear opacity;
+			transform: none;
+			opacity: 1;
+		}
+	}
+
+	&__head {
+		padding: 4rem 7.5rem 1.5rem;
+	}
+
+	&__title {
+		margin: 0;
+	}
+
+	&__close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+		z-index: 1;
+		width: 7rem;
+		height: 7rem;
+
+		$width: 3rem;
+		$height: 2px;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: $width;
+			height: $height;
+			top: 50%;
+			left: 50%;
+			margin-top: -($height / 2);
+			margin-left: -($width / 2);
+			background: $color-error;
+		}
+
+		&::before {
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+		}
+
+		&:hover {
+
+			&::before,
+			&::after {
+				background: lighten($color-error, 15%);
+			}
+		}
+
+		&:active {
+
+			&::before,
+			&::after {
+				background: darken($color-error, 15%);
+			}
+		}
+	}
+
+	&__body {
+		position: relative;
+		padding: 2.5rem 5rem 4rem;
+
+		@include screen-sm(max) {
+			height: 100%;
+			overflow-y: auto;
+		}
+	}
+
+	&__textarea {
+		height: 6.6em;
+	}
+
+	&__btn-wrap {
+
+		@include screen-sm() {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&__btn {
+		display: block;
+		margin: 0 ($space / 2) ($space / 2);
+
+		@include screen-sm(max) {
+			width: 100%;
+			margin: 0 0 ($space / 2);
+		}
+	}
+
+	&_visible {
+		display: flex;
+	}
+}

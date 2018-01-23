@@ -1,0 +1,39 @@
+include ../mixins/input
+include ../mixins/file-input
+
+// MODAL
+#modal.modal
+	.modal__wrap
+
+		.modal__head
+			h4.subtitle.subtitle_lg Откликнуться на вакансию
+			.modal__close
+
+		.modal__body
+			form
+
+				+input({
+					title: 'ФИО',
+					cls: ['name', 'space_bot']
+				})
+
+				+input({
+					title: 'Номер телефона',
+					type: 'tel',
+					cls: ['tel', 'space_bot']
+				})
+
+				+input({
+					title: 'Сообщение',
+					textarea: true,
+					cls: ['message', 'space_bot']
+				})(class='modal__textarea')
+
+				.modal__btn-wrap
+
+					+file-input({
+						id: 'file1',
+						text: 'Прикрепить резюме'
+					})(class='modal__btn')
+
+					input.btn.btn_fill.modal__btn(type='submit' value='Отправить отклик')

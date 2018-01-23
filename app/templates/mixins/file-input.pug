@@ -1,0 +1,19 @@
+include svg
+
+mixin file-input(data)
+	- var text = data.text ? data.text : 'Прикрепить файл';
+
+	.file-input(class= attributes.class)
+
+		input.file-input__input(
+			id= data.id
+			type='file'
+		)
+
+		label.file-input__label(
+			for= data.id
+			data-text= text
+		)
+			span.file-input__text= text
+
+		+svg('plus', 'file-input__reset')

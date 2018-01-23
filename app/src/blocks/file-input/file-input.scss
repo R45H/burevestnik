@@ -1,0 +1,94 @@
+$name: file-input;
+
+.#{$name} {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+
+	&__label {
+		@extend .btn;
+		display: block;
+		padding-right: 3em;
+
+		&:hover {
+
+			+ .#{$name} {
+				// =====
+
+				&__reset {
+					fill: white;
+				}
+			}
+		}
+
+		&:active {
+
+			+ .#{$name} {
+				// =====
+
+				&__reset {
+					fill: darken(white, 15%);
+				}
+			}
+		}
+	}
+
+	&__text {
+		display: block;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__input {
+		width: .1px;
+		height: .1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+
+		&:focus {
+
+			+ label {
+
+			}
+		}
+	}
+
+	&__reset {
+		font-size: 1.8rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 3em;
+		height: 100%;
+		padding: .7em;
+		transition: $duration / 2 ease;
+		fill: $color-main;
+		cursor: pointer;
+		pointer-events: none;
+	}
+
+	&_selected {
+
+		.file-input {
+			// =====
+
+			&__reset {
+				transform: rotate(45deg);
+				pointer-events: auto;
+				fill: $color-error;
+
+				&:hover {
+					padding: .4em;
+					fill: lighten($color-error, 15%);
+				}
+
+				&:active {
+					fill: darken($color-error, 15%);
+				}
+			}
+		}
+	}
+}
