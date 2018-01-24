@@ -14,6 +14,7 @@ $name: slider;
 
 	&__i {
 		width: 100%;
+		min-height: 100vh;
 		background: no-repeat center / cover;
 		display: flex;
 		flex-direction: column;

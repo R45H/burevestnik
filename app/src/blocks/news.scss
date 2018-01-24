@@ -47,6 +47,7 @@ $name: news;
 		justify-content: space-between;
 		align-items: flex-start;
 		flex: auto;
+		width: 100%;
 
 		@include screen-sm() {
 			border-top: 1px solid $color-gray;
@@ -59,6 +60,7 @@ $name: news;
 		border-bottom: none;
 		margin-bottom: 1.5em;
 		color: $color-text;
+		width: 100%;
 	}
 
 	&__text-i {
