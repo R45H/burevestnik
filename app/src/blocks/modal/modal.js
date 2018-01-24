@@ -8,6 +8,7 @@ var
 	classWrapVisible = classBlock + '__wrap_visible',
 	classInput = 'input',
 	classFog = 'fog',
+	classAccord = 'accord',
 	delay = 300;
 
 if (!$links.length) return;
@@ -25,7 +26,20 @@ $links.each(function() {
 
 	// Клик по кнопке, открывающей модалку
 	$this.on('click', function() {
+		var isAccord = !!($this.parents('.' + classAccord).length);
+
 		modal('open', id);
+
+		if (isAccord) {
+			var title = $this
+				.parents('.' + classAccord + '__body')
+				.prev()
+				.find('.' + classAccord + '__title')
+				.text();
+
+			$(id).find('.js-' + classBlock + '__hidden-title').val(title);
+		}
+
 		return false;
 	});
 	// =====
@@ -81,6 +95,7 @@ function modal(action, id) {
 	if (action == 'close') {
 		$(document).off('keydown', closeOnEsc);
 		$modal.find('.' + classInput).val('');
+		$modal.find('.js-' + classBlock + '__hidden-title').val('');
 		$wrap.removeClass(classWrapVisible);
 		$('.' + classFog).fadeOut(delay);
 

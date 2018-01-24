@@ -62,7 +62,7 @@ $name: modal;
 		height: 7rem;
 
 		$width: 3rem;
-		$height: 2px;
+		$height: 3px;
 
 		&::before,
 		&::after {
@@ -109,6 +109,7 @@ $name: modal;
 		@include screen-sm(max) {
 			height: 100%;
 			overflow-y: auto;
+			padding: 2.5rem 15px 15px;
 		}
 	}
 

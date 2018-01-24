@@ -74,6 +74,10 @@ $name: accord;
 	}
 
 	&__btn {
-		margin-top: 1rem;
+		padding-top: 1rem;
+
+		@include screen-sm(max) {
+			text-align: center;
+		}
 	}
 }
