@@ -66,6 +66,11 @@ $name: main;
 		margin-top: -($ext-space);
 	}
 
+	&__ext-wrap-simple {
+		display: inline-block;
+		max-width: 100%;
+	}
+
 	&__vert-line {
 		display: flex;
 		justify-content: center;

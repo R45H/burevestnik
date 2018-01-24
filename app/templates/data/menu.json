@@ -70,7 +70,7 @@
 			]
 		},
 		{"link": "#", "name": "Документы", "other": true},
-		{"link": "#", "name": "Юридические документы", "other": true},
+		{"link": "juristic-docs.html", "name": "Юридические документы", "other": true},
 		{"link": "#", "name": "Новости", "other": true},
 		{"link": "contacts.html", "name": "Контакты"}
 	]
