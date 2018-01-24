@@ -17,6 +17,10 @@ $links.each(function() {
 		$this = $(this),
 		id = $this.attr('data-modal');
 
+	if (id && id.charAt(0) !== '#') {
+		id = '#' + id;
+	}
+
 	if (!$(id).length) return;
 
 	// Клик по кнопке, открывающей модалку

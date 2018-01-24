@@ -18,8 +18,21 @@ $block.each(function() {
 	});
 
 	$item.on('focusout', function() {
-		if (!$item.val()) {
-			$this.removeClass(classActive);
-		}
+
+		setTimeout(function () {
+			var str = $item.val();
+
+			if ($item.attr('type') === 'tel') {
+				str = str.replace(/[()_-]|(\+\d+\s)/g, '');
+			}
+
+			if (!str) {
+				$this.removeClass(classActive);
+			}
+		}, 0);
 	});
+
+	if ($item.attr('type') === 'tel') {
+		$item.mask("+7 (999) 999-99-99");
+	}
 });

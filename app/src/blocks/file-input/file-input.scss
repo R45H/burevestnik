@@ -63,11 +63,20 @@ $name: file-input;
 		right: 0;
 		width: 3em;
 		height: 100%;
-		padding: .7em;
-		transition: $duration / 2 ease;
 		fill: $color-main;
 		cursor: pointer;
 		pointer-events: none;
+		overflow: hidden;
+	}
+
+	&__reset-icon {
+		transition: $duration / 2 ease;
+		padding: .7em;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 
 	&_selected {
@@ -76,18 +85,28 @@ $name: file-input;
 			// =====
 
 			&__reset {
-				transform: rotate(45deg);
 				pointer-events: auto;
 				fill: $color-error;
 
 				&:hover {
-					padding: .4em;
 					fill: lighten($color-error, 15%);
+
+					.#{$name} {
+						// =====
+
+						&__reset-icon {
+							padding: .4em;
+						}
+					}
 				}
 
 				&:active {
 					fill: darken($color-error, 15%);
 				}
+			}
+
+			&__reset-icon {
+				transform: rotate(45deg);
 			}
 		}
 	}
