@@ -6,6 +6,7 @@ $name: news;
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+	border: 1px solid $color-gray;
 
 	@include screen-sm() {
 		flex-direction: row;
@@ -40,8 +41,6 @@ $name: news;
 
 	&__text-wrap {
 		padding: 2rem 2rem 1rem;
-		border: 1px solid $color-gray;
-		border-top: none;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -50,8 +49,6 @@ $name: news;
 		width: 100%;
 
 		@include screen-sm() {
-			border-top: 1px solid $color-gray;
-			border-left: none;
 			padding-top: 1.5rem;
 		}
 	}
@@ -114,8 +111,6 @@ $name: news;
 			&__text-wrap {
 
 				@include screen-sm() {
-					border-top: none;
-					border-left: 1px solid $color-gray;
 					padding-top: 2rem;
 				}
 			}
