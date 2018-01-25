@@ -2,7 +2,7 @@ include ../mixins/check
 
 mixin filter(data)
 	.filter(class= attributes.class)
-		p.filter__title= data.title
+		.filter__title= data.title
 
 		each val in data.checks
 			+check({

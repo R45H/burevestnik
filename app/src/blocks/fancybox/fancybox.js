@@ -1,3 +1,5 @@
+// TODO: Прыгает шапка при клике
+
 var $links = $('.fancybox');
 
 $links.on('click', function() {

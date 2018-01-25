@@ -1,3 +1,5 @@
+// TODO: Не работает нажатие Esc
+
 var
 	$body = $('body'),
 	$links = $('[data-modal]'),

@@ -12,7 +12,8 @@ include ../mixins/input
 		.row
 			.col-sm-8.col-lg-7.offset-lg-1.main__space-bot-half
 				+input({
-					title: 'Поиск по обозначению'
+					title: 'Поиск по обозначению',
+					cls: ['search']
 				})
 
 			.col-sm-4.col-lg-3.main__space-bot-half
@@ -30,3 +31,9 @@ include ../mixins/input
 					+card(val)
 
 				- if (i == 11) break;
+
+.section.section_space-top_none
+	.container
+		.text
+			p= 'Подробнее о товарах по ссылке: '
+				a(href='#') https://google.ru/
