@@ -4,11 +4,10 @@
 			"link": "factory.html",
 			"name": "Завод",
 			"sub": [
-				{"link": "#", "name": "История"},
 				{"link": "admin.html", "name": "Администрация"},
 				{"link": "social.html", "name": "Социальная политика"},
 				{"link": "prize.html", "name": "Награды"},
-				{"link": "#", "name": "Достижения"}
+				{"link": "achievements.html", "name": "Достижения"}
 			]
 		},
 		{
