@@ -25,15 +25,7 @@
 		},
 		{
 			"link": "quality.html",
-			"name": "Качество",
-			"sub": [
-				{"link": "#", "name": "Система менеджмента качества"},
-				{"link": "#", "name": "Политика в области качества"},
-				{"link": "#", "name": "Сертификаты СМК"},
-				{"link": "#", "name": "РМРС"},
-				{"link": "#", "name": "Лицензии"},
-				{"link": "#", "name": "Сертификация продукции"}
-			]
+			"name": "Качество"
 		},
 		{
 			"link": "#",
@@ -69,7 +61,7 @@
 				{"link": "pers-policy.html", "name": "Кадровая политика"}
 			]
 		},
-		{"link": "#", "name": "Документы", "other": true},
+		{"link": "documents.html", "name": "Документы", "other": true},
 		{"link": "juristic-docs.html", "name": "Юридические документы", "other": true},
 		{"link": "#", "name": "Новости", "other": true},
 		{"link": "contacts.html", "name": "Контакты"}
