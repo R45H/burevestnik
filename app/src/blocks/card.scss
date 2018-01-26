@@ -11,20 +11,6 @@ $name: card;
 		padding-bottom: 66%;
 		overflow: hidden;
 		position: relative;
-
-		&:hover {
-
-			.#{$name}__img {
-				transform: scale(1.05);
-			}
-		}
-
-		&:active {
-
-			.#{$name}__img {
-				transform: scale(.95);
-			}
-		}
 	}
 
 	&__img {
@@ -109,6 +95,26 @@ $name: card;
 				left: 0;
 				right: 0;
 				background-size: cover;
+			}
+		}
+	}
+}
+
+a.#{$name} {
+
+	&__img-wrap {
+
+		&:hover {
+
+			.#{$name}__img {
+				transform: scale(1.05);
+			}
+		}
+
+		&:active {
+
+			.#{$name}__img {
+				transform: scale(.95);
 			}
 		}
 	}
