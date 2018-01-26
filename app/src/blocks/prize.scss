@@ -16,13 +16,15 @@ $name: prize;
 		position: relative;
 	}
 
-	&__img {
+	&__img-i {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: no-repeat center / contain;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	&__info {

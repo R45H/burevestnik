@@ -3,6 +3,7 @@ $name: fancybox;
 .#{$name} {
 	position: relative;
 	cursor: pointer;
+	text-align: center;
 
 	&::after {
 		content: '';

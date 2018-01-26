@@ -5,6 +5,7 @@
 // =====
 
 // Блоки
+@import 'blocks/fancybox/fancybox'; // Просмотр изображений
 @import 'blocks/map/map'; // Карта
 @import 'blocks/logo'; // Логотип
 @import 'blocks/title'; // Заголовок
@@ -40,7 +41,6 @@
 @import 'blocks/coach'; // Блок с описанием тренера
 @import 'blocks/partners'; // Блок с логотипами партнёров
 @import 'blocks/soc-icon'; // Социальные иконки
-@import 'blocks/fancybox/fancybox'; // Просмотр изображений
 @import 'blocks/fog'; // Затемнение
 @import 'blocks/file-input/file-input'; // Инпут типа "файл"
 /* Blocks will be inserted here */

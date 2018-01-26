@@ -38,11 +38,7 @@ include ../mixins/bread
 
 			- var path = 'img/content/quality/';
 			- var name = ['01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg'];
-			- var cnt = 0;
 			each val in name
-
-				if cnt
-					.hidden-md.col-lg-1
 
 				.col-sm-6.col-md-4.col-lg-3.main__space-bot-half
 					.fancybox(
@@ -50,8 +46,3 @@ include ../mixins/bread
 						data-fancybox='group'
 					)
 						img(src= path + val)
-
-				if cnt == 2
-					- cnt = 0
-				else
-					- cnt++

@@ -8,8 +8,9 @@ $name: card;
 
 	&__img-wrap {
 		display: block;
-		padding: 2.5rem;
+		padding-bottom: 66%;
 		overflow: hidden;
+		position: relative;
 
 		&:hover {
 
@@ -27,8 +28,12 @@ $name: card;
 	}
 
 	&__img {
+		position: absolute;
+		top: 2.5rem;
+		bottom: 2.5rem;
+		left: 2.5rem;
+		right: 2.5rem;
 		background: no-repeat center / contain;
-		padding-bottom: 66%;
 		transition: $duration ease;
 	}
 
@@ -81,9 +86,29 @@ $name: card;
 
 		.#{$name} {
 
-			&__img-wrap,
+			&__img {
+				top: 1rem;
+				bottom: 1rem;
+				left: 2rem;
+				right: 2rem;
+			}
+
 			&__text-wrap {
 				padding: 1rem 2rem;
+			}
+		}
+	}
+
+	&_cover {
+
+		.#{$name} {
+
+			&__img {
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-size: cover;
 			}
 		}
 	}
