@@ -2,7 +2,14 @@ include svg
 
 mixin ext(data)
 	a.ext(href= data.link class= attributes.class)
-		+svg(data.ext, 'ext__img')
+
+		if data.ext
+			+svg(data.ext, 'ext__img')
+		else
+			+svg('no-doc', 'ext__img')
+
 		.ext__wrap
 			span.ext__text= data.text + ' '
-			span.ext__ext= '(.' + data.ext + ')'
+
+			if data.ext
+				span.ext__ext= '(.' + data.ext + ')'

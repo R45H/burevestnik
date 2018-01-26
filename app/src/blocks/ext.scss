@@ -5,14 +5,7 @@ $name: ext;
 	align-items: flex-end;
 	position: relative;
 	padding: $ext-space 0;
-
-	&:hover {
-		color: $color-main;
-	}
-
-	&:active {
-		color: $color-main-active;
-	}
+	color: $color-light;
 
 	&__img {
 		height: 2em;
@@ -32,5 +25,17 @@ $name: ext;
 
 	&__ext {
 
+	}
+}
+
+a.#{$name} {
+	color: $color-text;
+
+	&:hover {
+		color: $color-main;
+	}
+
+	&:active {
+		color: $color-main-active;
 	}
 }
