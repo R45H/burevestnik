@@ -1,8 +1,13 @@
-// TODO: Прыгает шапка при клике
+var
+	$links = $('.fancybox'),
+	$body = $('body');
 
-var $links = $('.fancybox');
-
-$links.on('click', function() {
-	$.fancybox.open($links, {}, $links.index(this));
-	return false;
+$links.fancybox({
+	onActivate: function() {
+		$body.removeClass('compensate-for-scrollbar fancybox-active');
+		toggleBodyScroll();
+	},
+	beforeClose: function() {
+		toggleBodyScroll(false);
+	}
 });
