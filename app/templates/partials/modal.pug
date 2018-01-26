@@ -36,6 +36,10 @@ include ../mixins/file-input
 						text: 'Прикрепить резюме'
 					})(class='modal__btn')
 
-					input.btn.btn_fill.modal__btn(type='submit' value='Отправить отклик')
+					input.btn.btn_fill.modal__btn(type='button' value='Отправить отклик' data-message='message' data-message-delay='2000')
 
 				input.js-modal__hidden-title(type='hidden')
+
+		#message.message
+			.title.title_white.main__space-bot-half Спасибо!
+			.subtitle.subtitle_white.subtitle_lg.main__space-bot-half Ваш отклик успешно отправлен.

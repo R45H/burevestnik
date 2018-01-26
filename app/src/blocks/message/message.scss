@@ -1,0 +1,23 @@
+$name: message;
+
+.#{$name} {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgba(black, .8);
+	z-index: 50;
+	transition: $duration ease;
+	opacity: 0;
+	visibility: hidden;
+
+	&_visible {
+		opacity: 1;
+		visibility: visible;
+	}
+}

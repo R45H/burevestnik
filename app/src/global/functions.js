@@ -53,7 +53,7 @@ function toggleModal(action, modalId) {
 		classVisible = classBlock + '_visible',
 		classWrap = classBlock + '__wrap',
 		classWrapVisible = classBlock + '__wrap_visible',
-		classInput = 'input',
+		classInput = 'input__item',
 		classFog = 'fog',
 		$wrap = $modal.find('.' + classWrap),
 		delay = 300,
@@ -104,8 +104,16 @@ function toggleModal(action, modalId) {
 		}
 
 		$(document).off('keydown', closeOnEsc);
-		$modal.find('.' + classInput).val('');
-		$modal.find('.js-' + classBlock + '__hidden-title').val('');
+
+		$modal
+			.find('.' + classInput)
+			.val('')
+			.trigger('focusout');
+
+		$modal
+			.find('.js-' + classBlock + '__hidden-title')
+			.val('');
+
 		$wrap.removeClass(classWrapVisible);
 		$('.' + classFog).fadeOut(delay);
 
@@ -118,6 +126,7 @@ function toggleModal(action, modalId) {
 }
 /* ========== */
 
+/* Добавление хеша строке с ID */
 function addIdHash(id) {
 
 	if (id && id.charAt(0) !== '#') {
@@ -126,3 +135,24 @@ function addIdHash(id) {
 
 	return id;
 }
+/* ========== */
+
+/* Функция показа сообщения в модалке */
+function showMess(messId, delay) {
+	var
+		id = addIdHash(messId),
+		$mess = $(id),
+		classVisible = 'message_visible';
+
+	$mess.addClass(classVisible);
+
+	setTimeout(function() {
+		$mess.removeClass(classVisible);
+
+		var $modal = $mess.parents('.modal');
+		if ($modal.length) {
+			toggleModal('close', $modal.attr('id'));
+		}
+	}, delay);
+}
+/* ========== */

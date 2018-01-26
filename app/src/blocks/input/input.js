@@ -6,7 +6,6 @@ var
 $block.each(function() {
 	var
 		$this = $(this),
-		$title = $this.find('.' + classBlock + '__title'),
 		$item = $this.find('.' + classBlock + '__item');
 
 	if ($item.val()) {

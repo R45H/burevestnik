@@ -34,6 +34,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/file-input/file-input.js'
 	}());
+	(function() {
+		//=require 'blocks/message/message.js'
+	}());
 	/* Blocks will be inserted here */
 });
 
