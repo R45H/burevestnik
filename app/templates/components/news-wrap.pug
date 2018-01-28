@@ -27,5 +27,6 @@ mixin news-wrap(data)
 				- i++;
 			- }
 
-		.news-wrap__btn-wrap
-			a.btn.btn_arrow(href='#') Все новости
+		if i == 3
+			.news-wrap__btn-wrap
+				a.btn.btn_arrow(href='news.html') Все новости

@@ -1,0 +1,57 @@
+$name: pag;
+
+.#{$name} {
+	display: flex;
+	justify-content: center;
+
+	&__wrap {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	&__btn {
+		color: $color-gray;
+		border: 1px solid;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-width: 4rem;
+		height: 4rem;
+		margin: .5rem;
+		padding: .5rem;
+
+		&:hover {
+			color: $color-main;
+		}
+
+		&:active {
+			color: $color-main-active;
+		}
+
+		&_prev,
+		&_next {
+			border: none;
+
+			&::after {
+				font-family: $font-fa;
+				font-size: 3rem;
+				line-height: .5;
+			}
+		}
+
+		&_prev {
+
+			&::after {
+				content: '\f104';
+			}
+		}
+
+		&_next {
+
+			&::after {
+				content: '\f105';
+			}
+		}
+	}
+}

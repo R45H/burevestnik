@@ -1,0 +1,14 @@
+include ../mixins/bread
+include ../components/news-wrap
+include ../mixins/pag
+
+.section.section_space-bot_none
+	.container
+		+bread(class= 'main__bread')
+		h1.title.title_left.title_lg= page.title
+
+.section
+	+news-wrap(news_news)
+
+	.container
+		+pag(10)

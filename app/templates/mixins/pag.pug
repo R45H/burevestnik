@@ -1,0 +1,10 @@
+mixin pag(num)
+	.pag
+		.pag__wrap
+			a.pag__btn.pag__btn_prev(href='#')
+
+			- for (var i = 1; i <= num; i++) {
+				a.pag__btn(href='#')= i
+			- }
+
+			a.pag__btn.pag__btn_next(href='#')
