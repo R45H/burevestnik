@@ -1,0 +1,12 @@
+include ../mixins/ext
+
+.container
+	.row
+
+		- for (var i = 0; i < 3; i++) {
+		.col-sm-6.col-lg-4
+			.main__ext-wrap-simple
+
+				each val in ext
+					+ext(val)
+		- }

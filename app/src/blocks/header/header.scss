@@ -254,7 +254,10 @@ $name: header;
 			}
 
 			&__aside {
-				top: calc(100% + 1px);
+
+				@include screen-lg() {
+					top: calc(100% + 1px);
+				}
 			}
 		}
 	}
