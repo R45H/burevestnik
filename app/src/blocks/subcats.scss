@@ -6,6 +6,8 @@ $name: subcats;
 	@include screen-sm() {
 		display: flex;
 		flex-wrap: wrap;
+		margin-left: -1.25rem;
+		margin-right: -1.25rem;
 	}
 
 	&__btn {
