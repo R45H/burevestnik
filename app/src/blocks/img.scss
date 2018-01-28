@@ -9,14 +9,22 @@ $name: img;
 	}
 
 	&_left {
-		float: left;
-		margin-right: $space / 2;
-		margin-top: 0;
+
+		@include screen-sm() {
+			margin-top: 0;
+			float: left;
+			margin-right: $space / 2;
+			max-width: 60%;
+		}
 	}
 
 	&_right {
-		float: right;
-		margin-left: $space / 2;
-		margin-top: 0;
+
+		@include screen-sm() {
+			margin-top: 0;
+			float: right;
+			margin-left: $space / 2;
+			max-width: 60%;
+		}
 	}
 }
