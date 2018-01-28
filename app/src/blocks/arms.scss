@@ -1,0 +1,16 @@
+$name: arms;
+
+.#{$name} {
+	position: relative;
+	padding-left: 2em;
+
+	&::before {
+		content: '';
+		width: 1.5em;
+		height: 1.5em;
+		position: absolute;
+		left: 0;
+		top: -.2em;
+		background: url($path + 'img/icons/coat-of-arms.svg') no-repeat center / contain;
+	}
+}
