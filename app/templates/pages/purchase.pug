@@ -1,0 +1,23 @@
+include ../mixins/bread
+
+.section.section_space-bot_none
+	.container
+		+bread(class= 'main__bread')
+		h1.title.title_left.title_lg= page.title
+
+.section.section_space-top_half.section_space-bot_none
+	.container
+		.main__space-bot Акционерное общество «Завод «Буревестник» начало свою деятельность 13 октября 1924г. на базе кооперативной артели «Юпитер», выпускающей бытовые металлоизделия и объединявшей 35 человек.
+
+.section.section_space_none
+	.container
+		include ../components/subcats
+
+.section.section_space-top_none
+	.container
+		hr.main__space-bot
+		.text
+
+			- for (var i = 0; i < 3; i++) {
+				p= global[2].fish
+			- }

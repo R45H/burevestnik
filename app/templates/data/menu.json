@@ -27,7 +27,7 @@
 			"name": "Качество"
 		},
 		{
-			"link": "#",
+			"link": "purchase.html",
 			"name": "Закупки",
 			"sub": [
 				{"link": "#", "name": "Документы"},
