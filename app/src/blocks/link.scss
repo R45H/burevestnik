@@ -16,4 +16,9 @@ $name: link;
 			color: $color-main-active;
 		}
 	}
+
+	&_not-text {
+		border: none;
+		display: inline-block;
+	}
 }

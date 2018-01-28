@@ -1,0 +1,20 @@
+include ../mixins/bread
+
+.section.section_space-bot_none
+	.container
+		+bread(class= 'main__bread')
+		h1.title= page.title
+
+.section.section_space-top_half
+	.container
+		.text
+
+			- for (var i = 0; i < 2; i++) {
+				p= global[2].fish
+			- }
+
+			.text-center
+				p.main__space-top.main__space-bot-half
+					b= page.title
+				a.link.link_not-text(href='#')
+					img(src='img/content/electronic.jpg' alt='')
