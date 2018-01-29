@@ -8,6 +8,28 @@ $name: prize;
 	display: flex;
 	flex-direction: column;
 
+	&:hover {
+
+		.#{$name} {
+			// =====
+
+			&__info {
+				color: $color-main;
+			}
+		}
+	}
+
+	&:active {
+
+		.#{$name} {
+			// =====
+
+			&__info {
+				color: $color-main-active;
+			}
+		}
+	}
+
 	&__img-wrap {
 		display: block;
 		width: 100%;
@@ -32,5 +54,6 @@ $name: prize;
 		flex-grow: 1;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 	}
 }

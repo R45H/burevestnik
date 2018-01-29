@@ -23,4 +23,30 @@ $name: fancybox;
 			opacity: 1;
 		}
 	}
+
+	&__item {
+		@extend .#{$name};
+
+		&::after {
+			@extend .#{$name}::after;
+		}
+	}
+
+	&_has-item {
+
+		&::after {
+			display: none;
+		}
+
+		&:hover {
+
+			.#{$name} {
+				// =====
+
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
+	}
 }

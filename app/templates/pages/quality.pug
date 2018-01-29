@@ -41,8 +41,8 @@ include ../mixins/bread
 			each val in name
 
 				.col-sm-6.col-md-4.col-lg-3.main__space-bot-half
-					.fancybox(
+					.certificate.fancybox(
 						data-src= path + val
 						data-fancybox='group'
 					)
-						img(src= path + val alt='')
+						img.certificate__img(src= path + val alt='')

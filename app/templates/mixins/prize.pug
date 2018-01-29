@@ -1,10 +1,12 @@
 mixin prize(data)
-	.prize
+	.prize.fancybox.fancybox_has-item(
+		data-src= data.img
+		data-caption= data.text
+		data-fancybox='group'
+	)
+
 		.prize__img-wrap
-			.prize__img-i.fancybox(
-				data-src= data.img
-				data-caption= data.text
-				data-fancybox='group'
-			)
+			.prize__img-i.fancybox__item
 				img(src= data.img alt='')
+
 		.prize__info= data.text
