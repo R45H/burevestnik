@@ -1,10 +1,21 @@
-mixin pag(num)
+mixin pag(num, active)
 	.pag
 		.pag__wrap
-			a.pag__btn.pag__btn_prev(href='#')
+
+			if active == 1
+				span.pag__btn.pag__btn_prev
+			else
+				a.pag__btn.pag__btn_prev(href='#')
 
 			- for (var i = 1; i <= num; i++) {
-				a.pag__btn(href='#')= i
+
+				if i == active
+					span.pag__btn.pag__btn_active= i
+				else
+					a.pag__btn(href='#')= i
 			- }
 
-			a.pag__btn.pag__btn_next(href='#')
+			if active == num
+				span.pag__btn.pag__btn_next
+			else
+				a.pag__btn.pag__btn_next(href='#')

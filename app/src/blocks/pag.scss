@@ -20,18 +20,13 @@ $name: pag;
 		height: 4rem;
 		margin: .5rem;
 		padding: .5rem;
-
-		&:hover {
-			color: $color-main;
-		}
-
-		&:active {
-			color: $color-main-active;
-		}
+		cursor: default;
 
 		&_prev,
 		&_next {
+			display: none;
 			border: none;
+			font-size: 0;
 
 			&::after {
 				font-family: $font-fa;
@@ -52,6 +47,30 @@ $name: pag;
 			&::after {
 				content: '\f105';
 			}
+		}
+
+		&_active {
+			color: $color-main;
+		}
+	}
+}
+
+a.#{$name} {
+
+	&__btn {
+		cursor: pointer;
+
+		&:hover {
+			color: $color-main;
+		}
+
+		&:active {
+			color: $color-main-active;
+		}
+
+		&_prev,
+		&_next {
+			display: flex;
 		}
 	}
 }
