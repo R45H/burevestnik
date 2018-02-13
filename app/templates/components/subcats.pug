@@ -1,3 +1,5 @@
+include ../mixins/select-linked
+
 .subcats.main__space-bot-half
 
 	each val in menu
@@ -5,5 +7,10 @@
 		if (val.name == page.title)
 
 			each sub in val.sub
+
 				.subcats__btn
-					a.btn.btn_wide(class= sub.link == '#' ? 'btn_inactive' : '' href= sub.link)= sub.name
+
+					if sub.inner
+						+select-linked(sub.inner, sub.name)(class='select-linked_wide')
+					else
+						a.btn.btn_wide(class= sub.link == '#' ? 'btn_inactive' : '' href= sub.link)= sub.name

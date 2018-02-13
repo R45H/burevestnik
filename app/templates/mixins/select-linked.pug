@@ -1,0 +1,8 @@
+mixin select-linked(data, title)
+	.select-linked(class= attributes.class)
+		.select-linked__text= title
+		ul.select-linked__wrap
+
+			each val in data
+				li.select-linked__item
+					a.link.select-linked__link(href= val.link)= val.name

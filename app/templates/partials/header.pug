@@ -43,8 +43,16 @@ header.header(class= page.link == global[0].link_home ? 'header_transparent' : '
 								ul.aside__sub
 
 									each sub in val.sub
-										li.aside__sub-item
-											a.aside__sub-link(href= sub.link)= sub.name
+
+										if sub.inner
+
+											each inner in sub.inner
+												li.aside__sub-item
+													a.aside__sub-link(href= inner.link)= inner.name
+
+										else
+											li.aside__sub-item
+												a.aside__sub-link(href= sub.link)= sub.name
 
 			.header__right-bot
 				ul.menu

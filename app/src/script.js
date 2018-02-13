@@ -37,6 +37,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/message/message.js'
 	}());
+	(function() {
+		//=require 'blocks/select-linked/select-linked.js'
+	}());
 	/* Blocks will be inserted here */
 });
 
