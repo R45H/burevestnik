@@ -9,13 +9,13 @@ $name: slider;
 	}
 
 	&__item {
-		min-height: 100vh;
+		min-height: 85vh;
 	}
 
 	&__i {
 		width: 100%;
-		min-height: 100vh;
-		background: no-repeat center / cover;
+		min-height: 85vh;
+		background: no-repeat 63% 67% / cover;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

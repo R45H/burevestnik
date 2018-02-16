@@ -105,4 +105,8 @@ $name: cat;
 			}
 		}
 	}
+
+	&_bordered {
+		border: 1px solid $color-gray;
+	}
 }

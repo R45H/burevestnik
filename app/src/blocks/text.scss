@@ -21,10 +21,42 @@ $name: text;
 				background: url($path + 'img/icons/list.svg') no-repeat center / contain;
 			}
 		}
+
+		ul {
+
+			li {
+				padding-left: 1.4em;
+
+				&::before {
+					width: .4em;
+					height: .4em;
+					top: .5em;
+					background: $color-second;
+					border-radius: 50%;
+				}
+			}
+		}
 	}
 
 	img {
 		border: 2px solid lighten($color-gray, 10%);
+	}
+
+	table {
+		@extend .table;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	td {
+		@extend .table__cell;
+	}
+
+	th {
+		@extend .table__cell;
+		@extend .table__cell_head;
 	}
 
 	&_white {
