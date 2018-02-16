@@ -40,6 +40,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/select-linked/select-linked.js'
 	}());
+	(function() {
+		//=require 'blocks/section/section.js'
+	}());
 	/* Blocks will be inserted here */
 });
 
