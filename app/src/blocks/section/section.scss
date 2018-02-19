@@ -49,80 +49,59 @@ $name: section;
 	&__next {
 		background: none;
 		border: none;
-		padding: 0 0 3rem;
-		height: 5rem;
-		width: 15rem;
-		margin-left: -7.5rem;
+		padding: 0 1em;
+		height: $space;
+		min-width: 15rem;
 		cursor: pointer;
 		outline: none;
 		position: absolute;
 		left: 50%;
 		bottom: 0;
-		transition: $duration ease;
-		color: white;
+		transform: translateX(-50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $color-text;
+		font-size: 1.4rem;
+		transition: $duration ease padding;
 
 		&::before,
 		&::after {
-			content: '';
-			display: block;
-			background-color: $color-main;
-			width: 2px;
-			height: 50%;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			margin-left: -1px;
-			transition: $duration ease;
+			content: '\f107';
+			font-family: $font-fa;
+			display: inline-block;
+			font-size: 1.25em;
+			color: $color-second;
 		}
 
 		&::before {
-			transform: translateY(-50%) rotate(-45deg);
-			transform-origin: bottom right;
+			margin-right: .25em;
 		}
 
 		&::after {
-			transform: translateY(-50%) rotate(45deg);
-			transform-origin: bottom left;
+			margin-left: .25em;
 		}
 
 		&:hover {
-			padding-bottom: 1.5rem;
-			color: $color-main;
-
-			&::before {
-				transform: translateY(-20%) rotate(-45deg);
-			}
-
-			&::after {
-				transform: translateY(-20%) rotate(45deg);
-			}
+			color: $color-second;
+			padding-top: 1rem;
 		}
 
 		&:active {
-			color: $color-main-active;
+			color: lighten($color-second, 25%);
 
 			&::before,
 			&::after {
-				background-color: $color-main-active;
+				color: lighten($color-second, 25%);
 			}
 		}
 
 		&_big {
-			height: 10rem;
-			width: 20rem;
-			margin-left: -10rem;
-			padding-bottom: 5rem;
+			height: $space * 2;
+		}
 
-			&::before,
-			&::after {
-				height: 30%;
-				top: 50%;
-				left: 50%;
-			}
-
-			&:hover {
-				padding-bottom: 3rem;
-			}
+		&_white {
+			color: white;
 		}
 	}
 
