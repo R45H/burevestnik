@@ -4,8 +4,9 @@ mixin card(data)
 		class= data.mod ? 'card_' + data.mod : ''
 	)
 
-		a.card__img-wrap(href= data.link)
-			.card__img(style='background-image: url(' + data.img + ')')
+		a.card__img-outer(href= data.link)
+			.card__img-wrap
+				.card__img(style='background-image: url(' + data.img + ')')
 
 		.card__text-wrap
 			.card__title-wrap

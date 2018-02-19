@@ -4,9 +4,9 @@ mixin prize(data)
 		data-caption= data.text
 		data-fancybox='group'
 	)
-
-		.prize__img-wrap
-			.prize__img-i.fancybox__item
-				img(src= data.img alt='')
+		.prize__img-outer
+			.prize__img-wrap
+				.prize__img-i.fancybox__item
+					img(src= data.img alt='')
 
 		.prize__info= data.text

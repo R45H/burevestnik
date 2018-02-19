@@ -6,6 +6,10 @@ $name: card;
 	display: flex;
 	flex-direction: column;
 
+	&__img-outer {
+		display: block;
+	}
+
 	&__img-wrap {
 		display: block;
 		padding-bottom: 66%;
@@ -103,7 +107,7 @@ $name: card;
 
 a.#{$name} {
 
-	&__img-wrap {
+	&__img-outer {
 
 		&:hover {
 
