@@ -99,6 +99,10 @@ p {
 	text-align: center;
 }
 
+.text-right {
+	text-align: right;
+}
+
 .hidden-xs {
 
 	@include screen-sm(max) {

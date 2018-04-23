@@ -11,10 +11,16 @@ $name: news-wrap;
 	}
 
 	&__item {
-		height: 100%;
+
+		@include screen-lg() {
+			height: 100%;
+		}
 
 		&_sm {
-			height: 50%;
+
+			@include screen-lg() {
+				height: 50%;
+			}
 
 			&:first-child {
 				padding-bottom: 15px;
